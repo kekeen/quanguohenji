@@ -170,7 +170,10 @@ gulp.task('copy', function(){
     //   './app/libs/font-awesome-4.7.0/**'
     // ])
     // .pipe(gulp.dest('./dist/libs/font-awesome-4.7.0'));
-
+    gulp.src([
+        './app/libs/fonts/**'
+    ])
+        .pipe(gulp.dest('./dist/libs/fonts'));
 
 
 });

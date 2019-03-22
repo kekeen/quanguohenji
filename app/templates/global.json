@@ -1,9 +1,9 @@
 {
-    "site": "ejs-demo",
+    "site": "全国痕迹检验网络实验室项目",
     "styles": [
         "../css/custom-bootstrap.css",
-        "../css/normalize.css",
         "../libs/icheck/skins/flat/_all.css",
+        "../libs/fonts/iconfont.css",
         "../css/global.css"
     ],
     "scripts": [

@@ -1,0 +1,37 @@
+<div class="left-sidebar">
+    <ul>
+        <%
+        var data = [{
+            font:'icon-line-circle',
+            href:'人员协同',
+            kid:['紧急求助','普通求助']
+        },{
+            font:'icon-line-date',
+            href:'设备协同'
+        },{
+            font:'icon-line-speaker',
+            href:'技术交流'
+        }]
+                for(var i in data){
+        %>
+        <li class="<%= local.atname == data[i].href ? 'active' : '' %>">
+            <a href="<%= data[i].kid ? data[i].kid[0] : data[i].href %>.html" >
+                <i class="iconfont <%= data[i].font %>"></i>
+                <%= data[i].href  %>
+                <% if(data[i].kid){ %>
+                <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
+                <% } %>
+            </a>
+            <% if(data[i].kid){ %>
+            <div class="left-side-kid">
+                <% for(var j in data[i].kid){ %>
+                <a href="<%= data[i].kid[j] %>.html" class="<%= local.kidname == data[i].kid[j] ? 'active' :'' %>">
+                    <%= data[i].kid[j] %>
+                </a>
+                <% } %>
+            </div>
+            <% } %>
+        </li>
+        <% } %>
+    </ul>
+</div>
