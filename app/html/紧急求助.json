@@ -4,7 +4,6 @@
   "kidname":"紧急求助",
   "szxt":true,
   "styles": [
-    "../css/synergy.css"
   ],
   "scripts":[]
 }

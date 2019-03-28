@@ -1,0 +1,23 @@
+<div class="data-times">
+	<div class="timebox">
+		<input type="text" class="allData inps">
+		<i class="iconfont icon-line-insert time"></i>
+	</div>
+  	<div class="dataList">
+      	<ul>
+          	<% var data = ['最近一天','最近三天','最近七天'];
+          	for(var i in data){ %>
+          	<li><a href="javascript:void(0)"><%= data[i] %></a></li>
+          	<% } %>
+      	</ul>
+      	<div class="timeCustom">
+          	<p class="custom-title">自定义</p>
+          	<div class="custom-data">从<input type="text" class="ts-range"></div>
+          	<div class="custom-data">至<input type="text" class="ts-range2"></div>
+          	<div class="custom-btn">
+              	<a href="javascript:void(0)">重置</a>
+              	<a href="javascript:void(0)" class="sure">确认</a>
+          	</div>
+          </div>
+      </div>
+</div>

@@ -1,0 +1,10 @@
+{
+  "title": "发布紧急求助",
+  "atname": "人员协同",
+  "kidname":"紧急求助",
+  "szxt":true,
+  "styles": [
+  	"../css/helps.css"
+  ],
+  "scripts":[]
+}

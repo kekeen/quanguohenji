@@ -1,0 +1,23 @@
+<ul class="table-console">
+	<% for(var i in data){ %>
+	<li class="tables-console-lis inblock ib-top">
+		<label class="lbs"><%= data[i].lbs %>：</label>
+		<% if(data[i].type == 'text'){ %>
+			<input type="text" class="inps" placeholder="<%= data[i].txt %>"/>
+		<% }else if(data[i].type == 'drop'){ %>
+			<div class="dropdown">
+				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	            	<% for(var j in data[i].drop){ %>
+	                <li><a href="javascript:;"><%= data[i].drop[j] %></a></li>
+	                <% } %>
+	            </ul>
+            </div>
+		<% }else if(data[i].type == 'time'){ %>
+			<%- include('../templates/data_times') %>
+		<% }else if(data[i].type == 'btn'){ %>
+			<button class="btns"><%= data[i].lbs %></button>
+		<% } %>
+	</li>
+	<% } %>
+</ul>

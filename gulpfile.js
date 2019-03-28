@@ -166,16 +166,20 @@ gulp.task('copy', function(){
       './app/libs/icheck/skins/**'
     ])
     .pipe(gulp.dest('./dist/libs/icheck/skins'));
-    //  gulp.src([
-    //   './app/libs/font-awesome-4.7.0/**'
-    // ])
-    // .pipe(gulp.dest('./dist/libs/font-awesome-4.7.0'));
     gulp.src([
         './app/libs/fonts/**'
     ])
         .pipe(gulp.dest('./dist/libs/fonts'));
 
-
+	gulp.src([
+        './app/libs/datetimepicker-master/**'
+    ])
+        .pipe(gulp.dest('./dist/libs/datetimepicker-master'));
+        
+    gulp.src([
+        './app/libs/ztree/**'
+    ])
+        .pipe(gulp.dest('./dist/libs/ztree'));
 });
 // ----------------静态页面开发流程----------------end
 

@@ -1,16 +1,22 @@
 {
     "site": "全国痕迹检验网络实验室项目",
     "styles": [
+    	"../libs/ztree/css/zTreeStyle.css",
         "../css/custom-bootstrap.css",
         "../libs/icheck/skins/flat/_all.css",
         "../libs/fonts/iconfont.css",
-        "../css/global.css"
+        "../libs/datetimepicker-master/jquery.datetimepicker.css",
+        "../css/jquery.paging.css",
+        "../css/comment.css",
+        "../css/time_data.css"
     ],
-    "scripts": [
+    "scripts": [	
         "../libs/jquery/jquery.min.js",
+        "../libs/ztree/jquery.ztree.all.js",
         "../libs/bootstrap/dist/bootstrap.min.js",
+        "../libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js",
         "../libs/icheck/icheck.min.js",
-        "../libs/nicescroll/jquery.nicescroll.js",
+        "../js/jquery.paging.js",
         "../js/global.js"
     ]
 }

@@ -7,12 +7,14 @@
 <title>紧急求助 - 全国痕迹检验网络实验室项目</title>
 <meta name="renderer" content="webkit">
 
+<link rel="stylesheet" href="../libs/ztree/css/zTreeStyle.css">
 <link rel="stylesheet" href="../css/custom-bootstrap.css">
 <link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
 <link rel="stylesheet" href="../libs/fonts/iconfont.css">
-<link rel="stylesheet" href="../css/global.css">
-<link rel="stylesheet" href="../css/synergy.css">
-
+<link rel="stylesheet" href="../libs/datetimepicker-master/jquery.datetimepicker.css">
+<link rel="stylesheet" href="../css/jquery.paging.css">
+<link rel="stylesheet" href="../css/comment.css">
+<link rel="stylesheet" href="../css/time_data.css">
 
 <!--[if lt IE 9]>
   <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -89,12 +91,506 @@
         
     </ul>
 </div>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">紧急求助</a>
+        	</div>
+        	<div class="console-box whitebox">
+	<div class="tab-box">
+		
+		<a href="紧急求助.html" class="active">
+			紧急求助
+			<span class="num hide">1</span>
+		</a>
+		
+		<a href="待我处理的求助.html" class="">
+			待我处理的求助
+			<span class="num ">1</span>
+		</a>
+		
+		<a href="我已处理的求助.html" class="">
+			我已处理的求助
+			<span class="num hide">1</span>
+		</a>
+		
+	</div>
+	<div class="console-right pull-right">
+		<button class="btns" onclick="window.location.href ='发布紧急求助.html'">发布紧急求助</button>
+	</div>
+</div>
+        	<div class="right-content-box whitebox">
+        		<div class="table-box">
+        			<div class="table-console-box">
+        				
+	        			<ul class="table-console">
+	
+	<li class="tables-console-lis inblock ib-top">
+		<label class="lbs">求助标题：</label>
+		
+			<input type="text" class="inps" placeholder="请输入求助标题"/>
+		
+	</li>
+	
+	<li class="tables-console-lis inblock ib-top">
+		<label class="lbs">解决状态：</label>
+		
+			<div class="dropdown">
+				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	            	
+	                <li><a href="javascript:;">全部</a></li>
+	                
+	                <li><a href="javascript:;">已处理</a></li>
+	                
+	                <li><a href="javascript:;">未处理</a></li>
+	                
+	            </ul>
+            </div>
+		
+	</li>
+	
+	<li class="tables-console-lis inblock ib-top">
+		<label class="lbs">问题状态：</label>
+		
+			<div class="dropdown">
+				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	            	
+	                <li><a href="javascript:;">全部</a></li>
+	                
+	                <li><a href="javascript:;">已处理</a></li>
+	                
+	                <li><a href="javascript:;">未处理</a></li>
+	                
+	            </ul>
+            </div>
+		
+	</li>
+	
+	<li class="tables-console-lis inblock ib-top">
+		<label class="lbs">发布时间：</label>
+		
+			<div class="data-times">
+	<div class="timebox">
+		<input type="text" class="allData inps">
+		<i class="iconfont icon-line-insert time"></i>
+	</div>
+  	<div class="dataList">
+      	<ul>
+          	
+          	<li><a href="javascript:void(0)">最近一天</a></li>
+          	
+          	<li><a href="javascript:void(0)">最近三天</a></li>
+          	
+          	<li><a href="javascript:void(0)">最近七天</a></li>
+          	
+      	</ul>
+      	<div class="timeCustom">
+          	<p class="custom-title">自定义</p>
+          	<div class="custom-data">从<input type="text" class="ts-range"></div>
+          	<div class="custom-data">至<input type="text" class="ts-range2"></div>
+          	<div class="custom-btn">
+              	<a href="javascript:void(0)">重置</a>
+              	<a href="javascript:void(0)" class="sure">确认</a>
+          	</div>
+          </div>
+      </div>
+</div>
+		
+	</li>
+	
+	<li class="tables-console-lis inblock ib-top">
+		<label class="lbs">查询：</label>
+		
+			<button class="btns">查询</button>
+		
+	</li>
+	
+</ul>
+        			</div>
+        			
+        			<table class="tables">
+        				<thead>
+        					<tr>
+        						
+        						<th style="width:40%;">求助标题</th>
+        						
+        						<th style="width:;">发布人</th>
+        						
+        						<th style="width:;">状态</th>
+        						
+        						<th style="width:;">发布时间</th>
+        						
+        						<th style="width:240px;">操作</th>
+        						
+        					</tr>
+        				</thead>
+        				<tbody>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>未处理</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#look">确认解决</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
     </div>
+    <!-- 发起视频  -->
+<div class="modal in" id="video">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <span>选择视频对象</span>
+                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+            </div>
+            <div class="modal-body">
+				<div class="modal-body-content">
+					<div class="search-box">
+	<input type="text" />
+	<a href="javascript:void(0);" class="search-btn">
+		<i class="iconfont icon-line-search"></i>
+	</a>
+</div>
+					<ul>
+						
+						<li class="online">
+							<label class="radio-lbs">
+								<input type="radio" name="video" value="接受人1" />
+								<span class="inblock ib-mid">接受人1</span>
+							</label>
+						</li>
+						
+						<li class="busy">
+							<label class="radio-lbs">
+								<input type="radio" name="video" value="接受人2" />
+								<span class="inblock ib-mid">接受人2</span>
+							</label>
+						</li>
+						
+						<li class="offline">
+							<label class="radio-lbs">
+								<input type="radio" name="video" value="接受人3" />
+								<span class="inblock ib-mid">接受人3</span>
+							</label>
+						</li>
+						
+						<li class="offline">
+							<label class="radio-lbs">
+								<input type="radio" name="video" value="接受人4" />
+								<span class="inblock ib-mid">接受人4</span>
+							</label>
+						</li>
+						
+					</ul>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+                <button type="button" class="btns yes">呼叫</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 处理  -->
+<div class="modal in" id="solve">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <span>处理</span>
+                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+            </div>
+            <div class="modal-body">
+				<div class="modal-body-content">
+					<div class="lis-box">
+						<div class="small-tit bor-blue">基本信息</div>
+						<ul class="info-list">
+							
+							<li class="info-lis">
+								<label class="lbs">求助标题：</label>
+								
+									<span>xxxx案件证物检验需要求助</span>
+								
+							</li>
+							
+							<li class="info-lis">
+								<label class="lbs">接受人：</label>
+								
+									<span>全部用户</span>
+								
+							</li>
+							
+							<li class="info-lis">
+								<label class="lbs">求助描述：</label>
+								
+									<span>现场出现了一些状况，需要专家帮忙分析一下，详情见附件。</span>
+								
+							</li>
+							
+							<li class="info-lis">
+								<label class="lbs">附件：</label>
+								
+								<div class="down-file inblock">
+									<span>现场痕迹文件.docx</span>
+									<a href="javascript:void(0);" class="down-file-btn">
+										<i class="iconfont icon-line-vertical"></i>
+									</a>
+								</div>
+								
+							</li>
+							
+						</ul>
+					</div>
+					<div class="lis-box handle">
+						<div class="small-tit bor-blue">处理</div>
+						<ul class="handle-list">
+							<li class="handle-lis">
+								<label><font class="must">*</font>处理意见：</label>
+								<input type="text" class="uninps" placeholder="请输入处理意见"/>
+							</li>
+							<li class="handle-lis">
+								<label>添加附件：</label>
+								<div class="file-btn-box">
+	<button class="btns ib-mid"><i class="iconfont icon-line-backup"></i>上传文件</button>
+	<input type="file" class="hide" />
+	<span class="file-txt inblock ib-mid">支持扩展名：rar. zip. doc. docx. pdf. jpg...</span>
+</div>
+<ul class="file-list">
+	<li class="file-lis">
+		现场痕迹文件.docx
+		<a href="javascript:void(0);" class="del"><i class="iconfont icon-line-del"></i></a>
+	</li>
+</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+                <button type="button" class="btns yes">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 查看  -->
+<div class="modal in" id="look">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <span>查看</span>
+                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+            </div>
+            <div class="modal-body">
+				<div class="modal-body-content">
+					<div class="lis-box">
+						<div class="small-tit bor-blue">基本信息</div>
+						<ul class="info-list">
+							
+							<li class="info-lis">
+								<label class="lbs">求助标题：</label>
+								
+									<span>xxxx案件证物检验需要求助</span>
+								
+							</li>
+							
+							<li class="info-lis">
+								<label class="lbs">接受人：</label>
+								
+									<span>全部用户</span>
+								
+							</li>
+							
+							<li class="info-lis">
+								<label class="lbs">求助描述：</label>
+								
+									<span>现场出现了一些状况，需要专家帮忙分析一下，详情见附件。</span>
+								
+							</li>
+							
+							<li class="info-lis">
+								<label class="lbs">附件：</label>
+								
+									<div class="down-file inblock">
+	<span class="down-file-txt">现场痕迹文件.docx</span>
+	<a href="javascript:void(0);" class="down-file-btn">
+		<i class="iconfont icon-line-vertical"></i>
+	</a>
+</div>
+								
+							</li>
+							
+						</ul>
+					</div>
+					<div class="lis-box details">
+						<div class="small-tit bor-blue">详情</div>
+						<ul class="details-list">
+							
+							<li class="details-lis before-green">
+								<div class="details">
+									<span class="name">方语嫣  发布了求助</span>
+									<span class="time pull-right">2018-02-09 12:30:00</span>
+								</div>
+								
+							</li>
+							
+							<li class="details-lis before-blue">
+								<div class="details">
+									<span class="name">黄玉玉进行了处理</span>
+									<span class="time pull-right">2018-02-09 12:30:00</span>
+								</div>
+								
+									<div class="details-content">
+										<p class="details-content-txt">处理意见：针对提供的相关内容或材料进行了检测，发现这些痕迹存在很大一点，需要再次进行鉴定，确保准确性。</p>
+										<div class="file-box">
+											<label class="lbs">附件：</label>
+											<div class="down-file inblock">
+	<span class="down-file-txt">现场痕迹文件.docx</span>
+	<a href="javascript:void(0);" class="down-file-btn">
+		<i class="iconfont icon-line-vertical"></i>
+	</a>
+</div>
+										</div>
+									</div>
+								
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
     
 <script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/ztree/jquery.ztree.all.js"></script>
 <script src="../libs/bootstrap/dist/bootstrap.min.js"></script>
+<script src="../libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script src="../libs/icheck/icheck.min.js"></script>
-<script src="../libs/nicescroll/jquery.nicescroll.js"></script>
+<script src="../js/jquery.paging.js"></script>
 <script src="../js/global.js"></script>
 
 

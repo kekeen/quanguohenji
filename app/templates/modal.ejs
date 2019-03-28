@@ -1,0 +1,161 @@
+<!-- 发起视频  -->
+<div class="modal in" id="video">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <span>选择视频对象</span>
+                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+            </div>
+            <div class="modal-body">
+				<div class="modal-body-content">
+					<%- include('../templates/search') %>
+					<ul>
+						<% 
+							var radio = [{
+								val:['接受人1','接受人2','接受人3','接受人4'],
+								cls:['online','busy','offline','offline']
+							}];
+							for(var i in radio){
+								for(var j in radio[i].val){
+						%>
+						<li class="<%= radio[i].cls[j] %>">
+							<label class="radio-lbs">
+								<input type="radio" name="video" value="<%= radio[i].val[j] %>" />
+								<span class="inblock ib-mid"><%= radio[i].val[j] %></span>
+							</label>
+						</li>
+						<% }} %>
+					</ul>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+                <button type="button" class="btns yes">呼叫</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 处理  -->
+<div class="modal in" id="solve">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <span>处理</span>
+                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+            </div>
+            <div class="modal-body">
+				<div class="modal-body-content">
+					<div class="lis-box">
+						<div class="small-tit bor-blue">基本信息</div>
+						<ul class="info-list">
+							<%
+								var info = [{
+									lbs:['求助标题','接受人','求助描述','附件'],
+									content:['xxxx案件证物检验需要求助','全部用户','现场出现了一些状况，需要专家帮忙分析一下，详情见附件。','']
+								}];
+								for(var i=0;i<info[0].lbs.length;i++){
+							%>
+							<li class="info-lis">
+								<label class="lbs"><%= info[0].lbs[i] %>：</label>
+								<% if(i==3){ %>
+								<div class="down-file inblock">
+									<span>现场痕迹文件.docx</span>
+									<a href="javascript:void(0);" class="down-file-btn">
+										<i class="iconfont icon-line-vertical"></i>
+									</a>
+								</div>
+								<% }else{ %>
+									<span><%= info[0].content[i] %></span>
+								<% } %>
+							</li>
+							<% } %>
+						</ul>
+					</div>
+					<div class="lis-box handle">
+						<div class="small-tit bor-blue">处理</div>
+						<ul class="handle-list">
+							<li class="handle-lis">
+								<label><font class="must">*</font>处理意见：</label>
+								<input type="text" class="uninps" placeholder="请输入处理意见"/>
+							</li>
+							<li class="handle-lis">
+								<label>添加附件：</label>
+								<%- include('../templates/add_files') %>
+							</li>
+						</ul>
+					</div>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+                <button type="button" class="btns yes">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 查看  -->
+<div class="modal in" id="look">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <span>查看</span>
+                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+            </div>
+            <div class="modal-body">
+				<div class="modal-body-content">
+					<div class="lis-box">
+						<div class="small-tit bor-blue">基本信息</div>
+						<ul class="info-list">
+							<%
+								var info = [{
+									lbs:['求助标题','接受人','求助描述','附件'],
+									content:['xxxx案件证物检验需要求助','全部用户','现场出现了一些状况，需要专家帮忙分析一下，详情见附件。','']
+								}];
+								for(var i=0;i<info[0].lbs.length;i++){
+							%>
+							<li class="info-lis">
+								<label class="lbs"><%= info[0].lbs[i] %>：</label>
+								<% if(i==3){ %>
+									<%- include('../templates/down-file',{txt:'现场痕迹文件.docx'}) %>
+								<% }else{ %>
+									<span><%= info[0].content[i] %></span>
+								<% } %>
+							</li>
+							<% } %>
+						</ul>
+					</div>
+					<div class="lis-box details">
+						<div class="small-tit bor-blue">详情</div>
+						<ul class="details-list">
+							<%
+								var details = [{
+									name:['方语嫣  发布了求助','黄玉玉进行了处理'],
+									cls:['green','blue']
+								}];
+								for(var i in details[0].name){
+							%>
+							<li class="details-lis before-<%= details[0].cls[i] %>">
+								<div class="details">
+									<span class="name"><%= details[0].name[i] %></span>
+									<span class="time pull-right">2018-02-09 12:30:00</span>
+								</div>
+								<% if(i==1){ %>
+									<div class="details-content">
+										<p class="details-content-txt">处理意见：针对提供的相关内容或材料进行了检测，发现这些痕迹存在很大一点，需要再次进行鉴定，确保准确性。</p>
+										<div class="file-box">
+											<label class="lbs">附件：</label>
+											<%- include('../templates/down-file',{txt:'现场痕迹文件.docx'}) %>
+										</div>
+									</div>
+								<% } %>
+							</li>
+							<% } %>
+						</ul>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
