@@ -261,6 +261,85 @@ button.inps{
         }
     }
 }
+.hadLogin{
+  >ul{
+    .flex;
+    >li{
+      position: relative;
+      margin-left: 16px;
+      .icon-line-search{
+        font-size: 24px;
+      }
+      .icon-line-noti{
+        font-size: 24px;
+      }
+    }
+  }
+  .imgBox{
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .name{
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 2px;
+      font-size: 12px;
+    }
+  }
+  .notice{
+    position: relative;
+    .num{
+      position: absolute;
+      right: -1px;
+      top: -9px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      text-align: center;
+      line-height: 15px;
+      border-radius: 50%;
+      background: #e33751;
+      font-size: 10px;
+    }
+  }
+  .outBox{
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    right: 0;
+    background: white;
+    width: 112px;
+    padding: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    &:before{
+      position: absolute;
+      top: -20px;
+      right: 0;
+      width: 0;
+      height: 0;
+      content: '';
+
+    }
+    .outBtn{
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #6c849c;
+    }
+  }
+}
 /* 头部end */
 
 /* 内容 start */
