@@ -1,0 +1,8 @@
+{
+  "title": "首页",
+  "index":true,
+  "styles": [
+    "../css/index.css"
+  ],
+  "scripts":[]
+}
