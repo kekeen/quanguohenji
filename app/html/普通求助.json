@@ -1,0 +1,10 @@
+{
+  "title": "普通求助",
+  "atname": "人员协同",
+  "kidname":"普通求助",
+  "szxt":true,
+  "styles": [
+  	"../css/ordinary.css"
+  ],
+  "scripts":[]
+}

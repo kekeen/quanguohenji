@@ -95,8 +95,9 @@ commonJs.fn = {
 	}
 };
 function resize(){
-	var height = $(".content-right").height() - $(".links").outerHeight(true) - $(".console-box").outerHeight(true);
+	var height = $(".content-right").height() - $(".links").outerHeight(true) - $(".console-box").outerHeight(true) - $(".progress-box").outerHeight(true);
 		$(".right-content-box").outerHeight(height);
+		console.log($(".console-box").outerHeight(true))
 }
 $(window).resize(function(){
 	resize();

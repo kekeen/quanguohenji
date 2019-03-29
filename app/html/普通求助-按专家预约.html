@@ -1,0 +1,102 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">普通求助</a>
+        	</div>
+        	<div class="progress-box">
+        		<ul class="progress-list inblock">
+        			<% 
+        				var progress = [{
+        					txt:'专家选择',
+        					state:'complete'
+        				},{
+        					txt:'预约时段',
+        					state:'have-in-hand'
+        				},{
+        					txt:'信息提交',
+        					state:'carry-on'
+        				}];
+        				for(var i in progress){
+        			%>
+        			<li class="inblock <%= progress[i].state %>">
+        				<div class="ball-box"><span class="ball"></span></div>
+        				<span class="<%= i==2 ? '' : 'txtbule' %>"><%= progress[i].txt %></span>
+        			</li>
+        			<% } %>
+        		</ul>
+        	</div>
+        	<div class="console-box whitebox">
+        		<ul>
+        			<li>
+        				<div class="left-box inblock">
+		        			<label class="lbs">擅长专业：</label>
+		        			<%
+		        				var btns = ['全部','现场勘查','工具痕迹检验','锁具检验','痕迹检验','分离体检验','交通事故分析','其他'];
+		        				for(var i in btns){
+		        			%>
+		        			<button class="inps"><%= btns[i] %></button>
+		        			<% } %>
+		        		</div>
+		        		<div class="console-right pull-right">
+		        			<button class="inps"><i class="iconfont icon-line-reply"></i>返回</button>
+		        		</div>
+        			</li>
+        			<li>
+        				<div class="left-box inblock">
+		        			<label class="lbs">专家姓名：</label>
+		        			<input type="text" class="inps" placeholder="请输入专家姓名"/>
+		        			<button class="btns">查询</button>
+		        		</div>
+		        		<div class="console-right pull-right">
+		        			<label class="lbs">排序方式：</label>
+		        			<div class="dropdown">
+								<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+					            <ul class="dropdown-menu">
+					            	<% 
+					            		var drop = ['姓名','活跃度'];
+					            		for(var i in drop){
+			            			 %>
+					                <li><a href="javascript:;"><%= drop[i] %></a></li>
+					                <% } %>
+					            </ul>
+				            </div>
+		        		</div>
+        			</li>
+        		</ul>
+        	</div>
+        	<div class="right-content-box">
+        		<div class="flex-box">
+        			<% for(var i=0;i<18;i++){ %>
+		        		<div class="card inblock ib-top whitebox">
+		        			<div class="card-top">
+		        				<img src="../images/hj.png" class="card-head inblock ib-mid"/>
+		        				<p class="inblock ib-mid">
+		        					<span class="name">陈一新</span>
+		        					<span class="introduce">足迹检验</span>
+		        				</p>
+		        			</div>
+		        			<div class="card-content">
+		        				<span class="source">湖南省公安厅</span>
+		        				<p class="card-content-txt">
+		        					擅长指纹检验策略，曾为多起大型案件提供过服务擅长指纹检验策略，曾为多起大型案件提供过服务擅长指纹检验策略，曾为多起大型案件提供过服务擅长指纹检验策略，曾为多起大型案件提供过服务
+		        				</p>
+		        				<div class="card-btn-box">
+			        				<button class="btns">马上预约</button>
+			        			</div>
+		        			</div>
+		        		</div>
+        			<% } %>
+        		</div>
+        		<div class="pag-box">
+					<div class="pagging"></div>
+				</div>
+        	</div>
+        </div>
+    </div>
+    <%- include('../templates/foot') %>
+</body>
+</html>

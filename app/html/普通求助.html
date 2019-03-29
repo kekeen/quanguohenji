@@ -1,0 +1,191 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">普通求助</a>
+        	</div>
+        	<%
+        		var tab = ['我发出的预约','我收到的预约'],
+        		btns = [{
+        			val:'按专家预约',
+        			href:'普通求助-按专家预约'
+        		},{
+        			val:'按日期预约',
+        			href:'普通协助-按日期预约'
+        		}]
+        	%>
+        	<%- include('../templates/personnel_console',{btns:btns,tab:tab,index:'0'}) %>
+        	<div class="right-content-box whitebox">
+        		<div class="table-box">
+        			<div class="table-console-box">
+        				<%
+	        				var data = [
+								{lbs:'专家姓名',type:'text',txt:'请输入'},
+								{lbs:'状态',type:'drop',drop:['全部','已预约','已取消']},
+								{lbs:'发布时间',type:'time'},
+								{lbs:'查询',type:'btn'}
+							];
+	        			%>
+	        			<%- include('../templates/table_console',{data:data}) %>
+        			</div>
+        			<% var thead = ['专家姓名','值班时间','状态','预约人','预约时间','操作']; %>
+        			<table class="tables">
+        				<thead>
+        					<tr>
+        						<% for(var i in thead){ %>
+        						<th><%= thead[i] %></th>
+        						<% } %>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<% for(var i=0;i<10;i++){ %>
+        					<tr>
+        						<td class="title">陈易信</td>
+        						<td>2018-11-13 12:00</td>
+        						<td>已预约</td>
+        						<td>方语嫣</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid <%= i>5 ? 'txtdis' : 'txtcol' %>" data-toggle="modal" data-target="#cancel">取消预约</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid <%= i>5 ? 'txtdis' : 'txtcol' %>" data-toggle="modal" data-target="#launch_video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					<% } %>
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+    
+    <!-- 查看  -->
+	<div class="modal in" id="look">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>查看</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						<div class="lis-box">
+							<div class="small-tit bor-blue">基本信息</div>
+							<ul class="info-list">
+								<%
+									var info = [{
+										lbs:['求助标题','在值时间','预约事由','附件'],
+										content:['xxxx案件证物检验需要求助','2018-12-26 15:00—16:00','有相关问题需要询问专家','无']
+									}];
+									for(var i=0;i<info[0].lbs.length;i++){
+								%>
+								<li class="info-lis">
+									<label class="lbs"><%= info[0].lbs[i] %>：</label>
+									<span><%= info[0].content[i] %></span>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+						<div class="lis-box details">
+							<div class="small-tit bor-blue">详情</div>
+							<ul class="details-list">
+								<%
+									var details = [{
+										name:['方语嫣  进行了预约','黄玉玉 发起了视频'],
+										cls:['green','blue']
+									}];
+									for(var i in details[0].name){
+								%>
+								<li class="details-lis before-<%= details[0].cls[i] %>">
+									<div class="details">
+										<span class="name"><%= details[0].name[i] %></span>
+										<span class="time pull-right">2018-02-09 12:30:00</span>
+									</div>
+									<% if(i==1){ %>
+										<div class="details-content">
+											<p class="details-content-txt">接通状态：已接通</p>
+											<p class="details-content-txt">视频时长：05:25</p>
+										</div>
+									<% } %>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 发起视频  -->
+	<div class="modal in small" id="launch_video">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>发起视频</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						确定向专家【陈易新】发起视频？
+					</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+	                <button type="button" class="btns yes">确定</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+	<!-- 取消预约  -->
+	<div class="modal in small" id="cancel">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>取消预约</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							<%
+								var cancel = [{
+									lbs:'专家姓名',
+									txt:'陈易新'
+								},{
+									lbs:'值班时间',
+									txt:'2018-12-16 15:00—16:00'
+								},{
+									lbs:'取消原因',
+									txt:'请输入原因'
+								}];
+								for(var i in cancel){
+							%>
+							<li>
+								<label class="lbs"><%= cancel[i].lbs %>：</label>
+								<% if(cancel[i].lbs == '取消原因'){ %>
+									<input type="text" class="uninps" placeholder="<%= cancel[i].txt %>"/>
+								<% }else{ %>
+									<span><%= cancel[i].txt %></span>
+								<% } %>
+							</li>
+							<% } %>
+						</ul>
+					</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+	                <button type="button" class="btns yes">确定</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+    <%- include('../templates/foot') %>
+</body>
+</html>

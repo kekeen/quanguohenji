@@ -97,6 +97,12 @@ a:focus {
   margin: 0 auto;
 }
 /* 公共 start */
+.txtwhite {
+  color: #fff;
+}
+label {
+  font-weight: normal;
+}
 .radio-lbs,
 .check-lbs {
   font-weight: normal;
@@ -514,6 +520,9 @@ button.inps.actve {
 .content .content-right .console-box .console-right {
   margin: 13px;
 }
+.content .content-right .console-box .console-right .btns {
+  margin: 0 10px;
+}
 .content .content-right .right-content-box {
   overflow: auto;
 }
@@ -523,9 +532,6 @@ button.inps.actve {
 }
 .content .content-right .right-content-box .table-console-box .tables-console-lis {
   margin: 0 10px;
-}
-.content .content-right .right-content-box .table-console-box .tables-console-lis label.lbs {
-  margin-right: 5px;
 }
 /* 内容 end */
 /* 表格  start */
@@ -824,6 +830,68 @@ button.inps.actve {
 }
 .tree-box .ztree li a.curSelectedNode {
   height: 100%;
+}
+.progress-box {
+  height: 50px;
+  margin: 5px 0;
+  text-align: center;
+}
+.progress-box .progress-list .txtbule {
+  color: #03acef;
+}
+.progress-box .progress-list li {
+  position: relative;
+  text-align: center;
+  margin-right: 75px;
+}
+.progress-box .progress-list li .ball-box {
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+}
+.progress-box .progress-list li .ball {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.progress-box .progress-list li:after {
+  position: absolute;
+  content: "";
+  width: 94px;
+  height: 3px;
+  top: 10px;
+  left: 47px;
+}
+.progress-box .progress-list li.complete:after {
+  background: #03acef;
+}
+.progress-box .progress-list li.complete .ball {
+  background-image: url(../images/complete.png);
+}
+.progress-box .progress-list li.have-in-hand:after {
+  background: #d2d2d2;
+}
+.progress-box .progress-list li.have-in-hand .ball {
+  background-image: url(../images/have-in-hand.png);
+}
+.progress-box .progress-list li.carry-on:after {
+  display: none;
+}
+.progress-box .progress-list li.carry-on .ball {
+  width: 8px;
+  height: 8px;
+  background: #d2d2d2;
+}
+.progress-box .progress-list li:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=comment.css.map */

@@ -22,6 +22,12 @@
     border-bottom: 1px solid #d4e1e9;
 }
 /* 公共 start */
+.txtwhite{
+    color: #fff;
+}
+label{
+    font-weight: normal;
+}
 .radio-lbs,.check-lbs{
     font-weight: normal;
     .icheckbox_flat-blue, .iradio_flat-blue{
@@ -383,7 +389,10 @@ button.inps{
                 }
             }
             .console-right{
-                margin: 13px
+                margin: 13px;
+                .btns{
+                    margin: 0 10px;
+                }
             }
         }
         .right-content-box{
@@ -393,9 +402,6 @@ button.inps{
                 .border-bottom();
                 .tables-console-lis{
                     margin: 0 10px;
-                    label.lbs{
-                        margin-right: 5px;
-                    }
                 }
             }
         }
@@ -686,4 +692,75 @@ button.inps{
       }
     }
   }
+}
+
+.progress-box{
+    height: 50px;
+    margin: 5px 0;
+    text-align: center;
+    .progress-list{
+        .txtbule{
+            color: #03acef;
+        }
+        li{
+            position: relative;
+            text-align: center;
+            margin-right: 75px;
+            .ball-box{
+                height: 24px;
+                line-height: 24px;
+                position: relative;
+            }
+            .ball{
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                width: 94px;
+                height: 3px;
+                top: 10px;
+                left: 47px;
+            }
+            &.complete{
+                &:after{
+                    background: #03acef;
+                }
+                .ball{
+                    background-image: url(../images/complete.png);
+                }
+            }
+            &.have-in-hand{
+                &:after{
+                    background: #d2d2d2;
+                }
+                .ball{
+                    background-image: url(../images/have-in-hand.png);
+                }
+            }
+            &.carry-on{
+                &:after{
+                    display: none;
+                }
+                .ball{
+                    width: 8px;
+                    height: 8px;
+                    background: #d2d2d2;
+                }
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            
+        }
+    }
 }

@@ -7,7 +7,14 @@
         	<div class="links">
         		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">紧急求助</a>
         	</div>
-        	<%- include('../templates/personnel_console',{index:'1'}) %>
+        	<%
+        		var tab = ['我发出的求助','待我处理的求助','我已处理的求助'],
+        		btns = [{
+        			val:'发布紧急求助',
+        			href:'发布紧急求助'
+        		}]
+        	%>
+        	<%- include('../templates/personnel_console',{btns:btns,tab:tab,index:'1',btns:btns}) %>
         	<div class="right-content-box whitebox">
         		<div class="table-box">
         			<div class="table-console-box">
