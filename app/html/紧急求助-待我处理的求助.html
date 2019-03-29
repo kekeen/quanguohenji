@@ -1,0 +1,73 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">紧急求助</a>
+        	</div>
+        	<%
+        		var tab = [{
+        			name:'我发出的求助',
+        			href:'紧急求助-我发出的求助'
+        		},{
+        			name:'待我处理的求助',
+        			href:'紧急求助-待我处理的求助'
+        		},{
+        			name:'我已处理的求助',
+        			href:'紧急求助-我已处理的求助'
+        		}],
+        		btns = [{
+        			val:'紧急求助-发布紧急求助',
+        			href:'紧急求助-发布紧急求助'
+        		}]
+        	%>
+        	<%- include('../templates/personnel_console',{btns:btns,tab:tab,index:'1',btns:btns}) %>
+        	<div class="right-content-box whitebox">
+        		<div class="table-box">
+        			<div class="console-box-list">
+        				<%
+	        				var data = [
+								{lbs:'求助标题',type:'text',txt:'请输入求助标题'},
+								{lbs:'发布时间',type:'time'},
+								{lbs:'查询',type:'btn'}
+							];
+	        			%>
+	        			<%- include('../templates/table_console',{data:data}) %>
+        			</div>
+        			<% var thead = ['求助标题','发布人','发布时间','操作']; %>
+        			<table class="tables">
+        				<thead>
+        					<tr>
+        						<% for(var i in thead){ %>
+        						<th style="width:<%= i==0 ? '40%' : thead[i]=='操作' ? '240px' : '' %>;"><%= thead[i] %></th>
+        						<% } %>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<% for(var i=0;i<10;i++){ %>
+        					<tr>
+        						<td class="title">xxx案件证据验证</td>
+        						<td>方语嫣</td>
+        						<td>2018-11-13 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid <%= i>5 ? 'txtdis' : 'txtcol' %>" data-toggle="modal" data-target="#solve">处理</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid <%= i>5 ? 'txtdis' : 'txtcol' %>" data-toggle="modal" data-target="#video">发起视频</a>
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        						</td>
+        					</tr>
+        					<% } %>
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <%- include('../templates/modal') %>
+    <%- include('../templates/foot') %>
+</body>
+</html>

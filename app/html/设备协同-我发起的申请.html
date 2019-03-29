@@ -1,0 +1,165 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content">
+		<%- include('../templates/left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">实战协同</a> /
+				<a href="###">人员协同</a> /
+				<a href="###" class="at">设备协同</a>
+			</div>
+			<%
+        		var tab = [{
+        			name:'我发起的申请',
+        			href:'设备协同-我发起的申请'
+        		},{
+        			name:'我收到的申请',
+        			href:'设备协同-我收到的申请'
+        		}],
+        		btns = [{
+        			val:'设备申请',
+        			href:'设备协同-设备申请'
+        		}]
+        	%>
+			<%- include('../templates/personnel_console',{btns:btns,tab:tab,index:'0'}) %>
+			<div class="right-content-box whitebox">
+				<div class="table-box">
+					<div class="console-box-list">
+						<%
+	        				var data = [
+								{lbs:'设备名称',type:'text',txt:'请输入'},
+								{lbs:'借用方式',type:'drop',drop:['请选择','设备借出','送料来检']},
+								{lbs:'状态',type:'drop',drop:['未审批','已审批']},
+								{lbs:'申请时间',type:'time'}
+							];
+	        			%>
+						<%- include('../templates/table_console',{data:data}) %>
+					</div>
+					<% var thead = ['设备名称','借用方式','申请人','状态','申请时间','操作']; %>
+					<table class="tables">
+						<thead>
+							<tr>
+								<% for(var i in thead){ %>
+								<th style="width:<%= i==0 ? '40%' : thead[i]=='操作' ? '240px' : '' %>;">
+									<%= thead[i] %>
+								</th>
+								<% } %>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var i=0;i<10;i++){ %>
+							<tr>
+								<td class="title">指纹鉴定设备001</td>
+								<td>设备借出</td>
+								<td>方语嫣</td>
+								<td>未审批</td>
+								<td>2018-11-13 12:00</td>
+								<td class="operation">
+									<a href="javascript:void(0);" class="inblock ib-mid <%= i>5 ? 'txtdis' : 'txtcol' %>" data-toggle="modal" data-target="#return">归还</a>
+									<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+								</td>
+							</tr>
+							<% } %>
+						</tbody>
+					</table>
+					<div class="pag-box">
+						<div class="pagging"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 归还  -->
+	<div class="modal in small" id="return">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>发起视频</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						确定归还设备【指纹鉴定设备】？
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 查看  -->
+	<div class="modal in" id="look">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>查看</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						<div class="lis-box">
+							<div class="small-tit bor-blue">基本信息</div>
+							<ul class="info-list">
+								<%
+								var info = [{
+									lbs:['求助标题','接受人','求助描述','附件'],
+									content:['xxxx案件证物检验需要求助','全部用户','现场出现了一些状况，需要专家帮忙分析一下，详情见附件。','']
+								}];
+								for(var i=0;i<info[0].lbs.length;i++){
+							%>
+								<li class="info-lis">
+									<label class="lbs"><%= info[0].lbs[i] %>：</label>
+									<% if(i==3){ %>
+									<%- include('../templates/down-file',{txt:'现场痕迹文件.docx'}) %>
+									<% }else{ %>
+									<span><%= info[0].content[i] %></span>
+									<% } %>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+						<div class="lis-box details">
+							<div class="small-tit bor-blue">详情</div>
+							<ul class="details-list">
+								<%
+								var details = [{
+									name:['方语嫣  提交了申请','黄玉玉 进行了审批'],
+									cls:['green','blue']
+								}];
+								for(var i in details[0].name){
+							%>
+								<li class="details-lis before-<%= details[0].cls[i] %>">
+									<div class="details">
+										<span class="name"><%= details[0].name[i] %></span>
+										<span class="time pull-right">2018-02-09 12:30:00</span>
+									</div>
+									<% if(i==1){ %>
+									<div class="details-content">
+										<p class="details-content-txt">
+											<label class="lbs">审批结果：</label>
+											<span>通过</span>
+										</p>
+										<p class="details-content-txt">
+											<label class="lbs">审批意见：</label>
+											<span>可提供设备进行协助。</span>
+										</p>
+									</div>
+									<% } %>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%- include('../templates/foot') %>
+</body>
+
+</html>

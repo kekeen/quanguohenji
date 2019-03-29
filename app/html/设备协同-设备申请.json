@@ -1,0 +1,9 @@
+{
+  "title": "设备协同-设备申请",
+  "atname": "设备协同",
+  "szxt":true,
+  "styles": [
+  	"../css/apply.css"
+  ],
+  "scripts":[]
+}

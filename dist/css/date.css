@@ -33,6 +33,7 @@
   height: 50px;
   padding: 10px 20px;
   box-sizing: border-box;
+  position: relative;
 }
 .right-content-box .tables-box .time-tables td span {
   display: block;
@@ -56,6 +57,36 @@
   background: #7ecef4;
 }
 .right-content-box .tables-box .time-tables td.order {
+  background: #0eb5f8;
+}
+.right-content-box .tables-box .time-tables td .tips-box {
+  position: absolute;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 999;
+  text-align: left;
+}
+.right-content-box .tables-box .time-tables td .tips-box .tips-box-top .name {
+  color: #283e53;
+  margin-right: 15px;
+}
+.right-content-box .tables-box .time-tables td .tips-box .tips-box-top .inps {
+  border: 1px solid #3598db;
+  color: #3598db;
+  box-shadow: none;
+}
+.right-content-box .tables-box .time-tables td .tips-box .tips-box-content .skillbar {
+  width: 160px;
+  height: 6px;
+  border-radius: 4px;
+  background: #eff4f7;
+  margin-right: 18px;
+}
+.right-content-box .tables-box .time-tables td .tips-box .tips-box-content .skillbar .skill {
+  width: 80%;
+  height: 100%;
+  border-radius: 4px;
   background: #0eb5f8;
 }
 .right-content-box .tables-box .time-tables .order-btn {

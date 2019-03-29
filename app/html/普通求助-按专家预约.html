@@ -18,7 +18,7 @@
         					state:'have-in-hand'
         				},{
         					txt:'信息提交',
-        					state:'carry-on'
+        					state:'carry-on end'
         				}];
         				for(var i in progress){
         			%>
@@ -60,7 +60,7 @@
 					            		var drop = ['姓名','活跃度'];
 					            		for(var i in drop){
 			            			 %>
-					                <li><a href="javascript:;"><%= drop[i] %></a></li>
+					                <li><a href="javascript:void(0);"><%= drop[i] %></a></li>
 					                <% } %>
 					            </ul>
 				            </div>

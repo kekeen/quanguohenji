@@ -1,15 +1,22 @@
 <div class="console-box whitebox">
 	<div class="tab-box">
 		<% for(var i in tab){  %>
-		<a href="<%= tab[i] == '我发出的求助' ? '紧急求助' : tab[i] %>.html" class="<%= i == index ? 'active' : '' %>">
-			<%= tab[i] %>
-			<span class="num <%= tab[i] == '待我处理的求助' ? '' : 'hide' %>">1</span>
+		<a href="<%= tab[i].href %>.html" class="<%= i == index ? 'active' : '' %>">
+			<%= tab[i].name %>
+			<span class="num <%= tab[i].name == '待我处理的求助' ? '' : 'hide' %>">1</span>
 		</a>
 		<% } %>
 	</div>
 	<div class="console-right pull-right">
 		<% for(var i in btns){ %>
-		<button class="btns" onclick="window.location.href ='<%= btns[i].href %>.html'"><%= btns[i].val %></button>
-		<% } %>
+			<% if(btns[i].val == '返回'){ %>
+				<button class="inps" onclick="window.history.back(-1);'">
+				<i class="iconfont icon-line-reply"></i>
+				返回
+			<% }else{ %>
+				<button class="btns" onclick="window.location.href ='<%= btns[i].href %>.html'">
+				<%= btns[i].val %>
+		</button>
+		<% }} %>
 	</div>
 </div>

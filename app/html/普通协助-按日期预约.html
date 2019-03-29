@@ -18,7 +18,7 @@
         					state:'have-in-hand'
         				},{
         					txt:'信息提交',
-        					state:'carry-on'
+        					state:'carry-on end'
         				}];
         				for(var i in progress){
         			%>
@@ -69,7 +69,7 @@
         							%>
         								<td class="cancel-order">
         									<span class="txtwhite">预约被取消</span>
-        									<a href="javascript:;" class="order-btn">点击重新发起</a>
+        									<a href="javascript:void(0);" class="order-btn">点击重新发起</a>
         								<% }else if(i==4 && j==5){ %>
         								<td class="order">
         									<span class="txtwhite">已预约</span>
@@ -82,15 +82,20 @@
         								<td>
         									<span class="nothing"></span>
 									<% } %>
-									<div class="tips-box">
-										<div class="tips-box-top">
-											<span class="name">陈美玲</span>
-											<label class="inps">勘查</label>
+									<div class="tips-box whitebox hide">
+											<div class="tips-box-top">
+												<span class="name inblock">陈美玲</span>
+												<label class="inps">勘查</label>
+											</div>
+											<div class="tips-box-content">
+												<div class="skillbar inblock ib-mid">
+													<div class="skill" data-width="80%"></div>
+												</div>
+												<span class="inblock ib-mid">
+													<font class="num">8</font>/10
+												</span>
+											</div>
 										</div>
-										<div class="tips-box-content">
-											
-										</div>
-									</div>
 									</td>
     							<% } %>
         					</tr>	

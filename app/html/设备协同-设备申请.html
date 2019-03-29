@@ -1,0 +1,223 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content">
+		<%- include('../templates/left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">实战协同</a> /
+				<a href="###">人员协同</a> /
+				<a href="###" class="at">设备协同</a>
+			</div>
+			<div class="console-box whitebox">
+				<div class="console-box-list inblock">
+				<%
+        				var data = [
+							{lbs:'设备名称',type:'text',txt:'请输入'},
+							{lbs:'实验室',type:'drop',drop:['请选择']},
+							{lbs:'单位',type:'drop',drop:['请选择']},
+							{lbs:'设备类型',type:'drop',drop:['请选择']},
+							{lbs:'查询',type:'btn'}
+						],
+						btns = [{
+		        			val:'返回'
+		        		}]
+        			%>
+					<%- include('../templates/table_console',{data:data}) %>
+				</div>
+				<div class="console-right pull-right">
+					<button class="inps" onclick="window.history.back(-1);'">
+					<i class="iconfont icon-line-reply"></i>
+					返回
+				</div>
+			</div>
+			<div class="right-content-box whitebox">
+				<% for(var i=0;i<5;i++){ %>
+				<div class="equipment-lis">
+					<div class="equipment-lis-left inblock">
+						<div class="img-box inblock ib-top"></div>
+						<div class="equipment-info inblock ib-top">
+							<span class="name">复合光学显微镜（检验类）</span>
+							<p class="describe">复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域（功能介绍）</p>
+							<ul class="info-list">
+								<%
+									var list = ['型号：FH9002','品牌：徕卡','实验室：痕迹处足迹实验室','实验室：痕迹处足迹实验室','创建人：陈一新','创建时间：2019-01-12 12:30'];
+									for(var j in list){
+								%>
+								<li class="inblock ib-mid">
+									<span><%= list[j] %></span>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+					</div>
+					<div class="equipment-lis-right pull-right">
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#look">查看</a>
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#borrow">借用</a>
+					</div>
+				</div>
+				<% } %>
+				<div class="pag-box">
+					<div class="pagging"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 查看  -->
+	<div class="modal in" id="look">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>查看</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							<%
+								var list = [{
+									lbs:'设备名称',
+									type:'must',
+									content:'复合光学显微镜'
+								},{
+									lbs:'设备类型',
+									type:'must',
+									content:'检验类'
+								},{
+									lbs:'设备型号',
+									type:'normal',
+									content:'FH9002'
+								},{
+									lbs:'功能简介',
+									type:'longtxt',
+									content:'复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域样品制备和医疗设备等业务领域设备等业务领域设设备等业 务领域设备等业务领域设设备等业务领域设备等业务领域设设备等业务领域设备等业务。'
+								},{
+									lbs:'设备图片',
+									type:'img',
+									content:'equipment.png'
+								},{
+									lbs:'公司名称',
+									type:'must',
+									content:'北京市云居设备制造有限公司'
+								}];
+								for(var i in list){
+									var type = list[i].type;
+							%>
+							<li>
+								<label class="lbs ib-top">
+									<font class="must <%= list[i].type == 'must' ? '' : 'hide' %> ">*</font>
+									<%= list[i].lbs %>：
+								</label>
+								<div class="lis-content inblock ib-top">
+									<% if(type == 'img'){ %>
+										<div class="img-box">
+											<img src="../images/<%= list[i].content %>"/>
+											<a href="javascript:void(0);" class="box-shadow-box">
+												<i class="iconfont icon-line-zoom"></i>
+											</a>
+										</div>
+									<% }else if(type == 'longtxt'){ %>
+										<span class="long-txt">
+											<%= list[i].content %>
+										</span>
+										<a href="javascript:void(0);" class="long-txt-btn">
+											<span class="txt">展开</span>
+											<span class="caret"></span>
+										</a>
+									<% }else{ %>
+										<%= list[i].content %>
+									<% } %>
+								</div>
+							</li>
+							<% } %>
+						</ul>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="modal in list" id="borrow">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>借用</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							<li class="modal-lis">
+								<label class="lbs"><font class="must">*</font>借用方式：</label>
+								<div class="dropdown">	
+						            <% var drop = ['设备接出','送料来检'] %>
+									<button class="uninps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+						            <ul class="dropdown-menu">
+						            	<% for(var j in drop){ %>
+						                <li><a href="javascript:void(0);"><%= drop[j] %></a></li>
+						                <% } %>
+						            </ul>
+					            </div>
+							</li>
+							<li class="modal-lis">
+								<label class="lbs">申请事由：</label>
+								<textarea class="uninps" placeholder="请输入申请事由"></textarea>
+							</li>
+							<li class="modal-lis">
+								<%- include('../templates/add-files') %>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 查看大图 -->
+	<div class="modal fade" id="bigpic">
+		<div id="myCarousel" class="carousel slide">
+			<a href="javascript:void(0)" class="close" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-icon_biaoqian_close"></i></a>
+			<div class="carousel-inner">
+				<div class="item active"><img src="../images/equipment.png %>"/></div>
+			</div>
+			<a href="#myCarousel" data-slide="prev" class="carousel-control left txtwhite">
+				<i class="iconfont icon-icon_jiantou1"></i>
+			</a>
+			<a href="#myCarousel" data-slide="next" class="carousel-control right txtwhite">
+				<i class="iconfont icon-icon_jiantou"></i>
+			</a>
+		</div>
+	</div>
+	<%- include('../templates/foot') %>
+	<script>
+		$(function(){
+			$("#look").on('click','.long-txt-btn',function(){	
+				var that = $(this),
+					txt = that.find('.txt'),
+					val = txt.text();
+				if(val == '展开'){
+					that.siblings('.long-txt').addClass('show');
+					txt.html('收起');
+					that.addClass('active');
+				}else{
+					that.siblings('.long-txt').removeClass('show');
+					txt.html('展开');
+					that.removeClass('active');
+				}
+			});
+			$("#look").on("click",'.box-shadow-box',function(){
+				$("#bigpic").modal();
+			});
+			console.log($("#bigpic").find('.carousel-inner .item').length)
+			if($("#bigpic").find('.carousel-inner .item').length == 1){
+				$("#bigpic .carousel-control").addClass('hide');
+			}
+		})
+	</script>
+</body>
+
+</html>
