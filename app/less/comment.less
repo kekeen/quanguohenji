@@ -24,6 +24,11 @@
 
 
 /* 公共 start */
+.must {
+    color: #e4535a;
+    margin-right: 2px;
+    vertical-align: sub;
+}
 .console-box-list {
     padding: 15px 20px;
     .border-bottom();
@@ -72,7 +77,15 @@ label {
         margin-left: 5px;
     }
 }
-
+.down-file {
+    color: #03acef;
+    a {
+        color: #03acef;
+    }
+    .iconfont {
+        margin-left: 5px;
+    }
+}
 .file-lis {
     margin: 10px 0;
     color: #283e53;
@@ -584,10 +597,6 @@ button.inps {
 
 .modal {
     color: #283e53;
-    .must {
-        color: #e4535a;
-        margin-right: 2px;
-    }
     .modal-body {
         padding: 20px 0;
         min-height: 280px;
@@ -688,15 +697,6 @@ button.inps {
                     }
                 }
             }
-        }
-    }
-    .down-file {
-        color: #03acef;
-        a {
-            color: #03acef;
-        }
-        .iconfont {
-            margin-left: 15px;
         }
     }
     .lis-box {
@@ -1038,3 +1038,60 @@ button.inps {
     }
 }
 /*查看大图 end*/
+
+.right-content-box.config{
+    padding: 30px 40px;
+    box-sizing: border-box;
+    .title{
+        color: #283e53;
+        font-size: 16px;
+        padding: 10px 0;
+        border-bottom: 1px solid #fdd837;
+        margin-bottom: 25px;
+        .title-txt{
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: #3598db;
+                bottom: -14px;
+                left: 0;
+            }
+        }
+    }
+    .config-list{
+        width: 800px;
+        .config-lis{
+            margin: 15px 0;
+            .lbs{
+                display: block;
+                color: #6c849c;
+                font-size: 12px;
+                margin-bottom: 15px;
+                font-weight: normal;
+            }
+            .uninps{
+                width: 100%;
+            }
+            .config-btn-box{
+                .inps{
+                    margin-right: 5px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .radio-lbs,.check-lbs{
+                margin-right: 20px;
+            }
+        }
+    }
+    .btn-box{
+        text-align: center;
+        .btns{
+            margin: 0 10px;
+        }
+    }
+}

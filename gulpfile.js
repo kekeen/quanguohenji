@@ -180,6 +180,11 @@ gulp.task('copy', function(){
         './app/libs/ztree/**'
     ])
         .pipe(gulp.dest('./dist/libs/ztree'));
+        
+    gulp.src([
+        './app/libs/utf8-net/**'
+    ])
+        .pipe(gulp.dest('./dist/libs/utf8-net'));
 });
 // ----------------静态页面开发流程----------------end
 

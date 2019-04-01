@@ -74,5 +74,12 @@
         </div>
     </div>
     <%- include('../templates/foot') %>
+    <script>
+    	$(".btns").hover(function(){
+    		$(this).find('.console-tips-box').removeClass('hide');
+    	},function(){
+    		$(this).find('.console-tips-box').addClass('hide');
+    	});
+    </script>
 </body>
 </html>

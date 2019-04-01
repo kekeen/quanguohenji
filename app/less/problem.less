@@ -1,0 +1,114 @@
+.boxs{
+    padding: 30px 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color:#283e53; 
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .small-tit{
+        margin-bottom: 20px;
+        color: #6c849c;
+        font-size: 16px;
+    }
+    .info-list{
+        li{
+            margin: 10px 0;
+            .lbs{
+                width: 100px;
+                text-align: right;
+                margin-right: 20px;
+            }
+        }
+    }
+    .problem-list{
+        li{
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d4e1e9;
+            box-sizing: border-box;
+            .lis-head{
+                width: 36px;
+                height: 36px;
+                border-radius:50%;
+                margin-right: 10px;
+            }
+            .lis-content{
+                width: calc(~"100% - 55px");
+                .name{
+                    color: #6c849c;
+                }
+                .content-txt{
+                    margin: 10px 0;
+                }
+                .operation-box{
+                    margin-top: 10px;
+                    .time{
+                        color: #9eabbc;
+                        font-size: 12px;
+                    }
+                    .right-box{
+                        a{
+                            margin-right: 20px;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .reply-box{
+                    margin-top: 10px;
+                    .inputs{
+                        border: 1px solid #d4e1e9;
+                        border-radius: 2px;
+                        padding: 0 15px;
+                        height: 36px;
+                        box-sizing: border-box;
+                        width: 100%;
+                    }
+                    .btn-box{
+                        margin-top: 15px;
+                        text-align: right;
+                        .btns{
+                            margin-right: 20px;
+                            padding: 0 15px;
+                            &:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .forward-box{
+                    margin-top: 20px;
+                    background: #eef1f7;
+                    padding: 15px 5px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    .answer-list{
+        border: 1px solid #d4e1e9;
+        padding: 30px 40px;
+        box-sizing: border-box;
+        li{
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .lbs{
+            display: block;
+        }
+        .uninps{
+            width: 100%;
+        }
+    }
+    &.answer-box{
+        .btn-box{
+            margin-top: 20px;
+            text-align: right;
+        }
+    }
+}

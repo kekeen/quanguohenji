@@ -17,6 +17,19 @@
 				<button class="btns" onclick="window.location.href ='<%= btns[i].href %>.html'">
 				<span class="tips-num <%= btns[i].val == '私信交流' ? '' : 'hide' %>">12</span>
 				<%= btns[i].val %>
+				<% if(btns[i].val == '私信交流'){ %>
+					<div class="console-tips-box whitebox hide">
+						<ul>
+							<% for(var i=0;i<10;i++){ %>
+							<li><a href="javascript:;">
+								<img src="../images/hj.png" class="console-tips-head inblock ib-mid"/>
+								<span class="name inblock ib-mid">黄于静</span>
+								<span class="tips-num pull-right">1</span>
+							</a></li>
+							<% } %>
+						</ul>
+					</div>
+				<% } %>
 		</button>
 		<% }} %>
 	</div>
