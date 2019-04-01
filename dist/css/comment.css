@@ -610,6 +610,8 @@ button.inps.actve {
 }
 .content .content-right .console-box .console-right .btns {
   margin: 0 10px;
+  padding: 0 20px;
+  position: relative;
 }
 .content .content-right .right-content-box {
   overflow: auto;

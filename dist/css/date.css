@@ -60,12 +60,17 @@
   background: #0eb5f8;
 }
 .right-content-box .tables-box .time-tables td .tips-box {
+  width: 260px;
   position: absolute;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 4px;
+  top: 0;
   z-index: 999;
   text-align: left;
+}
+.right-content-box .tables-box .time-tables td .tips-box span {
+  display: inline-block;
 }
 .right-content-box .tables-box .time-tables td .tips-box .tips-box-top .name {
   color: #283e53;

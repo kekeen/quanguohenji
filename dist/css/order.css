@@ -7,6 +7,9 @@
   box-sizing: border-box;
   border-bottom: 1px solid #D2D2D2;
 }
+.content .content-right .console-box li .inps {
+  margin: 0 5px;
+}
 .content .content-right .console-box li:last-child {
   border-bottom: 0;
 }

@@ -3,7 +3,7 @@
   "atname": "技术交流",
   "szxt":true,
   "styles": [
-    
+    "../css/skill_all.css"
   ],
   "scripts":[]
 }

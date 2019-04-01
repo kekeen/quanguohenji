@@ -84,7 +84,7 @@
 									<% } %>
 									<div class="tips-box whitebox hide">
 											<div class="tips-box-top">
-												<span class="name inblock">陈美玲</span>
+												<span class="name">陈美玲</span>
 												<label class="inps">勘查</label>
 											</div>
 											<div class="tips-box-content">
@@ -111,5 +111,33 @@
         </div>
     </div>
     <%- include('../templates/foot') %>
+    <script>
+    	function tips_box(){
+    		$(".tips-box").each(function(){
+    			var that = $(this),
+    				td = that.parent('td'),
+    				right_box = $(".right-content-box"),
+    				lefts = td.offset().left - right_box.offset().left,
+    				widths = that.outerWidth(true);
+    				if(lefts > widths){
+    					that.css('left',-widths);
+    				}else{
+    					console.log(lefts)
+    					that.css("left",td.outerWidth(true))
+    				}
+    		});
+    	};
+    	$("td").hover(function(){
+    		$(this).find(".tips-box").removeClass('hide');
+    	},function(){
+    		$(this).find(".tips-box").addClass('hide');
+    	})
+    	$(function(){
+    		tips_box();
+    	})
+    	$(window).resize(function(){
+    		tips_box();
+    	})
+    </script>
 </body>
 </html>
