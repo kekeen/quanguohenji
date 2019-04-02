@@ -1,9 +1,474 @@
 <%- include('../templates/head') %>
 <body>
-    <%- include('../templates/nav') %>
-    <div class="content">
-        <%- include('../templates/left-side-list') %>
+    <%- include('../templates/hadLogin-nav') %>
+    <div class="in-content">
+        <!--banner开始-->
+        <div class="bannerBox">
+            <ul class="imgUl clearfix">
+                <li><img src="../images/banner_01.png"></li>
+            </ul>
+            <ul class="squareUl">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="businessBox">
+                <p class="tit">业务中心</p>
+                <div class="bus-cont">
+                    <ul class="busUl">
+                        <li>
+                            <a href="#">
+                                <p class="title">痕迹检验系统</p>
+                                <p class="business-img01"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="title">痕迹检验系统</p>
+                                <p class="business-img02"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="title">痕迹检验系统</p>
+                                <p class="business-img03"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="title">痕迹检验系统</p>
+                                <p class="business-img04"></p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="right" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                    <a class="left" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                </div>
+            </div>
+        </div>
+        <!--banner结束-->
+        <!--实验案例开始-->
+        <div class="caseBox">
+            <div class="case-content">
+                <div class="ca-top clearfix">
+                    <div class="leftNav">
+                        <ul>
+                            <li class="active">实验室展示</li>
+                            <li>实验室设备</li>
+                            <li>成功案例</li>
+                        </ul>
+                    </div>
+                    <a class="seeMore" href="#">查看更多></a>
+                </div>
+                <div class="ca-bottom clearfix">
+                    <!--实验室展示开始-->
+                    <div class="labShow labBox">
+                        <div class="lb-tit">
+                            <a class="left" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                            <span class="ti">痕迹检验中心实验室</span>
+                            <a class="right" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                        </div>
+                        <div class="lb-imgBox">
+                            <ul>
+                                <li><img src="../images/pic_shiyanshi1.png"></li>
+                                <li><img src="../images/pic_shiyanshi2.png"></li>
+                                <li><img src="../images/pic_shiyanshi1.png"></li>
+                                <li><img src="../images/pic_shiyanshi2.png"></li>
+                                <li><img src="../images/pic_shiyanshi1.png"></li>
+                                <li><img src="../images/pic_shiyanshi2.png"></li>
+                            </ul>
+                        </div>
+                        <div class="lb-number">
+                            <ul>
+                                <li class="active"></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--实验室展示结束-->
+                    <!--实验室设备开始-->
+                    <div class="labShow deviceBox" style="display: none">
+                        <div class="lb-tit">
+                            <a class="left" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                            <span class="ti">痕迹检验中心实验室</span>
+                            <a class="right" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                        </div>
+                        <div class="lb-imgBox">
+                            <ul>
+                                <li><img src="../images/hj.png"></li>
+                                <li><img src="../images/hj.png"></li>
+                                <li><img src="../images/hj.png"></li>
+                                <li><img src="../images/hj.png"></li>
+                                <li><img src="../images/hj.png"></li>
+                                <li><img src="../images/hj.png"></li>
+                            </ul>
+                        </div>
+                        <div class="lb-number">
+                            <ul>
+                                <li class="active"></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--实验室设备结束-->
+                    <!--成功案例开始-->
+                    <div class="successCase" style="display: none">
+                        <div class="caseWrap">
+                            <ul class="caseUl clearfix">
+                                <li>
+                                    <div class="liLeft">
+                                        <a href="#"><img src="../images/hj.png"/></a>
+                                    </div>
+                                    <div class="liRight">
+                                        <p class="lr-tit"><a href="#"><i class="bigI">“</i>张忻鑫：痕迹检验 让无声物证“开口说话”张忻鑫：痕迹检验 让无声物证“开口说话”张忻鑫：痕迹检验 让无声物证“开口说话”</a></p>
+                                        <p class="lr-detail"><a href="#">据张忻鑫介绍，每把锁具自带的钥匙插入锁孔，所产生的划痕是固定的。他们正是通过切割被盗现场锁具，对锁芯所留划痕以及微量物进行提取比对，由此确定案件是否属于技术开锁以及是否可以与同类案件进行串并，为侦查员侦破案件提供技术支持。经过一个多小时的忙碌，他们终于完成了对锁芯的痕迹检验，并得出这个锁芯所留痕迹与此前发生在市内的另外几起入室盗窃案手段相同，具备串并案条件并得出这个锁芯所留痕迹与此前发生在市内的另外几起入室盗窃案手段相同，具备串并案条件并得出这个锁芯所留痕迹与此前发生在市内的另外几起入室盗窃案手段相同，具备串并案条件。</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="left" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                        <a class="right" href="#"><span class="icon iconfont icon-outline-chevron_right-px"></span></a>
+                    </div>
+                    <!--成功案例结束-->
+                </div>
+            </div>
+        </div>
+        <!--实验案例结束-->
+        <div class="messageBox">
+            <div class="singleMes">
+                <div class="sm-top">
+                    <div class="st-wrap">
+                        <span class="icon iconfont icon-line-volume"></span>
+                        <span>通知通告</span>
+                        <a class="more" href="#">更多></a>
+                    </div>
+                </div>
+                <div class="sm-bottom">
+                    <ul>
+                        <li>
+                            <div class="banImg">
+                                <a href="#">
+                                    <p class="bigT">通知公告</p>
+                                    <p class="smallP">物证鉴定中心：发布道路交通事故痕迹鉴定方法论</p>
+                                </a>
+                            </div>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="singleMes">
+                <div class="sm-top">
+                    <div class="st-wrap">
+                        <span class="icon iconfont icon-line-insert lunzhi"></span>
+                        <span>轮值专家</span>
+                        <a class="more" href="#">更多></a>
+                    </div>
+                </div>
+                <div class="sm-bottom head-bottom">
+                    <ul>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="yellowRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="grayRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="yellowRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="yellowRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="singleMes">
+                <div class="sm-top">
+                    <div class="st-wrap">
+                        <span class="icon iconfont icon-line-border tuijian"></span>
+                        <span>推荐专家</span>
+                        <a class="more" href="#">更多></a>
+                    </div>
+                </div>
+                <div class="sm-bottom head-bottom">
+                    <ul>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="yellowRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="grayRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="yellowRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+                        <li>
+                            <div class="imgWrap">
+                                <p class="roundImg"><img src='../images/hj.png'></p>
+                                <i class="yellowRound"></i>
+                            </div>
+                            <div class="nameBox">
+                                <p class="name">黄岑秦</p>
+                                <p class="time"><span class="sp">现场分析</span><span>2018-12-26</span></p>
+                            </div>
+                            <span class="su"></span>
+                            <a class="book" href="#">预约</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="messageBox marginBottom70">
+            <div class="twoWrap">
+                <div class="singleMes">
+                    <div class="sm-top">
+                        <div class="st-wrap">
+                            <span class="icon iconfont icon-line-chat xinwen"></span>
+                            <span>新闻咨询</span>
+                            <a class="more" href="#">更多></a>
+                        </div>
+                    </div>
+                    <div class="sm-bottom">
+                        <ul>
+                            <li>
+                                <p class="liP fontWeight"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                                <p class="liDetail"><a href="#">痕迹检验工程师的思维方法论摘要痕迹检验工程师法论摘要痕迹检验工程师的思维方法论摘要思维检验工程师法论摘要痕迹检验工程师的思维方法论摘要思维</a></p>
+                                <p class="liTime">黄杜雨 2018-05-20</p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="singleMes">
+                    <div class="sm-top">
+                        <div class="st-wrap">
+                            <span class="icon iconfont icon-line-book henji"></span>
+                            <span>痕迹知识文档</span>
+                            <a class="more" href="#">更多></a>
+                        </div>
+                    </div>
+                    <div class="sm-bottom">
+                        <ul>
+                            <li>
+                                <p class="liP fontWeight"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                                <p class="liDetail"><a href="#">痕迹检验工程师的思维方法论摘要痕迹检验工程师法论摘要痕迹检验工程师的思维方法论摘要思维检验工程师法论摘要痕迹检验工程师的思维方法论摘要思维</a></p>
+                                <p class="liTime">黄杜雨 2018-05-20</p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                            <li>
+                                <p class="liP fontSize14"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="singleMes">
+                <div class="sm-top">
+                    <div class="st-wrap">
+                        <span class="icon iconfont icon-line-stars keji"></span>
+                        <span>科技创新</span>
+                        <a class="more" href="#">更多></a>
+                    </div>
+                </div>
+                <div class="sm-bottom">
+                    <ul>
+                        <li>
+                            <div class="banImg">
+                                <a href="#">
+                                    <p class="bigT">INNOVATE</p>
+                                    <p class="smallP">方晨语：指纹鉴定技术有了新的研究成果</p>
+                                </a>
+                            </div>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                        <li>
+                            <p class="liP"><a href="#">各省发放刑事技术检验检测机构资质认定各省发放刑事技术检验检测机构资质认定</a></p>
+                            <p class="liTime">黄杜雨 2018-05-20</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <%- include('../templates/footer') %>
     </div>
     <%- include('../templates/foot') %>
 </body>
 </html>
+
+<script>
+    $(window).resize(function () {
+        screenRem();
+    });
+    screenRem();
+    function screenRem() {
+        var cwidth = document.documentElement.clientWidth;
+        if(cwidth < 1920){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 1920 * 100 + 'px';
+        }else{
+            document.documentElement.style.fontSize = '100px';
+        };
+    };
+    $(function () {
+        //显示退出
+        showOut();
+        function showOut() {
+            $('.hadLogin .nameLi').hover(function () {
+                $(this).find('.outBox').show();
+            },function () {
+                $(this).find('.outBox').hide();
+            });
+        };
+        //显示消息
+        showNotice();
+        function showNotice() {
+            $('.hadLogin .noticeLi').click(function (e) {
+                e.stopPropagation();
+                if($(this).hasClass('active')){
+                    $(this).find('.noticeBox').hide();
+                    $(this).removeClass('active');
+                }else{
+                    $(this).find('.noticeBox').show();
+                    $(this).addClass('active');
+                }
+            });
+            $(document).click(function () {
+                $('.hadLogin .noticeBox').hide();
+                $('.hadLogin .noticeLi').removeClass('active');
+            })
+        }
+        //案例导航切换
+        caseNav();
+        function caseNav() {
+            $('.ca-top .leftNav li').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                var ind = $(this).index();
+                //alert(ind);
+                if(ind == '0'){
+                    $('.ca-bottom .labBox').show();
+                    $('.ca-bottom .deviceBox').hide();
+                    $('.ca-bottom .successCase').hide();
+                }else if(ind == '1'){
+                    $('.ca-bottom .labBox').hide();
+                    $('.ca-bottom .deviceBox').show();
+                    $('.ca-bottom .successCase').hide();
+                }else if(ind == '2'){
+                    $('.ca-bottom .labBox').hide();
+                    $('.ca-bottom .deviceBox').hide();
+                    $('.ca-bottom .successCase').show();
+                }
+            })
+        }
+    });
+</script>

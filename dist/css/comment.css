@@ -373,7 +373,11 @@ button.inps.actve {
   display: block;
   margin: 0 9px;
 }
+.hadLogin {
+  height: 100%;
+}
 .hadLogin > ul {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,7 +385,15 @@ button.inps.actve {
 }
 .hadLogin > ul > li {
   position: relative;
-  margin-left: 16px;
+  height: 100%;
+  line-height: 60px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.hadLogin > ul > li:hover,
+.hadLogin > ul > li.active {
+  background: -webkit-linear-gradient(#028ec3, #0798d2);
+  background: linear-gradient(#028ec3, #0798d2);
 }
 .hadLogin > ul > li .icon-line-search {
   font-size: 24px;
@@ -424,23 +436,42 @@ button.inps.actve {
   font-size: 10px;
 }
 .hadLogin .outBox {
+  display: none;
   position: absolute;
   z-index: 10;
-  top: 50px;
-  right: 0;
+  top: 59px;
+  right: 10px;
   background: white;
   width: 112px;
   padding: 5px 0;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6e6e6;
 }
 .hadLogin .outBox:before {
   position: absolute;
-  top: -20px;
-  right: 0;
+  z-index: 2;
+  top: -8px;
+  right: 50%;
+  margin-right: -8px;
   width: 0;
   height: 0;
   content: '';
+  border-bottom: 8px solid white;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.hadLogin .outBox:after {
+  position: absolute;
+  top: -9px;
+  right: 50%;
+  margin-right: -8px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-bottom: 8px solid #e6e6e6;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
 }
 .hadLogin .outBox .outBtn {
   display: block;
@@ -450,7 +481,143 @@ button.inps.actve {
   font-size: 14px;
   color: #6c849c;
 }
+.hadLogin .outBox .outBtn .icon-line-out {
+  margin-right: 8px;
+}
+.hadLogin .outBox .outBtn:hover {
+  background: #f2f5fa;
+}
+.hadLogin .noticeBox {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  left: -229px;
+  top: 59px;
+  width: 335px;
+  height: 360px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6e6e6;
+}
+.hadLogin .noticeBox:before {
+  position: absolute;
+  z-index: 2;
+  top: -8px;
+  right: 82px;
+  margin-right: -8px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-bottom: 8px solid white;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.hadLogin .noticeBox:after {
+  position: absolute;
+  top: -9px;
+  right: 82px;
+  margin-right: -8px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-bottom: 8px solid #e6e6e6;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.hadLogin .noticeBox .bitTit {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 16px;
+  color: #6c849c;
+  border-bottom: 1px solid #e2e2e2;
+}
+.hadLogin .noticeBox .seeAll {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  line-height: 45px;
+  background: white;
+  text-align: center;
+  border-top: 1px solid #e2e2e2;
+  font-size: 14px;
+}
+.hadLogin .noticeBox .seeAll a {
+  color: #283e53;
+}
+.hadLogin .noticeBox .seeAll a:hover {
+  color: #03acef;
+}
+.hadLogin .noticeList {
+  position: relative;
+  height: calc(100% - 45px);
+  padding-bottom: 45px;
+  overflow: auto;
+}
+.hadLogin .noticeList > li {
+  line-height: normal;
+  padding: 10px 12px 10px;
+  border-bottom: 1px dashed #e2e2e2;
+}
+.hadLogin .noticeList > li:hover {
+  background: #f2f5fa;
+}
+.hadLogin .noticeList > li a {
+  color: #6c849c;
+}
+.hadLogin .noticeList > li .tit {
+  width: 100%;
+  line-height: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+.hadLogin .noticeList > li .tit a {
+  color: #283e53;
+}
+.hadLogin .noticeList > li .tit a .icon-line-volume {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -2px;
+  font-size: 24px;
+  color: #8fa1b5;
+}
+.hadLogin .noticeList > li .detail {
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  padding-left: 28px;
+}
+.hadLogin .noticeList > li .time {
+  margin-top: 7px;
+  padding-left: 28px;
+  font-size: 12px;
+}
 /* 头部end */
+/*尾部start*/
+.cont-footer {
+  width: 100%;
+  height: 128px;
+  line-height: 128px;
+  background: #008cd5 url("../images/bg_foot.png") no-repeat center center;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  padding-top: 50px;
+}
+.cont-footer p {
+  line-height: normal;
+}
+/*尾部end*/
 /* 内容 start */
 .content {
   width: 100%;
