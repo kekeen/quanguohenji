@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设备协同-设备申请 - 全国痕迹检验网络实验室项目</title>
+<meta name="renderer" content="webkit">
+
+<link rel="stylesheet" href="../libs/ztree/css/zTreeStyle.css">
+<link rel="stylesheet" href="../css/custom-bootstrap.css">
+<link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
+<link rel="stylesheet" href="../libs/fonts/iconfont.css">
+<link rel="stylesheet" href="../libs/datetimepicker-master/jquery.datetimepicker.css">
+<link rel="stylesheet" href="../css/jquery.paging.css">
+<link rel="stylesheet" href="../css/comment.css">
+<link rel="stylesheet" href="../css/time_data.css">
+<link rel="stylesheet" href="../css/apply.css">
+
+
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+
+<body>
+	<div class="header">
+    <div class="logo">
+        <a href="javascript:void(0)"><img src="../images/logo.png"></a>
+    </div>
+    <div class="nav-list">
+        <ul class="clearfix">
+            <li class=""><a href="javascript:void(0)">首页</a></li>
+            <li class="active"><a href="紧急求助-我发出的求助.html">实战协同</a></li>
+            <li class=""><a href="javascript:void(0)">实验室建设</a></li>
+            <li class=""><a href="javascript:void(0)">标准规范</a></li>
+            <li class=""><a href="javascript:void(0)">在线学习</a></li>
+            <li class=""><a href="javascript:void(0)">科技创新</a></li>
+            <li class=""><a href="javascript:void(0)">系统管理</a></li>
+        </ul>
+    </div>
+    <div class="set">
+        <a href="javascript:void(0)" class="set-search"><i></i></a>
+        <a href="javascript:void(0)" class="set-login">登录</a>
+        <a href="javascript:void(0)" class="set-register">注册</a>
+    </div>
+ </div>
+	<div class="content">
+		<div class="left-sidebar">
+    <ul>
+        
+        <li class="">
+        	
+        	<a href="紧急求助-我发出的求助.html" >
+        	
+                <i class="iconfont icon-line-circle"></i>
+                人员协同
+                
+                <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
+                
+            </a>
+            
+            <div class="left-side-kid">
+                
+                <a href="紧急求助-我发出的求助.html" class="">
+                    紧急求助
+                </a>
+                
+                <a href="普通求助-我发出的预约.html" class="">
+                    普通求助
+                </a>
+                
+            </div>
+            
+        </li>
+        
+        <li class="active">
+        	
+    		<a href="设备协同-我发起的申请.html" >
+        	
+                <i class="iconfont icon-line-date"></i>
+                设备协同
+                
+            </a>
+            
+        </li>
+        
+        <li class="">
+        	
+    		<a href="技术交流-全部.html" >
+        	
+                <i class="iconfont icon-line-speaker"></i>
+                技术交流
+                
+            </a>
+            
+        </li>
+        
+    </ul>
+</div>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">实战协同</a> /
+				<a href="###">人员协同</a> /
+				<a href="###" class="at">设备协同</a>
+			</div>
+			<div class="console-box whitebox">
+				<div class="console-box-list inblock">
+				
+					<ul class="table-console">
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs ">设备名称：</label>
+		
+			<input type="text" class="inps" placeholder="请输入"/>
+		
+	</li>
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs ">实验室：</label>
+		
+			<div class="dropdown">
+				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	            	
+	                <li><a href="javascript:;">请选择</a></li>
+	                
+	            </ul>
+            </div>
+		
+	</li>
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs ">单位：</label>
+		
+			<div class="dropdown">
+				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	            	
+	                <li><a href="javascript:;">请选择</a></li>
+	                
+	            </ul>
+            </div>
+		
+	</li>
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs ">设备类型：</label>
+		
+			<div class="dropdown">
+				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	            	
+	                <li><a href="javascript:;">请选择</a></li>
+	                
+	            </ul>
+            </div>
+		
+	</li>
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs hide">查询：</label>
+		
+			<button class="btns">查询</button>
+		
+	</li>
+	
+</ul>
+				</div>
+				<div class="console-right pull-right">
+					<button class="inps" onclick="window.history.back(-1);'">
+					<i class="iconfont icon-line-reply"></i>
+					返回
+				</div>
+			</div>
+			<div class="right-content-box whitebox">
+				
+				<div class="equipment-lis">
+					<div class="equipment-lis-left inblock">
+						<div class="img-box inblock ib-top"></div>
+						<div class="equipment-info inblock ib-top">
+							<span class="name">复合光学显微镜（检验类）</span>
+							<p class="describe">复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域（功能介绍）</p>
+							<ul class="info-list">
+								
+								<li class="inblock ib-mid">
+									<span>型号：FH9002</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>品牌：徕卡</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建人：陈一新</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建时间：2019-01-12 12:30</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="equipment-lis-right pull-right">
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#look">查看</a>
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#borrow">借用</a>
+					</div>
+				</div>
+				
+				<div class="equipment-lis">
+					<div class="equipment-lis-left inblock">
+						<div class="img-box inblock ib-top"></div>
+						<div class="equipment-info inblock ib-top">
+							<span class="name">复合光学显微镜（检验类）</span>
+							<p class="describe">复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域（功能介绍）</p>
+							<ul class="info-list">
+								
+								<li class="inblock ib-mid">
+									<span>型号：FH9002</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>品牌：徕卡</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建人：陈一新</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建时间：2019-01-12 12:30</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="equipment-lis-right pull-right">
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#look">查看</a>
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#borrow">借用</a>
+					</div>
+				</div>
+				
+				<div class="equipment-lis">
+					<div class="equipment-lis-left inblock">
+						<div class="img-box inblock ib-top"></div>
+						<div class="equipment-info inblock ib-top">
+							<span class="name">复合光学显微镜（检验类）</span>
+							<p class="describe">复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域（功能介绍）</p>
+							<ul class="info-list">
+								
+								<li class="inblock ib-mid">
+									<span>型号：FH9002</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>品牌：徕卡</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建人：陈一新</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建时间：2019-01-12 12:30</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="equipment-lis-right pull-right">
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#look">查看</a>
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#borrow">借用</a>
+					</div>
+				</div>
+				
+				<div class="equipment-lis">
+					<div class="equipment-lis-left inblock">
+						<div class="img-box inblock ib-top"></div>
+						<div class="equipment-info inblock ib-top">
+							<span class="name">复合光学显微镜（检验类）</span>
+							<p class="describe">复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域（功能介绍）</p>
+							<ul class="info-list">
+								
+								<li class="inblock ib-mid">
+									<span>型号：FH9002</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>品牌：徕卡</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建人：陈一新</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建时间：2019-01-12 12:30</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="equipment-lis-right pull-right">
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#look">查看</a>
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#borrow">借用</a>
+					</div>
+				</div>
+				
+				<div class="equipment-lis">
+					<div class="equipment-lis-left inblock">
+						<div class="img-box inblock ib-top"></div>
+						<div class="equipment-info inblock ib-top">
+							<span class="name">复合光学显微镜（检验类）</span>
+							<p class="describe">复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域（功能介绍）</p>
+							<ul class="info-list">
+								
+								<li class="inblock ib-mid">
+									<span>型号：FH9002</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>品牌：徕卡</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>实验室：痕迹处足迹实验室</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建人：陈一新</span>
+								</li>
+								
+								<li class="inblock ib-mid">
+									<span>创建时间：2019-01-12 12:30</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="equipment-lis-right pull-right">
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#look">查看</a>
+						<a href="javascript:void(0);" class="txtcol" data-toggle="modal" data-target="#borrow">借用</a>
+					</div>
+				</div>
+				
+				<div class="pag-box">
+					<div class="pagging"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 查看  -->
+	<div class="modal in" id="look">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>查看</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							
+							<li>
+								<label class="lbs ib-top">
+									<font class="must  ">*</font>
+									设备名称：
+								</label>
+								<div class="lis-content inblock ib-top">
+									
+										复合光学显微镜
+									
+								</div>
+							</li>
+							
+							<li>
+								<label class="lbs ib-top">
+									<font class="must  ">*</font>
+									设备类型：
+								</label>
+								<div class="lis-content inblock ib-top">
+									
+										检验类
+									
+								</div>
+							</li>
+							
+							<li>
+								<label class="lbs ib-top">
+									<font class="must hide ">*</font>
+									设备型号：
+								</label>
+								<div class="lis-content inblock ib-top">
+									
+										FH9002
+									
+								</div>
+							</li>
+							
+							<li>
+								<label class="lbs ib-top">
+									<font class="must hide ">*</font>
+									功能简介：
+								</label>
+								<div class="lis-content inblock ib-top">
+									
+										<span class="long-txt">
+											复合光学显微镜主要应用在成像系统，样品制备和医疗设备等业务领域样品制备和医疗设备等业务领域设备等业务领域设设备等业 务领域设备等业务领域设设备等业务领域设备等业务领域设设备等业务领域设备等业务。
+										</span>
+										<a href="javascript:void(0);" class="long-txt-btn">
+											<span class="txt">展开</span>
+											<span class="caret"></span>
+										</a>
+									
+								</div>
+							</li>
+							
+							<li>
+								<label class="lbs ib-top">
+									<font class="must hide ">*</font>
+									设备图片：
+								</label>
+								<div class="lis-content inblock ib-top">
+									
+										<div class="img-box">
+											<img src="../images/equipment.png"/>
+											<a href="javascript:void(0);" class="box-shadow-box">
+												<i class="iconfont icon-line-zoom"></i>
+											</a>
+										</div>
+									
+								</div>
+							</li>
+							
+							<li>
+								<label class="lbs ib-top">
+									<font class="must  ">*</font>
+									公司名称：
+								</label>
+								<div class="lis-content inblock ib-top">
+									
+										北京市云居设备制造有限公司
+									
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="modal in list" id="borrow">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>借用</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							<li class="modal-lis">
+								<label class="lbs"><font class="must">*</font>借用方式：</label>
+								<div class="dropdown">	
+						            
+									<button class="uninps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+						            <ul class="dropdown-menu">
+						            	
+						                <li><a href="javascript:void(0);">设备接出</a></li>
+						                
+						                <li><a href="javascript:void(0);">送料来检</a></li>
+						                
+						            </ul>
+					            </div>
+							</li>
+							<li class="modal-lis">
+								<label class="lbs">申请事由：</label>
+								<textarea class="uninps" placeholder="请输入申请事由"></textarea>
+							</li>
+							<li class="modal-lis">
+								<div class="file-btn-box">
+	<button class="btns ib-mid"><i class="iconfont icon-line-backup"></i>上传文件</button>
+	<input type="file" class="hide" />
+	<span class="file-txt inblock ib-mid">支持扩展名：rar. zip. doc. docx. pdf. jpg...</span>
+</div>
+<ul class="file-list">
+	<li class="file-lis">
+		现场痕迹文件.docx
+		<a href="javascript:void(0);" class="del"><i class="iconfont icon-line-del"></i></a>
+	</li>
+</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 查看大图 -->
+	<div class="modal fade" id="bigpic">
+		<div id="myCarousel" class="carousel slide">
+			<a href="javascript:void(0)" class="close" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-icon_biaoqian_close"></i></a>
+			<div class="carousel-inner">
+				<div class="item active"><img src="../images/equipment.png "/></div>
+			</div>
+			<a href="#myCarousel" data-slide="prev" class="carousel-control left txtwhite">
+				<i class="iconfont icon-icon_jiantou1"></i>
+			</a>
+			<a href="#myCarousel" data-slide="next" class="carousel-control right txtwhite">
+				<i class="iconfont icon-icon_jiantou"></i>
+			</a>
+		</div>
+	</div>
+	
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/ztree/jquery.ztree.all.js"></script>
+<script src="../libs/bootstrap/dist/bootstrap.min.js"></script>
+<script src="../libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+<script src="../libs/icheck/icheck.min.js"></script>
+<script src="../js/jquery.paging.js"></script>
+<script src="../js/global.js"></script>
+
+
+	<script>
+		$(function(){
+			$("#look").on('click','.long-txt-btn',function(){	
+				var that = $(this),
+					txt = that.find('.txt'),
+					val = txt.text();
+				if(val == '展开'){
+					that.siblings('.long-txt').addClass('show');
+					txt.html('收起');
+					that.addClass('active');
+				}else{
+					that.siblings('.long-txt').removeClass('show');
+					txt.html('展开');
+					that.removeClass('active');
+				}
+			});
+			$("#look").on("click",'.box-shadow-box',function(){
+				$("#bigpic").modal();
+			});
+			console.log($("#bigpic").find('.carousel-inner .item').length)
+			if($("#bigpic").find('.carousel-inner .item').length == 1){
+				$("#bigpic .carousel-control").addClass('hide');
+			}
+		})
+	</script>
+</body>
+
+</html>

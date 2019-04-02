@@ -1,0 +1,92 @@
+.content .content-right .console-box {
+  height: auto;
+}
+.content .content-right .console-box li {
+  height: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #D2D2D2;
+}
+.content .content-right .console-box li .inps {
+  margin: 0 5px;
+}
+.content .content-right .console-box li:last-child {
+  border-bottom: 0;
+}
+.content .content-right .console-box .console-right {
+  margin: 0;
+}
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: auto;
+}
+.card {
+  width: 15%;
+  margin: 10px 0;
+}
+.card .card-top {
+  padding: 4px 15px;
+  box-sizing: border-box;
+  background: url(../images/card-top.png);
+  background-size: cover;
+}
+.card .card-top .card-head {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.card .card-top p {
+  color: #fff;
+}
+.card .card-top p .name {
+  font-size: 16px;
+  display: block;
+}
+.card .card-top p .introduce {
+  font-size: 12px;
+}
+.card .card-content {
+  padding: 15px;
+  box-sizing: border-box;
+}
+.card .card-content .source {
+  color: #6c849c;
+}
+.card .card-content .card-content-txt {
+  color: #9eabbc;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.card .card-btn-box {
+  text-align: center;
+}
+.card .card-btn-box .btns {
+  height: 28px;
+  background: #fff;
+  color: #03acef;
+  font-size: 14px;
+}
+.card .card-btn-box .btns:hover,
+.card .card-btn-box .btns.actve {
+  background: #03acef;
+  color: #fff;
+}
+.pag-box {
+  padding: 15px 0;
+}
+
+/*# sourceMappingURL=order.css.map */

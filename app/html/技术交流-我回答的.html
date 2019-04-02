@@ -1,0 +1,76 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###" class="at">技术交流</a>
+        	</div>
+        	<%
+        		var tab = [{
+        			name:'全部',
+        			href:'技术交流-全部'
+        		},{
+        			name:'我提问的',
+        			href:'技术交流-我提问的'
+        		},{
+        			name:'我回答的',
+        			href:'技术交流-我回答的'
+        		}],
+        		btns = [{
+        			val:'私信交流',
+        			href:'技术交流-私信交流'
+        		},{
+        			val:'发布问题',
+        			href:'技术交流-发布问题'
+        		}]
+        	%>
+        	<%- include('../templates/personnel_console',{btns:btns,tab:tab,index:'2',btns:btns}) %>
+        	<div class="right-content-box whitebox">
+        		<div class="table-box">
+        			<div class="console-box-list">
+        				<%
+	        				var data = [
+								{lbs:'问题',type:'text',txt:'请输入'},
+								{lbs:'问题标签',type:'double-drop',drop:['作案手法','痕迹类']},
+								{lbs:'发布时间',type:'time'},
+								{lbs:'查询',type:'btn'}
+							];
+	        			%>
+	        			<%- include('../templates/table_console',{data:data}) %>
+        			</div>
+        			<% var thead = ['问题','发布人','问题标签','发布时间','回答数','操作']; %>
+        			<table class="tables">
+        				<thead>
+        					<tr>
+        						<% for(var i in thead){ %>
+        						<th style="width:<%= i==0 ? '40%' : thead[i]=='操作' ? '240px' : '' %>;"><%= thead[i] %></th>
+        						<% } %>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<% for(var i=0;i<10;i++){ %>
+        					<tr>
+        						<td class="title">如何鉴定该足迹</td>
+        						<td>方语嫣</td>
+        						<td>作案手法、痕迹类</td>
+        						<td>2018-11-13 12:00</td>
+        						<td>20</td>
+        						<td class="operation">
+        							<a href="技术交流-问题详情.html" class="inblock ib-mid txtcol">查看</a>
+        						</td>
+        					</tr>
+        					<% } %>
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <%- include('../templates/foot') %>
+</body>
+</html>

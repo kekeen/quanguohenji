@@ -1,0 +1,159 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content">
+		<%- include('../templates/left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">实战协同</a> /
+				<a href="###">技术交流</a> /
+				<a href="###" class="at">问题详情</a>
+				<button class="inps pull-right" onclick="window.history.back(-1);'">
+					<i class="iconfont icon-line-reply"></i>
+				</button>
+			</div>
+			<div class="right-content-box">
+				<%
+					var data = [{
+						title:'基本信息',
+						cls:'info'
+					},{
+						title:'回答详情',
+						cls:'problem'
+					},{
+						title:'回答',
+						cls:'answer'
+					}],
+					info = [{
+						lbs:'问题',
+						type:'must',
+						content:'如何鉴定该足迹'
+					},{
+						lbs:'问题标签',
+						type:'must',
+						content:'作案手法'
+					},{
+						lbs:'问题描述',
+						type:'normal',
+						content:'鉴定事项鉴定事项鉴定事项鉴定事项鉴定事项鉴定事项鉴定事项。'
+					},{
+						lbs:'附件',
+						type:'file',
+						content:'足迹检测图片.jpg'
+					}];
+					for(var i in data){
+						var title = data[i].title;
+				%>
+				<div class="<%= data[i].cls %>-box boxs whitebox">
+					<div class="small-tit bor-blue"><%= data[i].title %></div>
+					<ul class="<%= data[i].cls %>-list">
+						<%
+							if(title == '基本信息'){
+							for(var i in info){ 
+						%>
+						<li>
+							<label class="lbs">
+								<font class="must <%= info[i].type == 'must' ? '' : 'hide' %>">*</font>
+								<%= info[i].lbs %>：
+							</label>
+							<% if(info[i].type == 'file'){ %>
+								<%- include('../templates/down-file',{txt:info[i].content}) %>
+							<% }else{ %>
+								<span><%= info[i].content %></span>
+							<% } %>
+						</li>
+						<% }}else if(title == '回答详情'){ %>
+							<% for(var j=0;j<4;j++){ %>
+							<li>
+								<img src="../images/hj.png" class="lis-head inblock ib-top"/>
+								<div class="inblock ib-top lis-content">
+									<span class="name">黄于静</span>
+									<p class="content-txt">采用最新的痕迹技术方法，可鉴定该足迹。</p>
+									<div class="operation-box">
+										<span class="time">2018-12-18 12:00</span>
+										<div class="right-box pull-right">
+											<%
+												var op = [{
+													cls:'reply',
+													txt:'回复',
+													font:'line-textsm'
+												},{
+													cls:'letter',
+													txt:'私信',
+													font:'line-mail'
+												},{
+													cls:'praise',
+													txt:'10',
+													font:'line-thumb'
+												}];
+												for(var i in op){
+											%>
+											<a href="javascript:;" class="<%= op[i].cls %>">
+												<i class="iconfont icon-<%= op[i].font %>"></i>
+												<%= op[i].txt %>
+											</a>
+											<% } %>
+										</div>
+									</div>
+									<div class="reply-box hide">
+										<input type="text" placeholder="请输入回复内容" class="inputs"/>
+										<div class="btn-box">
+											<button class="btns cancel">取消回复</button>
+											<button class="btns">回复</button>
+										</div>
+									</div>
+									<div class="forward-box <%= j == 2 ? '' : 'hide' %>">
+										<img src="../images/hj.png" class="lis-head inblock ib-top"/>
+										<div class="inblock ib-top lis-content">
+											<span class="name">黄于静</span>
+											<p class="content-txt">采用最新的痕迹技术方法，可鉴定该足迹。</p>
+											<span class="time">2018-12-18 12:00</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<% } %>
+						<% }else{ %>
+							<li>
+								<label class="lbs">
+									<font class="must">*</font>
+									回答问题：
+								</label>
+								<textarea class="uninps" placeholder="请输入回答内容"></textarea>
+							</li>
+							<li>
+								<label class="lbs">
+									<font class="must">*</font>
+									附件：
+								</label>
+								<%- include('../templates/add-files') %>
+							</li>
+						<% } %>
+					</ul>
+					<% if(title == '回答'){ %>
+					<div class="btn-box">
+						<button class="btns">发表</button>
+					</div>
+					<% } %>
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<%- include('../templates/foot') %>
+	<script>
+		$(".problem-list li").on("click",'.reply',function(){
+			var that = $(this),
+			replybox = that.parents(".operation-box").siblings('.reply-box');
+			replybox.removeClass('hide');
+		});
+		$(".reply-box").on('click','.cancel',function(){
+			var that = $(this),
+			replybox = that.parents(".reply-box");
+			replybox.addClass('hide');
+		})
+	</script>
+</body>
+</html>

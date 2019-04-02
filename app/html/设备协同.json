@@ -1,9 +1,0 @@
-{
-  "title": "设备协同",
-  "atname": "设备协同",
-  "szxt":true,
-  "styles": [
-    "../css/synergy.css"
-  ],
-  "scripts":[]
-}

@@ -1,0 +1,143 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">普通求助</a>
+        	</div>
+        	<div class="progress-box">
+        		<ul class="progress-list inblock">
+        			<% 
+        				var progress = [{
+        					txt:'专家选择',
+        					state:'complete'
+        				},{
+        					txt:'预约时段',
+        					state:'have-in-hand'
+        				},{
+        					txt:'信息提交',
+        					state:'carry-on end'
+        				}];
+        				for(var i in progress){
+        			%>
+        			<li class="inblock <%= progress[i].state %>">
+        				<div class="ball-box"><span class="ball"></span></div>
+        				<span class="<%= i==2 ? '' : 'txtbule' %>"><%= progress[i].txt %></span>
+        			</li>
+        			<% } %>
+        		</ul>
+        	</div>
+        	<div class="right-content-box whitebox">
+        		<div class="tables-box">
+        			<div class="info-box">
+        				<span class="title">专家排班信息表</span>
+        				<span class="pull-right tips">
+        					<i class="iconfont icon-line-error"></i>
+        					每日00:00放号，可提前7日预约，每日23:59截止次日预约
+        				</span>
+        			</div>
+        			<%
+        				var time = ['9:00-10:00','10:00-11:00','11:00-12:00','14:00-15:00','15:00-16:00','16:00-17:00','17:00-18:00','18:00-19:00'];
+        			%>
+        			<table class="time-tables" border="1">
+        				<thead>
+        					<tr>
+        						<th rowspan="2">日期</th>
+        						<th colspan="3">上午</th>
+        						<th colspan="5">下午</th>
+        					</tr>
+        					<tr>
+        						<% for(var i in time){ %>
+        						<th class="th-time"><%= time[i] %></th>
+        						<% } %>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<% for(var i=0;i<7;i++){%>
+        					<tr>
+        						<td>2018-12-<%= i+24 %></td>
+        						<% for(var j=0;j<8;j++){ %>
+        							<% if(i<2 && j<3){ %>
+        								<td class="dis">
+        									<span class="name">陈一新</span>
+        									<span class="state">（已满）</span>
+        							<%  
+        								}else if(i>2 && j>2){  
+        									if(i == 4 &&  j== 4){
+        							%>
+        								<td class="cancel-order">
+        									<span class="txtwhite">预约被取消</span>
+        									<a href="javascript:void(0);" class="order-btn">点击重新发起</a>
+        								<% }else if(i==4 && j==5){ %>
+        								<td class="order">
+        									<span class="txtwhite">已预约</span>
+        								<% }else{ %>
+        								<td class="have-time">
+        									<a href="普通求助-按专家预约.html" class="order-btn">点击预约</a>
+        									<span class="txt txtwhite">勘验、锁具检验勘验、锁具检验勘验、锁具检验勘验、锁具检验勘验、锁具检验勘验、锁具检验勘验、锁具检验</span>
+        								<% } %>
+        							<% }else{ %>
+        								<td>
+        									<span class="nothing"></span>
+									<% } %>
+									<div class="tips-box whitebox hide">
+											<div class="tips-box-top">
+												<span class="name">陈美玲</span>
+												<label class="inps">勘查</label>
+											</div>
+											<div class="tips-box-content">
+												<div class="skillbar inblock ib-mid">
+													<div class="skill" data-width="80%"></div>
+												</div>
+												<span class="inblock ib-mid">
+													<font class="num">8</font>/10
+												</span>
+											</div>
+										</div>
+									</td>
+    							<% } %>
+        					</tr>	
+        					<% } %>
+        				</tbody>
+        			</table>
+        			<div class="btn-box">
+        				<button class="btns cancel">取消</button>
+        				<button class="btns">上一步</button>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <%- include('../templates/foot') %>
+    <script>
+    	function tips_box(){
+    		$(".tips-box").each(function(){
+    			var that = $(this),
+    				td = that.parent('td'),
+    				right_box = $(".right-content-box"),
+    				lefts = td.offset().left - right_box.offset().left,
+    				widths = that.outerWidth(true);
+    				if(lefts > widths){
+    					that.css('left',-widths);
+    				}else{
+    					console.log(lefts)
+    					that.css("left",td.outerWidth(true))
+    				}
+    		});
+    	};
+    	$("td").hover(function(){
+    		$(this).find(".tips-box").removeClass('hide');
+    	},function(){
+    		$(this).find(".tips-box").addClass('hide');
+    	})
+    	$(function(){
+    		tips_box();
+    	})
+    	$(window).resize(function(){
+    		tips_box();
+    	})
+    </script>
+</body>
+</html>

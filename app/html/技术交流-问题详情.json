@@ -1,0 +1,9 @@
+{
+  "title": "技术交流-问题详情",
+  "atname": "技术交流",
+  "szxt":true,
+  "styles": [
+    "../css/problem.css"
+  ],
+  "scripts":[]
+}

@@ -1,0 +1,91 @@
+.txtmore(@number){
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:@number;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.content{
+    .content-right{
+        .console-box{
+            height: auto;
+            li{
+                height: 50px;
+                padding: 15px;
+                box-sizing: border-box;
+                border-bottom: 1px solid #D2D2D2;
+                .inps{
+                    margin: 0 5px;
+                }
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+            .console-right{
+                margin: 0;
+            }
+        }
+    }
+}
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+}
+.card{
+    width: 15%;
+    margin: 10px 0;
+    .card-top{
+        padding: 4px 15px;
+        box-sizing: border-box;
+        background: url(../images/card-top.png);
+        background-size: cover;
+        .card-head{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        p{
+            color: #fff;
+            .name{
+                font-size: 16px;
+                display: block;
+            }
+            .introduce{
+                font-size: 12px;
+            }
+        }
+    }
+    .card-content{
+        padding: 15px;
+        box-sizing: border-box;
+        .source{
+            color: #6c849c;
+        }
+        .card-content-txt{
+            color: #9eabbc;
+            font-size: 14px;
+            margin-bottom: 20px;
+            .txtmore(2);
+        }
+    }
+    .card-btn-box{
+        text-align: center;
+        .btns{
+            height: 28px;
+            background: #fff;
+            color: #03acef;
+            font-size:14px; 
+            &:hover,&.actve{
+                background: #03acef;
+                color: #fff;
+            }
+        }
+    }
+}
+.pag-box{
+    padding: 15px 0;
+}

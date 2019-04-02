@@ -1,0 +1,27 @@
+.right-content-box {
+  padding: 50px;
+  box-sizing: border-box;
+}
+.right-content-box .info-box {
+  height: calc(100% - 30px);
+}
+.right-content-box .info-box li {
+  margin-bottom: 25px;
+}
+.right-content-box .info-box li .lbs {
+  display: block;
+  margin-bottom: 10px;
+  color: #6c849c;
+  font-size: 12px;
+}
+.right-content-box .info-box li .uninps {
+  width: 745px;
+}
+.right-content-box .btn-box {
+  text-align: center;
+}
+.right-content-box .btn-box .btns {
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=info.css.map */

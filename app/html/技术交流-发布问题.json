@@ -1,0 +1,12 @@
+{
+  "title": "技术交流-发布问题",
+  "atname": "技术交流",
+  "szxt":true,
+  "styles": [
+  ],
+  "scripts":[
+  	"../libs/utf8-net/ueditor.config.js",
+    "../libs/utf8-net/ueditor.all.js",
+    "../libs/utf8-net/lang/zh-cn/zh-cn.js"
+  ]
+}

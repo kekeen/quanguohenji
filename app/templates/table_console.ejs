@@ -1,7 +1,7 @@
 <ul class="table-console">
 	<% for(var i in data){ %>
-	<li class="tables-console-lis inblock ib-top">
-		<label class="lbs"><%= data[i].lbs %>：</label>
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs <%= data[i].type == 'btn' ? 'hide' :'' %>"><%= data[i].lbs %>：</label>
 		<% if(data[i].type == 'text'){ %>
 			<input type="text" class="inps" placeholder="<%= data[i].txt %>"/>
 		<% }else if(data[i].type == 'drop'){ %>

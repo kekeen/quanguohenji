@@ -1,0 +1,55 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">实战协同</a> / <a href="###">人员协同</a> / <a href="###" class="at">普通求助</a>
+        	</div>
+        	<div class="progress-box">
+        		<ul class="progress-list inblock">
+        			<% 
+        				var progress = [{
+        					txt:'专家选择',
+        					state:'complete'
+        				},{
+        					txt:'预约时段',
+        					state:'complete'
+        				},{
+        					txt:'信息提交',
+        					state:'have-in-hand end'
+        				}];
+        				for(var i in progress){
+        			%>
+        			<li class="inblock <%= progress[i].state %>">
+        				<div class="ball-box"><span class="ball"></span></div>
+        				<span class="<%= i==2 ? '' : 'txtbule' %>"><%= progress[i].txt %></span>
+        			</li>
+        			<% } %>
+        		</ul>
+        	</div>
+        	<div class="right-content-box whitebox">
+        		<div class="info-box">
+					<ul>
+						<li>
+							<label class="lbs">预约事由：</label>
+							<input type="text" placeholder="请输入预约事由" class="uninps" />
+						</li>
+						<li>
+							<label class="lbs">预约事由：</label>
+							<%- include('../templates/add-files') %>
+						</li>
+					</ul>
+        		</div>
+        		<div class="btn-box">
+    				<button class="btns cancel">取消</button>
+    				<button class="btns">上一步</button>
+    				<button class="btns">确定</button>
+    			</div>
+        	</div>
+        </div>
+    </div>
+    <%- include('../templates/foot') %>
+</body>
+</html>

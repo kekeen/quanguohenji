@@ -1,0 +1,62 @@
+.tips-num {
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: #e33751;
+  color: #fff;
+  font-size: 12px;
+}
+.console-right .btns > .tips-num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+.console-right .console-tips-box {
+  position: absolute;
+  width: 250px;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 999;
+  border-radius: 4px;
+}
+.console-right .console-tips-box ul {
+  height: 275px;
+  overflow: auto;
+}
+.console-right .console-tips-box li {
+  height: 60px;
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+.console-right .console-tips-box li .console-tips-head {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.console-right .console-tips-box li .name {
+  color: #283e53;
+}
+.console-right .console-tips-box li .tips-num {
+  margin-top: 10px;
+}
+.console-right .console-tips-box li:hover {
+  background: #ebf1f5;
+}
+.console-right .console-tips-box:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  border: 6px solid transparent;
+  border-bottom: 6px dashed #fff;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+/*# sourceMappingURL=skill_all.css.map */

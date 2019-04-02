@@ -1,0 +1,209 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content">
+		<%- include('../templates/left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">实战协同</a> /
+				<a href="###">人员协同</a> /
+				<a href="###">紧急求助</a> /
+				<a href="###" class="at">发布紧急求助</a>
+			</div>
+			<div class="right-content-box config whitebox">
+				<div class="title">
+					<span class="title-txt">发布紧急求助</span>
+				</div>
+				<ul class="config-list">
+					<%
+        				var data = [{
+        					lbs:'求助标题',type:'input',placeholder:'请输入'
+        				},{
+        					lbs:'接收人',type:'tree',radio:['全部用户','专家组','指定用户'],name:'receiver'
+        				},{
+        					lbs:'专家组选择',type:'btn',btns:['现场勘查','足迹检验','工具痕迹检验','锁紧检验','痕迹检验','分离体检验','交通事故分析','其他']
+        				},{
+        					lbs:'求助描述',type:'input',placeholder:'请输入求助描述'
+        				},{
+        					lbs:'添加附件',type:'file'
+        				}];
+        				for(var i in data){
+        					var type = data[i].type;
+        			%>
+					<li class="config-lis">
+						<label class="lbs"><%= data[i].lbs %>：</label>
+						<% if(type == 'input'){ %>
+						<input type="text" class="uninps" placeholder="<%= data[i].placeholder %>" />
+						<% }else if(type == 'tree'){ %>
+						<div class="radio-box">
+							<% for(var j in data[i].radio){ %>
+							<label class="radio-lbs">
+        								<input type="radio" name="<%= data[i].name %>" value="<%= data[i].radio[j] %>" />
+        								<span class="inblock ib-mid"><%= data[i].radio[j] %></span>
+        							</label>
+							<% } %>
+						</div>
+						<div class="user-box clearfix">
+							<div class="tree-box pull-left">
+								<div class="user-box-top">
+									<%- include('../templates/search') %>
+								</div>
+								<div class="ztree" id="tree"></div>
+							</div>
+							<div class="result-box pull-left">
+								<div class="user-box-top">
+									<label class="check-lbs">
+        									<input type="checkbox" name="user" value="全选"/>
+        									<span class="inblock ib-bottom">全选</span>
+        								</label>
+									<span class="pull-right">已选人员： <font class="checked-num">1</font>/50</span>
+								</div>
+								<ul class="result-list">
+									<li>
+										<span>黄多多</span>
+										<a href="javascript:void(0);" class="pull-right user-del"><img src="../images/user_del.png" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<% }else if(type == 'btn'){ %>
+						<div class="helps-btn-box">
+							<% for(var j in data[i].btns){ %>
+							<button class="inps"><%= data[i].btns[j] %></button>
+							<% } %>
+						</div>
+						<% }else if(type == 'file'){ %>
+						<%- include('../templates/add-files') %>
+						<% } %>
+					</li>
+					<% } %>
+					<li class="config-list">
+						<div class="btn-box">
+							<button class="btns">发布</button>
+							<button class="btns cancel">取消</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<%- include('../templates/foot') %>
+	<script>
+		ztree();
+
+		function ztree() {
+			$(".result-list").on('click', '.user-del', function() {
+				var that = $(this),
+					target = that.parent(),
+					tree = $("#tree"),
+					txt = that.siblings("span").text(),
+					arr = zTreeObj.getCheckedNodes(),
+					font = $(".result-box .checked-num"),
+					num = parseInt(font.html());
+				for(var i in arr) {
+					if(txt == arr[i].name) {
+						zTreeObj.checkNode(arr[i], false)
+						target.remove();
+						num--;
+						if(num == 0) {
+							zTreeObj.checkAllNodes(false);
+						}
+						font.html(num);
+					}
+				}
+			});
+			var zTreeObj,
+				folder = "../images/folder.png",
+				folder_open = "../images/folder-open.png",
+				admin = "../images/admin.png",
+				setting = {
+					view: {
+						showTitle: false
+					},
+					check: {
+						enable: true
+					},
+					callback: {
+						onCheck: function(e, treeId, treeNode) {
+							var flag = treeNode.checked,
+								str = treeNode.name,
+								target = $(e.currentTarget).parent('.tree-box').siblings('.result-box').find('.result-list'),
+								lis = target.find('li'),
+								font = $(".result-box .checked-num"),
+								arr = zTreeObj.getCheckedNodes(true),
+								num = 0;
+							if(flag) {
+								//选中
+								if(treeNode.check_Child_State == -1) {
+									//判断是否选中的是否为子节点
+									if(lis.text().indexOf(str) == -1) {
+										target.append('<li><span>' + str + '</span><a href="javascript:void(0);" class="pull-right user-del"><img src="../images/user_del.png"></a>');
+									}
+								} else {
+									var child_arr = treeNode.children;
+									for(var i in child_arr) {
+										if(lis.text().indexOf(child_arr[i].name) == -1) {
+											target.append('<li><span>' + child_arr[i].name + '</span><a href="javascript:void(0);" class="pull-right user-del"><img src="../images/user_del.png"></a>');
+										}
+									}
+								}
+							} else {
+								//取消选中
+								if(treeNode.check_Child_State == -1) {
+									//判断是否选中的是否为子节点
+									lis.each(function() {
+										var that = $(this),
+											txt = that.find('span').text(),
+											index = that.index();
+										if(txt == str) {
+											lis.eq(index).remove();
+										}
+									})
+								} else {
+									lis.remove();
+								}
+							}
+							for(var i in arr) {
+								if(arr[i].check_Child_State == -1)
+									//判断是否选中的是否为子节点
+									num++;
+							}
+							font.html(num);
+						}
+					}
+				},
+				child = [{
+					name: "黄多多",
+					open: true,
+					icon: admin,
+					checked: true
+				}, {
+					name: "陈依依",
+					open: true,
+					icon: admin
+				}, {
+					name: "陈依依1",
+					open: true,
+					icon: admin
+				}, {
+					name: "陈依依2",
+					open: true,
+					icon: admin
+				}]
+			zNodes = [{
+				name: "专家组",
+				open: true,
+				iconClose: folder,
+				iconOpen: folder_open,
+				children: child
+			}];
+			$(document).ready(function() {
+				zTreeObj = $.fn.zTree.init($("#tree"), setting, zNodes);
+			});
+		}
+	</script>
+</body>
+
+</html>
