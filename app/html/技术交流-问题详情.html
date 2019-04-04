@@ -2,6 +2,10 @@
 
 <body>
 	<%- include('../templates/nav') %>
+	<div class="fixed-box">
+		<a href="javascript:;" class="toTop"><img src="../images/toTop.png" ></a>
+		<a href="javascript:;"><img src="../images/edit.png" ></a>
+	</div>
 	<div class="content">
 		<%- include('../templates/left-side-list') %>
 		<div class="content-right">
@@ -153,6 +157,9 @@
 			var that = $(this),
 			replybox = that.parents(".reply-box");
 			replybox.addClass('hide');
+		});
+		$(".toTop").click(function(){
+			$(".right-content-box").scrollTop(0);
 		})
 	</script>
 </body>
