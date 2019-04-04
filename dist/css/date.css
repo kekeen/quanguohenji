@@ -23,6 +23,8 @@
 }
 .right-content-box .tables-box .time-tables th {
   height: 35px;
+  color: #fff;
+  background: #2ca6e0;
 }
 .right-content-box .tables-box .time-tables th,
 .right-content-box .tables-box .time-tables td {
