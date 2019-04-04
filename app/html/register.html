@@ -1,0 +1,101 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/register-head') %>
+    <div class="content bgw">
+        <div class="register-cont">
+            <div class="register-top">
+                <h3>账号注册</h3>
+                <span>已有帐号，</span>
+                <a href="login.html" class="blue">直接登录» </a>
+            </div>
+            <ul class="form-list">
+                <li class="form-list-li h285">
+                    <label class="lbs"><font class="must">*</font>警官证：</label>
+                    <div class="upload-pic">
+                        <div class="up-before">
+                            <input type="file">
+                            <i class="icon">+</i>
+                            <p>上传警官证</p>
+                        </div>
+                        <div class="up-after">
+                            <img src="../images/hj.png" alt="">
+                            <a href="javascript:;" class="del-pic"><i class="iconfont icon-line-del"></i>删除</a>
+                        </div>
+                    </div>
+                </li>
+                <% var msg1=[
+                    {label:'警官证号',pl:'请输入警官证号',type:'text',caution:'警官证号不能为空'},
+                    {label:'姓名',pl:'请输入姓名',type:'text',caution:'姓名不能为空'},
+                    {label:'单位名称',pl:'请输入单位名称',type:'text',caution:'单位名称不能为空'},
+                ];
+                for(var i in msg1){ %>
+                <li class="form-list-li">
+                    <label class="lbs"><font class="must">*</font><%= msg1[i].label %>：</label>
+                    <!-- 加上warn显示错误提示 -->
+                    <div class="msg-box">
+                        <input type="<%= msg1[i].type %>" class="uninps" placeholder="<%= msg1[i].pl %>">
+                        <span class="caution red"><%= msg1[i].caution %></span>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+            <ul class="form-list ml150">
+                <li class="form-list-li">
+                    <label class="lbs">专业：</label>
+                    <div class="dropdown">	
+                        <button class="uninps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">请选择专业 <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">专业名称1</a></li>
+                            <li><a href="javascript:void(0);">专业名称2</a></li>
+                            <li><a href="javascript:void(0);">专业名称3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <% var msg2=[
+                    {label:'联系方式',pl:'请输入联系方式',type:'text'},
+                    {label:'电子邮箱',pl:'请输入电子邮箱',type:'text'},
+                    {label:'职称',pl:'请输入职称',type:'text'},
+                    {label:'登录密码',pl:'设置你的登录密码',type:'password',caution:'输入密码错误'},
+                    {label:'再次输入密码',pl:'请再次输入你的密码',type:'password',caution:'输入密码错误'},
+                ];
+                for(var i in msg2){ %>
+                <li class="form-list-li">
+                    <label class="lbs"><%= msg2[i].label %>：</label>
+                    <div class="msg-box">
+                        <input type="<%= msg2[i].type %>" class="uninps" placeholder="<%= msg2[i].pl %>">
+                        <span class="caution red"><%= msg2[i].caution %></span>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+            <a href="javascript:;" class="btn mt50">注册</a>
+            <p class="net-msg">Copyright © 公安部物证鉴定中心<br>主办：公安部物证鉴定中心市  地址：北京市西城区木樨地南里  邮编：100038</p>
+        </div>
+    </div>
+    <%- include('../templates/foot') %>
+    <script>
+        // 上传警官证
+        $('.up-before').on('change','input[type=file]',function(){
+            $(this).parents('.up-before').hide().siblings('.up-after').show();
+            event.target.value='';
+        })
+        $('.del-pic').on('click',function(event){
+            $(this).parents('.up-after').hide().siblings('.up-before').show();
+        })
+
+        // 注册按钮
+        var input=$('.form-list input.uninps');
+        input.on('input propertychange', function() {
+            var isEmpty = [].reduce.call(input, function (a, b) {
+                return a && !b.value;
+            }, true);
+            if(isEmpty) {
+                $(this).parents('.form-list').siblings('.btn').removeClass('active');
+            }
+            else{
+                $(this).parents('.form-list').siblings('.btn').addClass('active');
+            }
+        });
+    </script>
+</body>
+</html>

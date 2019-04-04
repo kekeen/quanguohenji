@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import "./base/conn.less";
+@import "./base/base.less";
+@import "./_module.less";
+
+body{
+    background: url('../images/login_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.mt35{
+    margin-top: 35px;
+}
+.login-cont{
+    display: inline-block;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 150px;
+}
+.login-left{
+    margin-top: 50px;
+    float: left;
+}
+.login-right {
+    margin-left: 100px;
+    display: inline-block;
+}
+.logo{
+    margin-bottom: 30px;
+}
+.bgw-box{
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(0,111,214,0.32);
+    background-color: #ffffff;
+    padding: 70px 50px 50px;
+    position: relative;
+}
+.prompt-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    width: 100%;
+    display: none;
+    p{
+        line-height: 34px;
+        border-radius: 2px;
+        background-color: rgba(244,67,54,0.2);
+        border: 1px solid #fc8d84;
+        color: #f44336;
+        padding: 0 10px;
+    }
+}
+.user-msg{
+    li{
+        border-bottom: 1px solid @line-color;
+        .flex();
+        &+li{
+            margin-top: 25px;
+        }
+        i{
+            color:@icon-color;
+            margin-right: 10px;
+        }
+        input{
+            border: none;
+            line-height: 24px;
+            .l_flex();
+            &::-moz-placeholder{
+                color: #9eabbc;
+            }
+            &::-webkit-input-placeholder{
+                color: #9eabbc;
+            }
+            &:focus{
+                outline:none;
+            }
+        }
+    }
+}
+.login-operate{
+    padding: 20px 0;
+    label{
+        div{
+            margin-right: 5px;
+        }
+    }
+    i{
+        padding: 0 5px;
+    }
+}
+.btn{
+    display: inline-block;
+    width: 100%;
+    line-height: 44px;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #a1a1a1;
+    background-color: #e6e6e6;
+    padding: 0;
+    cursor: not-allowed;
+    &.active{
+        background-color: #03acef;
+        color: #fff;
+        box-shadow: 0px 1px 2px #8b8b8b;
+        cursor: pointer;
+        &:hover{
+            color: #fff;
+        }
+    }
+    &:hover{
+        color: #a1a1a1;
+    }
+}
+.register-btn{
+    text-align: center;
+    margin-top: 30px;
+}
+.net-msg{
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;    
+}
+.reset-pdw{
+    display: none;
+}
