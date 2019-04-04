@@ -27,7 +27,7 @@
 <body>
     <div class="header">
     <div class="logo">
-        <a href="javascript:void(0)"><img src="../images/logo.png"></a>
+        <a href="index.html"><img src="../images/logo.png"></a>
     </div>
     <span class="white ml50">一个实现  资源共享·模型分享·刑事技术发展  的痕迹检验平台</span>
  </div>
@@ -162,17 +162,17 @@
 
         // 注册按钮
         var input=$('.form-list input.uninps');
-        for(var i=0;i<input.length;i++){
-            input.on('input propertychange', function() {
-                console.log(input.eq(i));
-                // if(input.eq(i).val().length <= 0) {
-                //     $(this).parents('.form-list').siblings('.btn').removeClass('active');
-                // }
-                // else{
-                //     $(this).parents('.form-list').siblings('.btn').addClass('active');
-                // }
-            });
-        }
+        input.on('input propertychange', function() {
+            var isEmpty = [].reduce.call(input, function (a, b) {
+                return a && !b.value;
+            }, true);
+            if(isEmpty) {
+                $(this).parents('.form-list').siblings('.btn').removeClass('active');
+            }
+            else{
+                $(this).parents('.form-list').siblings('.btn').addClass('active');
+            }
+        });
     </script>
 </body>
 </html>
