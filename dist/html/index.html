@@ -609,12 +609,40 @@
         //大banner轮播
         bannerMove();
         function bannerMove() {
+            var banNum      = 0,
+                banOnemove  = 100,
+                banLilength = $('.bannerBox .imgUl li').length,
+                banUlwidth  = banOnemove * banLilength,
+                banLiwidth  = 100/banLilength,
+                timer       = null;
+            $('.bannerBox .imgUl').css('width',''+banUlwidth+'%');
+            $('.bannerBox .imgUl li').css('width',''+banLiwidth+'%');
+            //点击小长方形
             $('.bannerBox .squareUl li').click(function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 var ind = $(this).index();
-                $('.bannerBox .imgUl li').eq(ind).show();
-                $('.bannerBox .imgUl li').eq(ind).siblings().hide();
+                var moveLength = ind * banOnemove;
+                $('.bannerBox .imgUl').animate({'margin-left':'-'+moveLength+'%'},800);
+                banNum = ind;
             });
+            //定时器
+            var timing = function () {
+                banNum ++;
+                if(banNum == banLilength){
+                    banNum = 0;
+                    $('.bannerBox .imgUl').css({'margin-left':'0'});
+                }
+                var aniMove = banNum * banOnemove;
+                $('.bannerBox .squareUl li:eq('+banNum+')').addClass('active').siblings().removeClass('active');
+                $('.bannerBox .imgUl').animate({'margin-left':'-'+aniMove+'%'},800);
+            };
+            timer = setInterval(timing,2000);
+            //鼠标移进去定时器停止
+            $('.bannerBox').mouseenter(function () {
+                clearInterval(timer);
+            }).mouseleave(function () {
+                timer = setInterval(timing,2000);
+            })
         }
         //业务中心轮播
         businessMove();
