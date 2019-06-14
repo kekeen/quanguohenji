@@ -1,0 +1,9 @@
+{
+  "title": "在线学习-上传书籍",
+  "atname": "在线学习",
+  "szxt":true,
+  "styles": [
+  	"../css/upload_page.css"
+  ],
+  "scripts":[]
+}

@@ -3,7 +3,7 @@
 	<li class="console-list-lis inblock ib-mid">
 		<label class="lbs <%= data[i].type == 'btn' ? 'hide' :'' %>"><%= data[i].lbs %>：</label>
 		<% if(data[i].type == 'text'){ %>
-			<input type="text" class="inps" placeholder="<%= data[i].txt %>"/>
+			<input type="text" class="inps" placeholder="<%= data[i].txt %>" style="width:<%= data[i].width+'px'%>"/>
 		<% }else if(data[i].type == 'drop'){ %>
 			<div class="dropdown">
 				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>

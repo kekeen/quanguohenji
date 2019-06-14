@@ -1311,5 +1311,38 @@ button.inps.actve {
 .right-content-box.config .btn-box .btns {
   margin: 0 10px;
 }
+.modal-title {
+  text-align: left;
+  font-size: 16px;
+}
+.f-btn {
+  display: inline-block;
+  background: #fff;
+  color: #6c849c;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(185, 206, 223, 0.68);
+  height: 28px;
+  padding: 0 20px;
+  line-height: 28px;
+  margin: 0 10px;
+  border-radius: 2px;
+}
+.f-btn:link,
+.f-btn:visited,
+.f-btn:hover,
+.f-btn:active {
+  background: #fff;
+}
+.f-btn-a {
+  background: #03ACEF;
+  color: #fff;
+}
+.f-btn-a:link,
+.f-btn-a:visited,
+.f-btn-a:hover,
+.f-btn-a:active {
+  background: #03ACEF;
+  color: #fff;
+}
 
 /*# sourceMappingURL=comment.css.map */
