@@ -135,3 +135,57 @@
   content: "\e624";
 }
 
+/*在线学习侧边图标*/
+@font-face {font-family: "iconfont";
+  src: url('iconfont-st.eot?t=1560597842754'); /* IE9 */
+  src: url('iconfont-st.eot?t=1560597842754#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAXEAAsAAAAADNQAAAV2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDYAqLMIhqATYCJAMoCxYABCAFhG0HgT0brQojETZ7cLKS/WWCbcy60L/iYtmyrFBvyT0NZgi2PEZ/95/TRO5gTQTUsLlXvlYHCgWvGFzvColiUCg0Fg3KMBEywiTju7x0YQOkm+VstFURBMfl9/X/V5d+W3d9efJRAUguuICsLwcAtgJZHZNuACQVAMYA2ZdlLdBUJ0DAXJnbZx13vG9O/eA/9nEBkgl7vOV/cY9nR1nK2XLX/c+pzS94QIlX/FX1KuFLWh4xCzmhJvcmFAALOzkhx3JG+i3DKWFmKVJzfKb//QQ0zZsJe2s3cygZqgGG3FdVFEFV8vKAOainqh3nZoUXiKrH3/wAPCcfH/6YWYZElSR80NXdmlL4ymKriQylcpME6a4U84tImCETbjvLb0TWPpM0t+22zGntFiirw5CyWPIny0HvKMkqu394NXUNQlWotcH4qDZumMApgbKEEilLKYmyjJIpyykVygpKlbKSUqOsyqk/FgHyGhN98+AxVgmvAOE/MZ6VV1QfF2a5TUfUzNcDjNlKUXgN/fM9p6K3YoU6iKb6dyrjQKERxulbikb3RGLRktizlmGRi61z4i8/joxe+oCmMNymG/34jXsA8v54PHnTetk+klzqqrWAuklIZO/C7Tn4qmOKeNtt+D7HHre+I99Vtv1AJBFtSDz7ZM3zeU7y5VfXl0KgvWIQL4yDrIRYRdIqLKDAe1eYlAtKdEpbhpmnUGGh6y3X5tZjwTKSJoWZ1sl7w8cbuFmJG3fk3fHJ2/qIyklCAjgWrEmJKpJSCpZRpWXQM8WkLSbKDa8Ejns2nXEj9uydax52FiYlLjWtxXSpxcnoHLrMqoxDjGw4jgd8oWnyS4yDZVz6MpdOO/eGxrwwBGtVV9fcaKFS0Cvu/oS9TWqIcV4fvTsYztzJmSUN3ipgwjgj8I1c9DwIwOeBkyRAkk7ghMm24aPX0711l7yLFE+R111cOvDSwPIF3vqTgqaGD2ADU7tXSiHBYyjQeND87ds791evn6SOrVuPb16OzNm9J2fEjx/zn7xe1pMaeOh7m123GWY+CZRQiML5RhT55sC2Y//b2g45BsgRssrmu4PnAwKCAC9EDBfoo76W19qiJ3N2pERnlQcJWcrlyI7BtrCZZtjLBbOBADOQkLuwM75d759/wL+pnPIJ5Y4sgtBbb8ZQI1ci63snkb3LA5faypacbc6jkGwOnGumBe8bci2FQPcownCnxIgTrwMy5ExqqZiSnOEdeSjvMo9r1JAWaUhjGubsCEK0ijEzESbsjRnQefbr2gFjLEgeD97bDQjgK8GEx62XOXJylZmchMWogcd533JTkkvqRaRZvoI7xyAQBknvMGxcv77Rq2eqx0f14H0C3JNoMw0QBuQQmTIxS2JvUEQTqHIqPGA4MYo00LwB/E++tPSzC5KLfyNlbAs+sTvpOW/K0jVIXURZ+EcSFFfknYQFzbxZHBf/Xzv2HX6lUzU18QZYPfTddXKirPmPTU4KiGrmIKlbINk4g4qWFaiq24SmJYcXt4w8CCFPseiJQND3DqKu95D0fSTZ+A0qpv5BVT8CTQeK+l7TMiF+WJVgFJ7sjdjJFliRPqRDvxHLYlJZStz/SJmbqG+6etcJG5KLE/I5DqqBQpKVjuRhWBahPckEp82ouh/aNnS9oHGyVg9WScBQ4BHrJuOZIzZhffXQeP9vEBULIw3MuY3/B0nGWye9RqdATtqmNOepjM7OooHS1oCE+WCxIkdaCkvULsjevdcEHNUYDVp3By1dK6hqTfjk+mxLf7zz4PVojcB0BkkxWWw4Zy3+Vi/lymaLL5Vh9yL3ETPTBRs7YHgcdOXN40spZ1irbIZTNb5XikdDPFC5sOWn0hnTVGrNjKWSqyoA') format('woff2'),
+  url('iconfont-st.woff?t=1560597842754') format('woff'),
+  url('iconfont-st.ttf?t=1560597842754') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont-st.svg?t=1560597842754#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconstudy-luxiang:before {
+  content: "\e63c";
+}
+
+.iconstudy-zuozheng:before {
+  content: "\e63d";
+}
+
+.iconstudy-wenzhang:before {
+  content: "\e63e";
+}
+
+.iconstudy-xinde:before {
+  content: "\e63f";
+}
+
+.iconstudy-zaixiankecheng:before {
+  content: "\e640";
+}
+
+.iconstudy-wodekecheng:before {
+  content: "\e641";
+}
+
+.iconstudy-suibi:before {
+  content: "\e642";
+}
+
+.iconstudy-kejian:before {
+  content: "\e643";
+}
+
+.iconstudy-shuji:before {
+  content: "\e644";
+}
+

@@ -1,0 +1,9 @@
+{
+  "title": "在线学习-课程录像",
+  "atname": "课程录像",
+  "zxxx":true,
+  "styles": [
+    "../css/video.css"
+  ],
+  "scripts":[]
+}
