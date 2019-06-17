@@ -1,0 +1,194 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content">
+		<%- include('../templates/left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+        <a href="###">在线学习</a> /
+        <a href="###">专业书籍</a> /
+				<a href="###" class="at">上传书籍</a>
+			</div>
+		
+			<div class="right-content-box whitebox">
+				<div class="table-box">
+					<div class="upload-wrapper">
+            <div class="line-hr">
+                <h3>上传书籍</h3>
+            </div>
+            <div class="label-input">
+              <label for="">
+                封面：
+              </label>
+              <div class="file-content">
+                <input type="file">
+                <dl>
+                  <dt></dt>
+                  <dd>上传图片</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="label-input label-input-block">
+                <label for="">
+                  <span class="necessarily">*</span>书名：
+                </label>
+                <input type="text" placeholder="请输入书名" style="width: 766px;">
+            </div>
+            <div class="label-input">
+                <label for="">
+                  <span class="necessarily">*</span>作者：
+                </label>
+                <input type="text" placeholder="请输入作者">
+            </div>
+            <div class="label-input label-input-block">
+                <label for="">
+                  <span class="necessarily">*</span>出版社：
+                </label>
+                <input type="text" placeholder="请输入出版社">
+            </div>
+            <div class="label-input">
+                <label for="">
+                  目录：
+                </label>
+                <div class="upload-file">
+                  <a href="###" class="f-btn f-btn-a"><i></i>上传文件<input type="file"></a>
+                  <span>支持扩展名：rar. zip. doc. docx. pdf. jpg...</span>
+                </div>
+                <ul class="upload-file-list">
+                  <li>现场痕迹文件.docx <a href="###"></a></li>
+                  <li>现场痕迹文件.docx <a href="###"></a></li>
+                </ul>
+            </div>
+            <div class="btns-group">
+                <a href="###" class="f-btn f-btn-a">发布</a>
+                <a href="###" class="f-btn">取消</a>
+                <a href="###" class="f-btn">重置</a>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 归还  -->
+	<div class="modal in small" id="return">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>发起视频</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						确定归还设备【指纹鉴定设备】？
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 查看  -->
+	<div class="modal in" id="look">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>查看</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						<div class="lis-box">
+							<div class="small-tit bor-blue">基本信息</div>
+							<ul class="info-list">
+								<%
+								var info = [{
+									lbs:['求助标题','接受人','求助描述','附件'],
+									content:['xxxx案件证物检验需要求助','全部用户','现场出现了一些状况，需要专家帮忙分析一下，详情见附件。','']
+								}];
+								for(var i=0;i<info[0].lbs.length;i++){
+							%>
+								<li class="info-lis">
+									<label class="lbs"><%= info[0].lbs[i] %>：</label>
+									<% if(i==3){ %>
+									<%- include('../templates/down-file',{txt:'现场痕迹文件.docx'}) %>
+									<% }else{ %>
+									<span><%= info[0].content[i] %></span>
+									<% } %>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+						<div class="lis-box details">
+							<div class="small-tit bor-blue">详情</div>
+							<ul class="details-list">
+								<%
+								var details = [{
+									name:['方语嫣  提交了申请','黄玉玉 进行了审批'],
+									cls:['green','blue']
+								}];
+								for(var i in details[0].name){
+							%>
+								<li class="details-lis before-<%= details[0].cls[i] %>">
+									<div class="details">
+										<span class="name"><%= details[0].name[i] %></span>
+										<span class="time pull-right">2018-02-09 12:30:00</span>
+									</div>
+									<% if(i==1){ %>
+									<div class="details-content">
+										<p class="details-content-txt">
+											<label class="lbs">审批结果：</label>
+											<span>通过</span>
+										</p>
+										<p class="details-content-txt">
+											<label class="lbs">审批意见：</label>
+											<span>可提供设备进行协助。</span>
+										</p>
+									</div>
+									<% } %>
+								</li>
+								<% } %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  <%
+    var data = [{
+      el:'remove',
+      title:'删除提示',
+      text:'确定删除该书籍？'
+    },{
+      el:'pl-remove',
+      title:'删除提示',
+      text:'确定删除选中的书籍？'
+    }]
+  %>
+  <%- include('../templates/modal-delete',{data:data}) %>
+  <div class="modal fade yulan" id="yulan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">预览</h4>
+        </div>
+        <div class="modal-body">
+            <img src="../images/hj.png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="f-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="f-btn f-btn-a">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	<%- include('../templates/foot') %>
+</body>
+
+</html>

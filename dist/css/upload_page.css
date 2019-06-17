@@ -1,0 +1,91 @@
+.upload-wrapper {
+  padding: 20px 40px;
+}
+.upload-wrapper .line-hr {
+  border-bottom: 1px solid #FDD837;
+  margin-bottom: 40px;
+}
+.upload-wrapper .line-hr h3 {
+  border-bottom: 1px solid #03ACEF;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 44px;
+  display: inline-block;
+  margin-bottom: -1px;
+  padding-right: 34px;
+  color: #283E53;
+}
+.upload-wrapper .label-input {
+  margin-bottom: 30px;
+  display: inline-block;
+  margin-right: 54px;
+}
+.upload-wrapper .label-input label {
+  margin-bottom: 20px;
+}
+.upload-wrapper .label-input .file-content {
+  border: 2px dashed #D4E1E9;
+  display: block;
+  border-radius: 2px;
+  background: #f9fafa;
+  width: 100px;
+  height: 145px;
+  text-align: center;
+}
+.upload-wrapper .label-input input[type="text"] {
+  display: block;
+  padding-bottom: 14px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #D4E1E9;
+  min-width: 356px;
+}
+.upload-wrapper .label-input input[type="text"]::-webkit-input-placeholder {
+  color: #6C849C;
+}
+.upload-wrapper .label-input input[type="text"]:-ms-input-placeholder {
+  color: #6C849C;
+}
+.upload-wrapper .label-input input[type="text"]::placeholder {
+  color: #6C849C;
+}
+.upload-wrapper .label-input .necessarily {
+  color: #F54545;
+}
+.upload-wrapper .label-input .f-btn {
+  width: 98px;
+}
+.upload-wrapper .label-input .upload-file {
+  margin-bottom: 18px;
+}
+.upload-wrapper .label-input .upload-file a,
+.upload-wrapper .label-input .upload-file span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+}
+.upload-wrapper .label-input .upload-file a:hover {
+  color: #fff;
+}
+.upload-wrapper .label-input .upload-file-list {
+  margin-bottom: 18px;
+  color: #283E53;
+}
+.upload-wrapper .label-input .upload-file-list li {
+  margin-bottom: 18px;
+}
+.upload-wrapper .label-input .upload-file-list a {
+  color: #6C849C;
+}
+.upload-wrapper .label-input-block {
+  display: block;
+}
+.btns-group {
+  display: block;
+  text-align: center;
+}
+input[type="file"] {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=upload_page.css.map */

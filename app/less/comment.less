@@ -3,6 +3,10 @@
 @import "./base/base.less";
 @import "./_module.less";
 @box-shadow: 1px 0 4px #a8bbc7;
+@color: #03ACEF;
+@text-color:#283E53;
+@border-color:#EFF4F7;
+@shadow-color:0px 0px 10px 0px rgba(185,206,223,0.68);
 .before(@color: #4caf50) {
     position: relative;
     &:before {
@@ -1243,5 +1247,34 @@ button.inps {
     .btns {
       margin: 0 10px;
     }
+  }
+}
+
+.modal-title{
+  text-align: left;
+  font-size: 16px;
+}
+
+.f-btn{
+  display: inline-block;
+  background: #fff;
+  color:#6c849c;
+  border:none;
+  box-shadow: @shadow-color;
+  height: 28px;
+  padding:0 20px;
+  line-height: 28px;
+  margin:0 10px;
+  border-radius: 2px;
+  &:link,&:visited,&:hover,&:active{
+    background: #fff;
+  }
+}
+.f-btn-a{
+  background: @color;
+  color:#fff;
+  &:link,&:visited,&:hover,&:active{
+    background: @color;
+    color:#fff;
   }
 }
