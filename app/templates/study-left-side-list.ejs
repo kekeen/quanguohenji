@@ -1,4 +1,5 @@
 <div class="left-sidebar">
+    <% if(local.zxxx){ %>
     <ul>
         <%
         var data = [{
@@ -41,27 +42,95 @@
                 for(var i in data){
         %>
         <li class="<%= local.atname == data[i].name ? 'active' : '' %>">
-        	<% if(data[i].kid){ %>
-        	<a href="<%= data[i].kid[0].href %>.html" >
-        	<% }else{ %>
-    		<a href="<%= data[i].href %>.html" >
-        	<% } %>
-                <i class="iconfont <%= data[i].font %>"></i>
-                <%= data[i].name  %>
-                <% if(data[i].kid){ %>
-                <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
-                <% } %>
-            </a>
             <% if(data[i].kid){ %>
-            <div class="left-side-kid">
-                <% for(var j in data[i].kid){ %>
-                <a href="<%= data[i].kid[j].href %>.html" class="<%= local.kidname == data[i].kid[j].name ? 'active' :'' %>">
-                    <%= data[i].kid[j].name %>
+            <a href="<%= data[i].kid[0].href %>.html" >
+                <% }else{ %>
+                <a href="<%= data[i].href %>.html" >
+                    <% } %>
+                    <i class="iconfont <%= data[i].font %>"></i>
+                    <%= data[i].name  %>
+                    <% if(data[i].kid){ %>
+                    <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
+                    <% } %>
                 </a>
+                <% if(data[i].kid){ %>
+                <div class="left-side-kid">
+                    <% for(var j in data[i].kid){ %>
+                    <a href="<%= data[i].kid[j].href %>.html" class="<%= local.kidname == data[i].kid[j].name ? 'active' :'' %>">
+                        <%= data[i].kid[j].name %>
+                    </a>
+                    <% } %>
+                </div>
                 <% } %>
-            </div>
-            <% } %>
         </li>
         <% } %>
     </ul>
+    <% } %>
+    <% if(local.xtgl){ %>
+    <ul>
+        <%
+            var data = [{
+                font:'iconstudy-wodekecheng',
+                name:'专家管理',
+                href:'在线学习-我的课程'
+            },{
+                font:'iconstudy-wenzhang',
+                name:'栏目管理',
+                href:'在线学习-学术文章'
+            },{
+                font:'iconstudy-shuji',
+                name:'用户管理',
+                href:'在线学习-专业书籍'
+            },{
+                font:'iconstudy-kejian',
+                name:'角色管理',
+                href:'在线学习-专家课件'
+            },{
+                font:'iconstudy-suibi',
+                name:'字典管理',
+                href:'在线学习-工作随笔'
+            },{
+                font:'iconstudy-luxiang',
+                name:'通知中心',
+                href:'在线学习-课程录像'
+            },{
+                font:'iconstudy-zaixiankecheng',
+                name:'积分管理',
+                href:'系统管理-积分管理'
+            },{
+                font:'iconstudy-xinde',
+                name:'排班管理',
+                href:'在线学习-学习心得'
+            },{
+                font:'iconstudy-zuozheng',
+                name:'日志管理',
+                href:'在线学习-出庭作证'
+            }]
+                for(var i in data){
+        %>
+        <li class="<%= local.atname == data[i].name ? 'active' : '' %>">
+            <% if(data[i].kid){ %>
+            <a href="<%= data[i].kid[0].href %>.html" >
+                <% }else{ %>
+                <a href="<%= data[i].href %>.html" >
+                    <% } %>
+                    <i class="iconfont <%= data[i].font %>"></i>
+                    <%= data[i].name  %>
+                    <% if(data[i].kid){ %>
+                    <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
+                    <% } %>
+                </a>
+                <% if(data[i].kid){ %>
+                <div class="left-side-kid">
+                    <% for(var j in data[i].kid){ %>
+                    <a href="<%= data[i].kid[j].href %>.html" class="<%= local.kidname == data[i].kid[j].name ? 'active' :'' %>">
+                        <%= data[i].kid[j].name %>
+                    </a>
+                    <% } %>
+                </div>
+                <% } %>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
 </div>

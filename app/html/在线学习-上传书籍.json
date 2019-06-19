@@ -1,7 +1,7 @@
 {
-  "title": "在线学习-上传书籍",
-  "atname": "在线学习",
-  "szxt":true,
+  "title": "在线学习-专业书籍",
+  "atname": "专业书籍",
+  "zxxx":true,
   "styles": [
   	"../css/upload_page.css"
   ],

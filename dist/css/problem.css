@@ -111,6 +111,10 @@
   padding: 15px 5px;
   box-sizing: border-box;
 }
+.boxs .problem-list li .lis-content .forward-box .time {
+  color: #9eabbc;
+  font-size: 12px;
+}
 .boxs .answer-list {
   border: 1px solid #d4e1e9;
   padding: 30px 40px;

@@ -13,6 +13,7 @@ commonJs.fn = {
 		_this.time();
 		_this.page();
 		_this.right_content();
+		_this.showReport();
     },
 
     // 下拉菜单
@@ -92,7 +93,24 @@ commonJs.fn = {
 	//right-content高度
 	right_content : function(){
 		resize();
-	}
+	},
+    //显示举报选择
+	showReport : function () {
+        $('.jubao-btn').click(function () {
+            $(this).siblings().toggle();
+            $(this).closest('tr').siblings().find('.reportList').hide();
+            event.stopPropagation();
+        });
+        $(document).click(function () {
+            $('.reportBox .reportList').hide();
+        })
+        $('.reportList').click(function () {
+            event.stopPropagation();
+        });
+        $('.reportList .submit-btn').click(function () {
+            $(this).closest('.reportList').hide();
+        })
+    }
 };
 function resize(){
 	var height = $(".content-right").height() - $(".links").outerHeight(true) - $(".console-box").outerHeight(true) - $(".progress-box").outerHeight(true);

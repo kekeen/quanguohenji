@@ -1,0 +1,139 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content essay-detail-cont">
+		<%- include('../templates/study-left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">实战协同</a> /
+				<a href="###">技术交流</a> /
+				<a href="###" class="at">问题详情</a>
+				<button class="inps pull-right" onclick="window.history.back(-1);'">
+					<i class="iconfont icon-line-reply"></i>返回
+				</button>
+			</div>
+			<div class="right-content-box">
+				<div class="essay-detail boxs whitebox">
+					<p class="de-tit">近期工作感想</p>
+					<p class="de-explain">
+						<span>发布人：<i>陈一新</i></span>
+						<span>发表时间：<i>2018-08-19  19:00</i></span>
+					</p>
+					<p class="de-stage">当地时间1日晚，英国首相特雷莎·梅在英国《每日电讯》网站接连发表署名文章，排除了再次举行“脱欧”公投的可能性并承诺将坚守内阁制定的“脱欧”蓝图，不向欧盟作任何妥协。排除了再次举行“脱欧”公投的可能性并承诺将坚守内阁制定的“脱欧”蓝图。</p>
+					<p class="de-stage">当地时间1日晚，英国首相特雷莎·梅在英国《每日电讯》网站接连发表署名文章，排除了再次举行“脱欧”公投的可能性并承诺将坚守内阁制定的“脱欧”蓝图，不向欧盟作任何妥协。</p>
+					<p class="de-img">
+						<img src="../images/detail-img.png"/>
+					</p>
+					<p class="de-stage">当地时间1日晚，英国首相特雷莎·梅在英国《每日电讯》网站接连发表署名文章，排除了再次举行“脱欧”公投的可能性并承诺将坚守内阁制定的“脱欧”蓝图，不向欧盟作任何妥协。排除了再次举行“脱欧”公投的可能性并承诺将坚守内阁制定的“脱欧”蓝图，不向欧盟作任何妥协</p>
+					<div class="de-control">
+						<a href="#" class="youyong"><i class="iconfont icon-line-thumb"></i>有用(<i class="num">16</i>)</a>
+						<a href="#" class="meiyong"><i class="iconfont icon-line-thumb"></i>没用(<i class="num">10</i>)</a>
+						<div class="reportBox">
+							<a href="javascript:void(0);" class="jubao-btn" ><i class="iconfont icon-line-error"></i>举报</a>
+							<div class="reportList">
+								<ul>
+									<li><label><input type="radio" name="jubao">时政反动</label></li>
+									<li><label><input type="radio" name="jubao">色情低俗</label></li>
+									<li><label><input type="radio" name="jubao">暴力血腥</label></li>
+									<li><label><input type="radio" name="jubao">违法犯罪</label></li>
+									<li><label><input type="radio" name="jubao">垃圾信息</label></li>
+									<li><label><input type="radio" name="jubao">未成年人有害</label></li>
+									<li><label><input type="radio" name="jubao">欺诈恶意营销</label></li>
+									<li><label><input type="radio" name="jubao">其他</label></li>
+								</ul>
+								<a class="submit-btn" href="#">提交</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<%
+					var data = [{
+						title:'评论详情',
+						cls:'problem'
+					}]
+					for(var i in data){
+						var title = data[i].title;
+				%>
+				<div class="<%= data[i].cls %>-box boxs whitebox">
+					<div class="small-tit bor-blue">评论</div>
+					<div class="discuss-box">
+						<div class="label-input">
+							<label for="">
+								<span class="necessarily">*</span>作者：
+							</label>
+							<textarea class="uninps area" placeholder="请输入作者"></textarea>
+						</div>
+						<div class="btn-box">
+							<button class="btns">发表</button>
+						</div>
+					</div>
+					<div class="small-tit bor-blue"><%= data[i].title %></div>
+					<ul class="<%= data[i].cls %>-list">
+						<% for(var j=0;j<4;j++){ %>
+						<li>
+							<img src="../images/hj.png" class="lis-head inblock ib-top"/>
+							<div class="inblock ib-top lis-content">
+								<span class="name">黄于静</span>
+								<p class="content-txt">采用最新的痕迹技术方法，可鉴定该足迹。</p>
+								<div class="operation-box">
+									<span class="time">2018-12-18 12:00</span>
+									<div class="right-box pull-right">
+										<%
+											var op = [{
+												cls:'reply',
+												txt:'回复',
+												font:'line-textsm'
+											}];
+											for(var i in op){
+										%>
+										<a href="javascript:;" class="<%= op[i].cls %>">
+											<i class="iconfont icon-<%= op[i].font %>"></i>
+											<%= op[i].txt %>
+										</a>
+										<% } %>
+									</div>
+								</div>
+								<div class="reply-box hide">
+									<input type="text" placeholder="请输入回复内容" class="inputs"/>
+									<div class="btn-box">
+										<button class="btns cancel">取消回复</button>
+										<button class="btns">回复</button>
+									</div>
+								</div>
+								<div class="forward-box <%= j == 2 ? '' : 'hide' %>">
+									<img src="../images/hj.png" class="lis-head inblock ib-top"/>
+									<div class="inblock ib-top lis-content">
+										<span class="name">黄于静</span>
+										<p class="content-txt">采用最新的痕迹技术方法，可鉴定该足迹。</p>
+										<span class="time">2018-12-18 12:00</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<% } %>
+					</ul>
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	<%- include('../templates/foot') %>
+	<script>
+		$(".problem-list li").on("click",'.reply',function(){
+			var that = $(this),
+			replybox = that.parents(".operation-box").siblings('.reply-box');
+			replybox.removeClass('hide');
+		});
+		$(".reply-box").on('click','.cancel',function(){
+			var that = $(this),
+			replybox = that.parents(".reply-box");
+			replybox.addClass('hide');
+		});
+		$(".toTop").click(function(){
+			$(".right-content-box").scrollTop(0);
+		})
+	</script>
+</body>
+</html>

@@ -146,7 +146,7 @@ button.inps {
     border: 0;
     border-bottom: 1px solid #d4e1e9;
     &:hover {
-        border-bottom-color: #3598db;
+        border-bottom-color: #3598db !important;
     }
 }
 
@@ -252,6 +252,191 @@ button.inps {
     }
 }
 
+.blueBtn{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 20px;
+  height: 30px;
+  line-height: 30px;
+  background: #03acef;
+  color: #fff;
+  box-shadow: 1px 1px 4px #a7bac7;
+  border-radius: 4px;
+  border: 0;
+  min-width: 75px;
+  &:hover{
+    color: white;
+  }
+  &:active{
+    color: white;
+  }
+  &:visited{
+    color: white;
+  }
+}
+.icon-upload{
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 14px;
+  background: url("../images/file-upload.png") no-repeat center center;
+  margin-top: -5px;
+}
+.upload-btn{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  .blueBtn{
+    padding: 0 10px;
+  }
+  .icon-upload{
+    margin-right: 3px;
+  }
+  .file{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 0;
+    opacity: 0;
+  }
+}
+.upload-img{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  .icon-uploadImg{
+    display: inline-block;
+    vertical-align: middle;
+    width: 39px;
+    height: 39px;
+    background: url("../images/icon-uploadImg.png") no-repeat center center;
+  }
+  .file{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 0;
+    opacity: 0;
+  }
+}
+.pop-close{
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background: url("../images/pop-close.png") no-repeat center center;
+}
+.icon-rentou{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 3px 0 0;
+  width: 18px;
+  height: 18px;
+  background: url("../images/icon-rentou.png") no-repeat center center;
+}
+.icon-yanjing{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 3px 0 0;
+  width: 20px;
+  height: 13px;
+  background: url("../images/icon-yanjing.png") no-repeat center center;
+}
+.reportBox{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  a{
+    color: #3598db;
+  }
+  .reportList{
+    position: absolute;
+    z-index: 5;
+    left: -52px;
+    top: 30px;
+    background: white;
+    min-width: 135px;
+    padding: 0 10px 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    border-radius: 6px;
+    display: none;
+    &:before{
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      margin-left: -8px;
+      top: -8px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-bottom: 8px solid white;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+    &:after{
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      margin-left: -8px;
+      top: -10px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-bottom: 8px solid #ecf0f2;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+    >ul>li{
+      margin-top: 10px;
+      white-space: nowrap;
+      color: #283e53;
+      text-align: left;
+      label{
+        cursor: pointer;
+      }
+      .iradio_flat-blue{
+        margin-right: 5px;
+      }
+    }
+    .submit-btn{
+      min-width: 110px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 12px;
+      background: #03acef;
+      height: 28px;
+      line-height: 28px;
+      border-radius: 4px;
+      text-align: center;
+      color: white;
+    }
+  }
+}
+//弹窗
+.modal.modal-delete{
+  .modal-content{
+    width: 448px;
+  }
+  .modal-body{
+    min-height: 90px;
+    font-size: 16px;
+    line-height: 90px;
+  }
+}
+.yulan{
+  .modal-body{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
 /* 公共 end */
 

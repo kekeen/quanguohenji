@@ -1,0 +1,292 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/study-left-side-list') %>
+        <div class="content-right">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">在线学习</a> / <a href="###" class="at">工作随笔</a>
+        	</div>
+        	<div class="console-box whitebox video-consoleBox clearfix">
+				<%
+					var drop = ['原创','转载'],
+					data = [
+						{lbs:'标题',type:'text',txt:'请输入'},
+						{lbs:'发布人',type:'text',txt:'请输入'},
+						{lbs:'上传时间',type:'time'},
+						{lbs:'查询',type:'btn'}
+					];
+				%>
+				<ul class="table-console pull-left">
+					<% for(var i in data){ %>
+					<li class="console-list-lis inblock ib-mid">
+						<label class="lbs <%= data[i].type == 'btn' ? 'hide' :'' %>"><%= data[i].lbs %>：</label>
+						<% if(data[i].type == 'text'){ %>
+						<input type="text" class="inps" placeholder="<%= data[i].txt %>"/>
+						<% }else if(data[i].type == 'drop'){ %>
+						<div class="dropdown">
+							<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<% for(var j in data[i].drop){ %>
+								<li><a href="javascript:;"><%= data[i].drop[j] %></a></li>
+								<% } %>
+							</ul>
+						</div>
+						<% }else if(data[i].type == 'time'){ %>
+						<%- include('../templates/data_times') %>
+						<% }else if(data[i].type == 'btn'){ %>
+						<button class="btns"><%= data[i].lbs %></button>
+						<% } %>
+					</li>
+					<% } %>
+				</ul>
+				<div class="console-right pull-right">
+					<button class="btns" onclick="window.location.href='在线学习-工作随笔-发布随笔.html'">
+						<span class="tips-num hide">12</span>
+						发布随笔
+					</button>
+				</div>
+			</div>
+        	<div class="right-content-box whitebox video-tableBox">
+        		<div class="table-box">
+        			<table class="tables vi-tables">
+        				<tbody>
+        					<% for(var i=0;i<10;i++){ %>
+        					<tr>
+        						<td width="30"><input type="checkbox"></td>
+        						<td width="110">
+									<a href="#">
+										<div class="essay-img">
+											<img src="../images/login_bg.png">
+										</div>
+									</a>
+								</td>
+        						<td width="65%" class="describeTd">
+									<p class="vi-tit"><a href="#">指纹鉴定的教学视频</a></p>
+									<p class="es-detail">还是喜欢有电脑的日子，可以比较有仪式感的写自己所感、所想，记录自己的委屈或感动。可是，真静下来让自己去记录这段时间工作中的委屈与成长真静下来让自己去记录这段时间工作中的委屈与成长可是，真静下来让自己去记录这段时间工作中的委屈与成长真静下来让自己去记录这段时间工作中的委屈与成长</p>
+									<p class="vi-explain">
+										<span><i class="icon-rentou"></i>陈一新</span>
+										<span>发布时间：2019-01-12 12:30</span>
+										<span><i class="icon-yanjing"></i>1.5万</span>
+										<span><i class="icon-pinglun"></i>98</span>
+									</p>
+								</td>
+        						<td class="controlTd">
+									<div class="reportBox">
+										<a href="javascript:void(0);" class="jubao-btn" >举报</a>
+										<div class="reportList">
+											<ul>
+												<li><label><input type="radio" name="jubao">时政反动</label></li>
+												<li><label><input type="radio" name="jubao">色情低俗</label></li>
+												<li><label><input type="radio" name="jubao">暴力血腥</label></li>
+												<li><label><input type="radio" name="jubao">违法犯罪</label></li>
+												<li><label><input type="radio" name="jubao">垃圾信息</label></li>
+												<li><label><input type="radio" name="jubao">未成年人有害</label></li>
+												<li><label><input type="radio" name="jubao">欺诈恶意营销</label></li>
+												<li><label><input type="radio" name="jubao">其他</label></li>
+											</ul>
+											<a class="submit-btn" href="#">提交</a>
+										</div>
+									</div>
+        							<a href="在线学习-工作随笔-发布随笔.html">编辑</a>
+        							<a href="javascript:void(0);" data-toggle="modal" data-target="#delete">删除</a>
+        						</td>
+        					</tr>
+        					<% } %>
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+						<div class="pull-left">
+							<input type="checkbox">
+							<a class="blueBtn" href="#" data-toggle="modal" data-target="#moreDelete">批量删除</a>
+						</div>
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+	<!--上传视频弹框-->
+	<div class="modal in" id="uploadVideo">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>上传视频</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+					<a href="#" class="pop-close"></a>
+				</div>
+				<div class="modal-body">
+					<div class="video-message">
+						<ul>
+							<li>
+								<p class="name"><i class="redStar">*</i>视频名称：</p>
+								<p class="detail"><input type="text" class="uninps" placeholder="请输入视频名称" /></p>
+							</li>
+							<li>
+								<p class="name"><i class="redStar">*</i>版权：</p>
+								<p class="detail">
+									<label><input type="radio" name="choose"/>原创</label>
+									<label><input type="radio" name="choose"/>转载</label>
+								</p>
+							</li>
+							<li>
+								<p class="name"><i class="redStar">*</i>视频：</p>
+								<div class="uploadBox">
+									<div class="upload-btn">
+										<input class="file" type="file"/>
+										<a class="blueBtn" href="#"><i class="icon-upload"></i>上传视频</a>
+									</div>
+									<p class="p1">点击或将视频文件拖拽到这里上传</p>
+									<p class="p2">支持扩展名：rar. zip. doc. docx. pdf. jpg...</p>
+								</div>
+								<div class="video-fileList">
+									<ul>
+										<li>
+											<p>
+												<span class="viName">鉴定课程视频.mp4</span>
+												<i class="percent">50%</i>
+												<i class="iconfont icon-line-del"></i>
+											</p>
+											<div class="out-progress">
+												<span class="in-progress"></span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">提交</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 删除单个视频提示  -->
+	<div class="modal in small" id="delete">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>删除提示</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						确定删除该视频？
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 删除多个视频提示  -->
+	<div class="modal in small" id="moreDelete">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header clearfix">
+					<span>删除提示</span>
+					<a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-content">
+						确定删除选中的视频？
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+					<button type="button" class="btns yes">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--上传视频缩略提示-->
+		<!--失败提示-->
+	<div class="videoTip failTip" style="display: none;">
+		<i class="icon-tip"></i>
+		<span>上传视频</span>
+		<span class="state">上传失败</span>
+		<p class="btnWrap">
+			<a href="#" class="pop-open"></a>
+			<a href="#" class="close-tip"></a>
+		</p>
+	</div>
+		<!--成功提示-->
+	<div class="videoTip successTip" style="display: none;">
+		<i class="icon-tip"></i>
+		<span>上传视频</span>
+		<span class="state">100%</span>
+		<p class="btnWrap">
+			<a href="#" class="pop-open"></a>
+			<a href="#" class="close-tip"></a>
+		</p>
+	</div>
+		<!--上传中提示-->
+	<div class="videoTip ingTip" style="display: none;">
+		<i class="icon-tip"></i>
+		<span>上传视频</span>
+		<span class="state">80%</span>
+		<p class="btnWrap">
+			<a href="#" class="pop-open"></a>
+			<a href="#" class="close-tip"></a>
+		</p>
+	</div>
+    <%- include('../templates/foot') %>
+</body>
+</html>
+<script type="text/javascript">
+	//$('#uploadVideo').modal('show');
+	//显示举报选择
+    showReport();
+	function showReport() {
+        $('.jubao-btn').click(function () {
+            $(this).siblings().toggle();
+            $(this).closest('tr').siblings().find('.reportList').hide();
+            event.stopPropagation();
+        });
+		$(document).click(function () {
+		    $('.reportBox .reportList').hide();
+        })
+		$('.reportList').click(function () {
+            event.stopPropagation();
+        });
+		$('.reportList .submit-btn').click(function () {
+			$(this).closest('.reportList').hide();
+        })
+    }
+    //进度条
+    progressBar();
+	function progressBar() {
+	    var percent = $('.percent').text();
+		$('.in-progress').css('width',percent);
+    }
+    //点击上传视频弹框的缩略按钮
+    smallClose();
+	function smallClose() {
+		$('.pop-close').click(function () {
+            $('#uploadVideo').modal('hide');
+            $('.failTip').show();
+        })
+    }
+    //点击提示显示弹框
+    showPop();
+	function showPop() {
+		$('.pop-open').click(function () {
+            $('#uploadVideo').modal('show');
+            $('.failTip').hide();
+        })
+    }
+    //隐藏上传提示
+    hideTip();
+	function hideTip() {
+		$('.close-tip').click(function () {
+			$(this).closest('.videoTip').hide();
+        })
+    }
+
+
+</script>

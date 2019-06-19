@@ -2,6 +2,26 @@
 @text-color:#283E53;
 @border-color:#EFF4F7;
 @shadow-color:0px 0px 10px 0px rgba(185,206,223,0.68);
+.book-content{
+  .table-console{
+    float: left;
+    >li{
+      margin-bottom: 8px;
+    }
+  }
+  .console-box-list{
+    position: relative;
+    padding: 15px 130px 7px 20px;
+    .console-right{
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      .btns{
+        padding: 0 20px;
+      }
+    }
+  }
+}
 .book-container{
   padding:0 18px;
   padding-top:30px;
@@ -89,6 +109,9 @@
       }
     }
   }
+  .icon-rentou{
+    margin: -3px 3px 0 0;
+  }
 }
 .pag-box{
   .pl-delete{
@@ -159,27 +182,6 @@
       li{
         width: 46.2%;
       }
-    }
-  }
-}
-
-//弹窗
-.modal-delete{
-  .modal-content{
-    width: 448px;
-  }
-  .modal-body{
-    min-height: 128px;
-    font-size: 16px;
-    line-height: 128px;
-  }
-}
-
-.yulan{
-  .modal-body{
-    img{
-      width: 100%;
-      height: 100%;
     }
   }
 }

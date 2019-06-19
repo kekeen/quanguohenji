@@ -1,0 +1,9 @@
+{
+  "title": "系统管理-积分管理",
+  "atname": "积分管理",
+  "xtgl":true,
+  "styles": [
+  	"../css/ordinary.css"
+  ],
+  "scripts":[]
+}

@@ -1,62 +1,5 @@
-.blueBtn{
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0px 20px;
-  height: 30px;
-  line-height: 30px;
-  background: #03acef;
-  color: #fff;
-  box-shadow: 1px 1px 4px #a7bac7;
-  border-radius: 4px;
-  border: 0;
-  min-width: 75px;
-  &:hover{
-    color: white;
-  }
-  &:active{
-    color: white;
-  }
-  &:visited{
-    color: white;
-  }
-}
-.icon-upload{
-  display: inline-block;
-  vertical-align: middle;
-  width: 19px;
-  height: 14px;
-  background: url("../images/file-upload.png") no-repeat center center;
-  margin-top: -5px;
-}
-.upload-btn{
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  .blueBtn{
-    padding: 0 10px;
-  }
-  .icon-upload{
-    margin-right: 3px;
-  }
-  .file{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    font-size: 0;
-    opacity: 0;
-  }
-}
-.pop-close{
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  background: url("../images/pop-close.png") no-repeat center center;
-}
-
+@import "./base/conn.less";
+/*在线学习-课程录像开始*/
 .video-consoleBox{
   position: relative;
   padding: 10px 130px 2px 20px;
@@ -108,23 +51,10 @@
     a{
       font-size: 18px;
       color: #283e53;
+      &:hover{
+        color: #03acef;
+      }
     }
-  }
-  .icon-rentou{
-    display: inline-block;
-    vertical-align: middle;
-    margin: -4px 3px 0 0;
-    width: 18px;
-    height: 18px;
-    background: url("../images/icon-rentou.png") no-repeat center center;
-  }
-  .icon-yanjing{
-    display: inline-block;
-    vertical-align: middle;
-    margin: -4px 3px 0 0;
-    width: 20px;
-    height: 13px;
-    background: url("../images/icon-yanjing.png") no-repeat center center;
   }
   .vi-explain{
     margin-top: 15px;
@@ -417,5 +347,46 @@
     }
   }
 }
+#delete,#moreDelete{
+  .modal-content{
+    width: 448px;
+    .modal-body-content{
+      font-size: 16px;
+      color: #283e53;
+    }
+  }
+  .modal-footer{
+    font-size: 14px;
+  }
+}
+/*在线学习-课程录像结束*/
+/*在线学习-工作随笔开始*/
+.icon-pinglun{
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icon-pinglun.png") no-repeat center center;
+}
+
+.essay-img{
+  width: 95px;
+  height: 95px;
+  border: 1px solid #f0f4f7;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.es-detail{
+  margin-top: 3px;
+  height: 40px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #6c849c;
+  .txtmore(2)
+}
+/*在线学习-工作随笔结束*/
 
 

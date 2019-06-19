@@ -1,7 +1,7 @@
 {
   "title": "在线学习-专业书籍",
-  "atname": "在线学习",
-  "szxt":true,
+  "atname": "专业书籍",
+  "zxxx":true,
   "styles": [
   	"../css/professional_book.css"
   ],

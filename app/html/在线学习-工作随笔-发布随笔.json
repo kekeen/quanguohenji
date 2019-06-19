@@ -1,0 +1,13 @@
+{
+  "title": "在线学习-工作随笔",
+  "atname": "工作随笔",
+  "zxxx":true,
+  "styles": [
+  	"../css/upload_page.css"
+  ],
+  "scripts":[
+    "../libs/utf8-net/ueditor.config.js",
+    "../libs/utf8-net/ueditor.all.js",
+    "../libs/utf8-net/lang/zh-cn/zh-cn.js"
+  ]
+}
