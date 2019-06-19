@@ -1,0 +1,251 @@
+<%- include('../templates/head') %>
+
+<body>
+	<%- include('../templates/nav') %>
+	<div class="content">
+		<%- include('../templates/study-left-side-list') %>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">系统管理</a> /
+				<a href="###" class="at">日志管理</a>
+			</div>
+		
+			<div class="right-content-box whitebox">
+				<div class="table-box">
+					<div class="log">
+            <div class="left">
+              <div class="case">
+                <div class="head">
+                  <h4 class="title">今日访问量</h4>  
+                </div>
+                <div class="body">
+                  <ul class="volume-list">
+                    <li>
+                      <p>今日访问量</p>
+                      <span>124</span>
+                    </li>
+                    <li>
+                      <p>IP数</p>
+                      <span>43</span>
+                    </li>
+                    <li>
+                      <p>平均访问时长</p>
+                      <span>00:10:50</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="case">
+                <div class="head">
+                  <h4 class="title">访问量趋势图</h4>  
+                  <div class="labels">
+                    <a class="tab-btn active" href="javascript:;">今天</a>
+                    <a class="tab-btn" href="javascript:;">最近7天</a>
+                    <a class="tab-btn" href="javascript:;">最近30天</a>
+                  </div>
+                </div>
+                <div class="body">
+                  <div class="echarts-wrapper" id="trend"></div>
+                </div>
+              </div>
+
+              <div class="case">
+                <div class="head">
+                  <h4 class="title">模块访问占比</h4>  
+                  <div class="labels">
+                    <a class="tab-btn active" href="javascript:;">今天</a>
+                    <a class="tab-btn" href="javascript:;">最近7天</a>
+                    <a class="tab-btn" href="javascript:;">最近30天</a>
+                  </div>
+                </div>
+                <div class="body">
+                  <div class="echarts-wrapper" id="scale"></div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="case">
+                <div class="head">
+                  <h4 class="title">日志记录</h4>  
+                  <div class="labels">
+                    <label for="" class="labels-item">
+                      <div class="dropdown">
+                        <button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">访问模块 <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="javascript:;">访问模块</a></li>
+                        </ul>
+                      </div>
+                    </label> 
+                    <label for="" class="labels-item">
+                      <div class="data-times">
+                        <div class="timebox">
+                          <input type="text" class="allData inps">
+                          <i class="iconfont icon-line-insert time"></i>
+                        </div>
+                          <div class="dataList" style="display: none;">
+                            <ul>
+                                
+                                <li><a href="javascript:void(0)">最近一天</a></li>
+                                
+                                <li><a href="javascript:void(0)">最近三天</a></li>
+                                
+                                <li><a href="javascript:void(0)">最近七天</a></li>
+                                
+                            </ul>
+                            <div class="timeCustom">
+                                <p class="custom-title">自定义</p>
+                                <div class="custom-data">从<input type="text" class="ts-range"></div>
+                                <div class="custom-data">至<input type="text" class="ts-range2"></div>
+                                <div class="custom-btn">
+                                    <a href="javascript:void(0)">重置</a>
+                                    <a href="javascript:void(0)" class="sure">确认</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </label> 
+                  </div>
+                </div>
+                <div class="body">
+                  <ul class="record">
+                    <%for(var i=0;i<12;i++){%>
+                      <li>
+                        <img src="../images/hj.png" alt="">
+                        <dl>
+                          <dt>海淀区公安局分局_黄多多访问了<a href="javascript:;">[首页]</a></dt>
+                          <dd>
+                            <span>2019-04-06 16:10:00</span>
+                            <span>IP:119.130.234.254</span>
+                          </dd>
+                        </dl>
+                      </li>
+                    <%}%>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <%
+    var data = [{
+      el:'remove',
+      title:'删除提示',
+      text:'确定删除该书籍？'
+    },{
+      el:'pl-remove',
+      title:'删除提示',
+      text:'确定删除选中的书籍？'
+    }]
+  %>
+  <%- include('../templates/modal-delete',{data:data}) %>
+  <div class="modal fade yulan" id="yulan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">预览</h4>
+        </div>
+        <div class="modal-body">
+            <img src="../images/hj.png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="f-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="f-btn f-btn-a">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	<%- include('../templates/foot') %>
+</body>
+<script>
+  $(function(){
+    (function trend(){
+      var myChart = echarts.init(document.getElementById('trend'));
+      option = {
+        color:'#03ACEF',
+        tooltip: {
+          trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['2019/05/20','2019/05/25','2019/05/30', '2019/06/04','2019/06/09','2019/06/14']
+        },
+        yAxis: {
+            type: 'value',
+            axisTick:{
+              show:false
+            },
+            axisLine:{
+              show:false
+            },
+            splitLine:{
+              lineStyle:{
+                type:'dashed'
+              }
+            }
+        },
+        series: [{
+            name:"访问量",
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+        }]
+      };
+      myChart.setOption(option);
+    })();
+    
+    
+    (function scale(){
+      var myChart = echarts.init(document.getElementById('scale'));
+      option = {
+          tooltip: {
+              trigger: 'item',
+              formatter: "{b}: {c} ({d}%)"
+          },
+          legend: {
+              orient: 'vertical',
+              x: 'left',
+              data:['系统管理','科技创新','在线学习','标准规范','实验室建设','实战协同','首页']
+          },
+          color:['#36cbcb','#9b62e9','#f64967','#fdd738','#4ecb74','#274968','#3aa1ff'],
+          series: [
+              {
+                  name:'访问来源',
+                  type:'pie',
+                  radius: ['50%', '70%'],
+                  avoidLabelOverlap: false,
+                  label: {
+                      normal: {
+                          show: true,
+                          position: 'outside'
+                      }
+                  },
+                  labelLine: {
+                      normal: {
+                          show: true,
+                          length:40,
+                          length2:25
+                      }
+                  },
+                  data:[
+                      {value:5, name:'系统管理'},
+                      {value:4, name:'科技创新'},
+                      {value:6, name:'在线学习'},
+                      {value:12, name:'标准规范'},
+                      {value:18, name:'实验室建设'},
+                      {value:28, name:'实战协同'},
+                      {value:27, name:'首页'}
+                  ]
+              }
+          ]
+      };
+      myChart.setOption(option);
+    })();
+  })
+</script>
+</html>
