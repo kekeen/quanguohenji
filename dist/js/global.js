@@ -44,7 +44,8 @@ commonJs.fn = {
 	        onChangeDateTime:function(dp,$input){
 	            $(".sure").click(function () {
 	               /* var $inputs=$input.val()+" 至 "+$input.val();*/
-	                $(this).parents('.data-times').find(".allData").val($(this).parents('.data-times').find('.ts-range').val()+" 至 "+$(this).parents('.data-times').find('.ts-range2').val());
+                  $(this).parents('.data-times').find(".allData").val($(this).parents('.data-times').find('.ts-range').val()+" 至 "+$(this).parents('.data-times').find('.ts-range2').val());
+                  $(this).parents(".dataList").siblings('.timebox').find(".allData").css({width:'295px'});
 	                $(this).parents(".dataList").hide();
 	            })
 	        }
@@ -63,7 +64,8 @@ commonJs.fn = {
 	    $(".dataList ul li a").click(function (event) {
 	        var $text=$(this).text();
 	        $(this).parents(".data-times").find(".allData").val($text);
-	        $(this).parents(".dataList").hide();
+          $(this).parents(".dataList").hide();
+          $(this).parents(".dataList").siblings('.timebox').find(".allData").css({width:'115px'});
 	        event.stopPropagation();
 	    });
 	},

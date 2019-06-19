@@ -1,0 +1,11 @@
+{
+  "title": "系统管理-日志管理",
+  "atname": "日志管理",
+  "zxxx":true,
+  "styles": [
+  	"../css/manager-log.css"
+  ],
+  "scripts":[
+    "../libs/echarts/echarts.min.js"
+  ]
+}
