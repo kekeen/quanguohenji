@@ -141,10 +141,10 @@ gulp.task('copy', function(){
     ])
     .pipe(gulp.dest('./dist/libs/jquery'));
 
-    // gulp.src([
-    //   './app/libs/echarts/**'
-    // ])
-    // .pipe(gulp.dest('./dist/libs/echarts'));
+    gulp.src([
+      './app/libs/echarts/**'
+    ])
+    .pipe(gulp.dest('./dist/libs/echarts'));
 
     // gulp.src([
     //   './app/libs/countUp/dist/countUp.min.js'
