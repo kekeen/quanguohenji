@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>系统管理-积分管理 - 全国痕迹检验网络实验室项目</title>
+<meta name="renderer" content="webkit">
+
+<link rel="stylesheet" href="../libs/ztree/css/zTreeStyle.css">
+<link rel="stylesheet" href="../css/custom-bootstrap.css">
+<link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
+<link rel="stylesheet" href="../libs/fonts/iconfont.css">
+<link rel="stylesheet" href="../libs/datetimepicker-master/jquery.datetimepicker.css">
+<link rel="stylesheet" href="../css/jquery.paging.css">
+<link rel="stylesheet" href="../css/comment.css">
+<link rel="stylesheet" href="../css/time_data.css">
+<link rel="stylesheet" href="../css/manager-integral.css">
+
+
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="header">
+    <div class="logo">
+        <a href="index.html"><img src="../images/logo.png"></a>
+    </div>
+    <div class="nav-list">
+        <ul class="clearfix">
+            <li class=""><a href="index.html">首页</a></li>
+            <li class=""><a href="紧急求助-我发出的求助.html">实战协同</a></li>
+            <li class=""><a href="javascript:void(0)">实验室建设</a></li>
+            <li class=""><a href="javascript:void(0)">标准规范</a></li>
+            <li class=""><a href="在线学习-课程录像.html">在线学习</a></li>
+            <li class=""><a href="javascript:void(0)">科技创新</a></li>
+            <li class="active"><a href="系统管理-积分管理.html">系统管理</a></li>
+        </ul>
+    </div>
+    <div class="set">
+        <a href="javascript:void(0)" class="set-search"><i></i></a>
+        <a href="login.html" class="set-login">登录</a>
+        <a href="register.html" class="set-register">注册</a>
+    </div>
+ </div>
+    <div class="content">
+        <div class="left-sidebar">
+    
+    
+    <ul>
+        
+        <li class="">
+            
+                <a href="系统管理-专家管理.html" >
+                    
+                    <i class="iconfont iconsystem-zhuanjia"></i>
+                    专家管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-栏目管理.html" >
+                    
+                    <i class="iconfont iconsystem-lanmu"></i>
+                    栏目管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-用户管理.html" >
+                    
+                    <i class="iconfont iconsystem-yonghu"></i>
+                    用户管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-角色管理.html" >
+                    
+                    <i class="iconfont iconsystem-juese"></i>
+                    角色管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-字典管理.html" >
+                    
+                    <i class="iconfont iconsystem-zidian"></i>
+                    字典管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+            <a href="系统管理-通知中心-消息通知.html" >
+                
+                    <i class="iconfont iconsystem-tongzhi"></i>
+                    通知中心
+                    
+                    <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
+                    
+                </a>
+                
+                <div class="left-side-kid">
+                    
+                    <a href="系统管理-通知中心-消息通知.html" class="">
+                        消息通知
+                    </a>
+                    
+                    <a href="系统管理-通知中心-通知管理.html" class="">
+                        通知管理
+                    </a>
+                    
+                </div>
+                
+        </li>
+        
+        <li class="active">
+            
+                <a href="系统管理-积分管理.html" >
+                    
+                    <i class="iconfont iconsystem-jifen"></i>
+                    积分管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-排班管理.html" >
+                    
+                    <i class="iconfont iconsystem-paiban"></i>
+                    排班管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-日志管理.html" >
+                    
+                    <i class="iconfont iconsystem-rizhi"></i>
+                    日志管理
+                    
+                </a>
+                
+        </li>
+        
+    </ul>
+    
+</div>
+        <div class="content-right integral-cont">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">系统管理</a> / <a href="###">积分管理</a> / <a href="###" class="at">积分规则设置</a>
+				<button class="inps pull-right" onclick="window.history.back(-1);">
+					<i class="iconfont icon-line-reply"></i>返回
+				</button>
+        	</div>
+			<div class="console-box whitebox">
+				<div class="title-box">
+					积分规则设置
+				</div>
+				<div class="console-right pull-right">
+					<button class="btns" data-toggle="modal" data-target="#addRule">
+						<span class="tips-num hide">12</span>
+						添加积分规则
+					</button>
+				</div>
+			</div>
+        	<div class="right-content-box whitebox">
+        		<div class="table-box">
+        			<div class="console-box-list">
+        				
+	        			<ul class="table-console">
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs ">积分规则：</label>
+		
+			<input type="text" class="inps" placeholder="请输入" style="width:undefinedpx"/>
+		
+	</li>
+	
+	<li class="console-list-lis inblock ib-mid">
+		<label class="lbs hide">查询：</label>
+		
+			<button class="btns">查询</button>
+		
+	</li>
+	
+</ul>
+        			</div>
+        			
+        			<table class="tables int-table">
+        				<thead>
+        					<tr>
+        						
+								
+								<th class="text-left">积分规则</th>
+								
+								
+								
+								<th>变动积分</th>
+								
+								
+								
+								<th>添加人</th>
+								
+								
+								
+								<th>操作时间</th>
+								
+								
+								
+								<th>操作</th>
+								
+								
+        					</tr>
+        				</thead>
+        				<tbody>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+
+	<!-- 添加积分规则  -->
+	<div class="modal in small" id="addRule">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>添加积分规则</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							
+							<li>
+								<label class="lbs"><i class="redStar">*</i>积分规则：</label>
+								<input type="text" class="uninps" placeholder="请输入积分规则内容"/>
+							</li>
+							
+							<li>
+								<label class="lbs"><i class="redStar">*</i>变动积分：</label>
+								<input type="text" class="uninps" placeholder="请输入变动积分数值"/>
+							</li>
+							
+						</ul>
+					</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+	                <button type="button" class="btns yes">确定</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+    
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/ztree/jquery.ztree.all.js"></script>
+<script src="../libs/bootstrap/dist/bootstrap.min.js"></script>
+<script src="../libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+<script src="../libs/icheck/icheck.min.js"></script>
+<script src="../js/jquery.paging.js"></script>
+<script src="../js/global.js"></script>
+
+
+</body>
+</html>

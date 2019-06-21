@@ -1,0 +1,108 @@
+<%- include('../templates/head') %>
+<body>
+    <%- include('../templates/nav') %>
+    <div class="content">
+        <%- include('../templates/study-left-side-list') %>
+        <div class="content-right integral-cont">
+        	<div class="links">
+        		<a href="index.html">首页</a> / <a href="###">系统管理</a> / <a href="###">积分管理</a> / <a href="###" class="at">积分规则设置</a>
+				<button class="inps pull-right" onclick="window.history.back(-1);">
+					<i class="iconfont icon-line-reply"></i>返回
+				</button>
+        	</div>
+			<div class="console-box whitebox">
+				<div class="title-box">
+					积分规则设置
+				</div>
+				<div class="console-right pull-right">
+					<button class="btns" data-toggle="modal" data-target="#addRule">
+						<span class="tips-num hide">12</span>
+						添加积分规则
+					</button>
+				</div>
+			</div>
+        	<div class="right-content-box whitebox">
+        		<div class="table-box">
+        			<div class="console-box-list">
+        				<%
+	        				var data = [
+								{lbs:'积分规则',type:'text',txt:'请输入'},
+								{lbs:'查询',type:'btn'}
+							];
+	        			%>
+	        			<%- include('../templates/table_console',{data:data}) %>
+        			</div>
+        			<% var thead = ['积分规则','变动积分','添加人','操作时间','操作']; %>
+        			<table class="tables int-table">
+        				<thead>
+        					<tr>
+        						<% for(var i in thead){ %>
+								<% if(i == 0){ %>
+								<th class="text-left"><%= thead[i] %></th>
+								<% }else{ %>
+								<th><%= thead[i] %></th>
+								<% } %>
+								<% } %>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<% for(var i=0;i<10;i++){ %>
+        					<tr>
+        						<td class="title text-left">每日首次登录系统</td>
+        						<td>+5</td>
+								<td>黄多多</td>
+        						<td>2018-12-18 12:00</td>
+        						<td class="operation">
+        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#addRule">编辑</a>
+        						</td>
+        					</tr>
+        					<% } %>
+        				</tbody>
+        			</table>
+        			<div class="pag-box">
+        				<div class="pagging"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+
+	<!-- 添加积分规则  -->
+	<div class="modal in small" id="addRule">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header clearfix">
+	                <span>添加积分规则</span>
+	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+	            </div>
+	            <div class="modal-body">
+					<div class="modal-body-content">
+						<ul>
+							<%
+								var cancel = [{
+									lbs:'积分规则',
+									txt:'请输入积分规则内容'
+								},{
+									lbs:'变动积分',
+									txt:'请输入变动积分数值'
+								}];
+								for(var i in cancel){
+							%>
+							<li>
+								<label class="lbs"><i class="redStar">*</i><%= cancel[i].lbs %>：</label>
+								<input type="text" class="uninps" placeholder="<%= cancel[i].txt %>"/>
+							</li>
+							<% } %>
+						</ul>
+					</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
+	                <button type="button" class="btns yes">确定</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+    <%- include('../templates/foot') %>
+</body>
+</html>

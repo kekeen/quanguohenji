@@ -37,7 +37,8 @@
   margin-bottom: 10px;
   margin-top: 8px;
 }
-.upload-wrapper .label-input input[type="text"] {
+.upload-wrapper .label-input input[type="text"],
+.upload-wrapper .label-input input[type="password"] {
   display: block;
   padding-bottom: 14px;
   border: none;
@@ -45,13 +46,16 @@
   border-bottom: 1px solid #D4E1E9;
   min-width: 356px;
 }
-.upload-wrapper .label-input input[type="text"]::-webkit-input-placeholder {
+.upload-wrapper .label-input input[type="text"]::-webkit-input-placeholder,
+.upload-wrapper .label-input input[type="password"]::-webkit-input-placeholder {
   color: #6C849C;
 }
-.upload-wrapper .label-input input[type="text"]:-ms-input-placeholder {
+.upload-wrapper .label-input input[type="text"]:-ms-input-placeholder,
+.upload-wrapper .label-input input[type="password"]:-ms-input-placeholder {
   color: #6C849C;
 }
-.upload-wrapper .label-input input[type="text"]::placeholder {
+.upload-wrapper .label-input input[type="text"]::placeholder,
+.upload-wrapper .label-input input[type="password"]::placeholder {
   color: #6C849C;
 }
 .upload-wrapper .label-input .necessarily {

@@ -1,0 +1,402 @@
+@import "./base/conn.less";
+@warning:#f4c700;
+@blue:#3598db;
+.grayColor{
+  color: #6c849c;
+}
+/*系统管理-积分管理开始*/
+.grayCircle{
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 22px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 1px;
+  border-radius: 50%;
+  background: #d4e1e9;
+  color: white;
+  &.first{
+    background: #ff4081;
+  }
+  &.second{
+    background: #f4c700;
+  }
+  &.third{
+    background: #03acef;
+  }
+}
+.title-box{
+  display: inline-block;
+  padding-left: 20px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #283e53;
+}
+.int-table{
+  th{
+    text-align: center;
+    &.text-left{
+      text-align: left;
+    }
+  }
+  td{
+    text-align: center;
+    &.text-left{
+      text-align: left;
+    }
+  }
+}
+.integral-cont{
+  .links{
+    position: relative;
+    .inps{
+      position: absolute;
+      right: 0;
+      top: -6px;
+    }
+  }
+}
+.modal{
+  &#addRule{
+    .modal-dialog{
+      width: 480px;
+    }
+    .modal-body{
+      min-height: auto;
+      padding: 50px 0;
+      font-size: 12px;
+      .modal-body-content{
+        width: 350px;
+        li{
+          margin-bottom: 20px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .lbs{
+        color: #6c849c;
+      }
+      span{
+        color: #283e53;
+      }
+      .uninps{
+        margin-top: 15px;
+        display: block;
+        width: 100%;
+      }
+    }
+    .modal-footer{
+      font-size: 14px;
+    }
+  }
+}
+/*系统管理-积分管理结束*/
+/*系统管理-用户管理开始*/
+.user-right-cont{
+  .unit-box{
+    float: left;
+    width: 260px;
+    height: 100%;
+    background: white;
+    padding: 10px;
+    .search-box{
+      margin-bottom: 14px;
+    }
+    .tree-box{
+      .allChoose{
+        margin-bottom: 8px;
+        font-size: 12px;
+        color: #798ea4;
+        label{
+          cursor: pointer;
+        }
+        .icheckbox_flat-blue{
+          margin-right: 5px;
+          vertical-align: middle;
+          margin-top: -3px;
+        }
+      }
+      .ztree{
+        padding: 0;
+      }
+    }
+  }
+  .user-tableWrap{
+    float: right;
+    width: calc(~'100% - 270px');
+  }
+  .pag-box{
+    /*padding: 15px 10px;*/
+    padding: 15px 20px 15px 30px;
+    .blueBtn{
+      margin-left: 15px;
+    }
+  }
+  .ztree li span.button.add {
+    margin-left:2px;
+    margin-right: -1px; background-position:-144px 0; vertical-align:top;
+  }
+  .ztree {
+    li {
+      margin: 5px 0;
+      span.button {
+        background-image: url('../libs/ztree/css/img/icon.png');
+        &.center_open,&.roots_open,&.bottom_open {
+          background-position: -40px -3px;
+        }
+        &.center_close,
+        &.roots_close,
+        &.bottom_close {
+          background-position: -5px -3px;
+        }
+        &.center_docu,
+        &.bottom_docu,
+        &.roots_docu {
+          background-image: url(../libs/ztree/css/img/zTreeStandard.png);
+        }
+        &.chk {
+          width: 15px;
+          height: 15px;
+          &.checkbox_false_full,
+          &.checkbox_false_full_focus,
+          &.checkbox_false_part,
+          &.checkbox_false_part_focus {
+            background-position: -166px -7px;    margin-top: 4px;
+          }
+          &.checkbox_true_part,
+          &.checkbox_true_part_focus{
+            background-position: -199px -7px;   margin-top: 4px;
+          }
+          &.checkbox_true_full,
+          &.checkbox_true_full_focus {
+            background-position: -231px -7px;   margin-top: 4px;
+          }
+        }
+        &.pIcon01_ico_open,&.icon01_ico_open,&.ico_open{
+          background-position: -266px -26px;
+          margin-right: 8px;
+        }
+        &.pIcon01_ico_close,&.icon01_ico_close,&.ico_close{
+          background-position: -266px -9px;
+          margin-right: 8px;
+        }
+        &.icon01_ico_docu,&.ico_docu{
+          background-position: -266px -47px;
+          margin-right: 6px;
+        }
+        &.add{
+          background-position: -5px -32px;
+        }
+        &.edit{
+          background-position: -23px -32px;
+        }
+        &.remove{
+          background-position: -43px -32px;
+        }
+      }
+      a {
+        display: inline-block;
+        width: 84%;
+        color: #6c849c;
+        padding: 2px 4px;
+        box-sizing: border-box;
+        height: 100%;
+        border:1px solid #fff;
+        .iconbox {
+          display: none;
+          button {
+            background: none;
+            box-shadow: none;
+            border: none;
+            margin: 0 2px;
+            color: #fff;
+          }
+        }
+        &:hover {
+          background:#fdd837;
+          border:1px dashed @warning;
+          text-decoration: none;
+          .node_name{
+            color:@blue;
+          }
+          .iconbox {
+            display: block;
+          }
+        }
+        &.curSelectedNode {
+          height: 100%;
+          background:#fdd837;
+          border:1px dashed @warning;
+          opacity:1;
+        }
+      }
+      .node_name{
+        input{
+          background-color:transparent;
+          border:none;
+          border-bottom:1px solid @blue;
+          &:focus{
+            outline:none;
+          }
+        }
+      }
+      .curSelectedNode{
+        .node_name{
+          color:@blue;
+        }
+      }
+    }
+    *{
+      font-size:inherit;
+    }
+  }
+}
+  /*开关按钮开始*/
+@f-derail-text-align:left;
+
+@f-derail-span-width:100%;
+@f-derail-span-background-color:#8fa1b5;
+@f-derail-span-left:0;
+@f-derail-span-top:50%;
+@f-derail-span-transform: translateY(-50%);
+@f-derail-span-box-shadow:0,1px,4px,0,rgba(148,171,182,0.46);
+
+@f-derail-i-height:100%;
+@f-derail-i-background-color:#fff;
+@f-derail-i-border-radius:50%;
+@f-derail-i-box-shadow:0,1px,4px,0,rgba(148,171,182,0.46);
+
+@f-derail-on-span-background-color:rgba(53,152,219,0.6);
+
+@f-derail-on-i-background-color:#3598db;
+@f-derail-on-i-right:0;
+
+@f-derail-s-height:18px;
+@f-derail-s-width:34px;
+
+@f-derail-s-span-height:12px;
+@f-derail-s-span-border-radius:6px;
+
+@f-derail-s-i-width:18px;
+
+@f-derail-s2-height:20px;
+@f-derail-s2-width:38px;
+
+@f-derail-s2-span-height:14px;
+@f-derail-s2-span-border-radius:7px;
+
+@f-derail-s2-i-width:20px;
+
+@f-derail-n-height:22px;
+@f-derail-n-width:42px;
+
+@f-derail-n-span-height:16px;
+@f-derail-n-span-border-radius:8px;
+
+@f-derail-n-i-width:22px;
+
+@f-derail-b-height:24px;
+@f-derail-b-width:46px;
+
+@f-derail-b-span-height:18px;
+@f-derail-b-span-border-radius:9px;
+
+@f-derail-b-i-width:24px;
+.f-derail{
+  position:relative;
+  display:inline-block;
+  cursor:pointer;
+  text-align:@f-derail-text-align;
+  span{
+    width:@f-derail-span-width;
+    position:absolute;
+    display:inline-block;
+    background-color:@f-derail-span-background-color;
+    left:@f-derail-span-left;
+    top:@f-derail-span-top;
+    transform: @f-derail-span-transform;
+    .box-shadow(0,1px,4px,0,rgba(148,171,182,0.46));
+  }
+  i{
+    height:@f-derail-i-height;
+    position:absolute;
+    display:inline-block;
+    background-color:@f-derail-i-background-color;
+    border-radius:@f-derail-i-border-radius;
+    .box-shadow(0,1px,4px,0,rgba(148,171,182,0.46));
+  }
+  &.on{
+    span{
+      background-color:@f-derail-on-span-background-color;
+    }
+    i{
+      background-color:@f-derail-on-i-background-color;
+      right:@f-derail-on-i-right;
+    }
+  }
+}
+.f-derail-s{
+  height:@f-derail-s-height;
+  width:@f-derail-s-width;
+  span{
+    height:@f-derail-s-span-height;
+    border-radius:@f-derail-s-span-border-radius;
+  }
+  i{
+    width:@f-derail-s-i-width;
+  }
+}
+  /*开关按钮结束*/
+#seeDetail{
+  .modal-dialog{
+    width: 535px;
+  }
+  .modal-body{
+    padding: 0 10px;
+  }
+  .modal-body-cont{
+    width: 100%;
+    padding: 15px 0 40px;
+  }
+  .contLeft{
+    float: left;
+    width: 45%;
+    padding-top: 30px;
+    .img{
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+    >p{
+      margin-top: 12px;
+    }
+    .iconfont{
+      margin-left: 6px;
+    }
+    .iconcom-woman{
+      color: #ff74a5;
+    }
+    .iconcom-man{
+      color: #03acef;
+    }
+    .iconcom-wu{
+      color: #9dabbb;
+    }
+  }
+  .contRight{
+    float: left;
+    width: 55%;
+    padding-left: 20px;
+    text-align: left;
+    >ul>li{
+      margin-top: 12px;
+    }
+  }
+}
+/*系统管理-用户管理结束*/

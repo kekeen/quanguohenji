@@ -1,0 +1,10 @@
+{
+  "title": "系统管理-用户管理",
+  "atname": "用户管理",
+  "xtgl":true,
+  "styles": [
+  	"../css/upload_page.css",
+    "../css/manager-addUser.css"
+  ],
+  "scripts":[]
+}

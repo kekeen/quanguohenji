@@ -1,10 +1,32 @@
 .whitebox {
   background: transparent;
 }
-.log .left,
-.log .right {
-  display: inline-block;
-  width: calc(50% - 7px);
+.diary-cont .right-content-box .table-box {
+  height: 100%;
+}
+.diary-cont .right-content-box .table-box .log {
+  height: 100%;
+  overflow: auto;
+  background: white;
+}
+.diary-cont .right-content-box .table-box .log .left {
+  height: 100%;
+  width: calc(50% - 10px);
+  float: left;
+}
+.diary-cont .right-content-box .table-box .log .right {
+  float: right;
+  height: 100%;
+  width: 50%;
+  background: pink;
+}
+.diary-cont .right-content-box .table-box .log .right .case {
+  height: 100%;
+  overflow: auto;
+}
+.diary-cont .right-content-box .table-box .log .right .case .body {
+  height: calc(100% - 61px);
+  overflow: auto;
 }
 .log .left {
   margin-right: 10px;
@@ -19,8 +41,8 @@
   box-shadow: 0 0 16px rgba(185, 206, 223, 0.32);
 }
 .log .case .head {
-  height: 44px;
-  padding: 0 15px;
+  /*height: 44px;*/
+  padding: 8px 15px;
   border-bottom: 1px solid #D4E1E9;
   color: #283E53;
 }
@@ -58,7 +80,7 @@
   height: auto;
 }
 .log .case .head .labels .timebox .allData {
-  width: 115px;
+  width: 295px;
 }
 .log .case .head .labels .timebox .time {
   top: 1px;
@@ -180,6 +202,14 @@
 }
 .log .case:last-child {
   margin-bottom: 0;
+}
+@media screen and (max-width: 1340px) {
+  .log .case .head {
+    padding: 8px 5px 8px 10px;
+  }
+  .log .case .head .labels .labels-item {
+    margin-right: 0px;
+  }
 }
 
 /*# sourceMappingURL=manager-log.css.map */

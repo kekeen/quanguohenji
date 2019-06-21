@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../css/jquery.paging.css">
 <link rel="stylesheet" href="../css/comment.css">
 <link rel="stylesheet" href="../css/time_data.css">
-<link rel="stylesheet" href="../css/ordinary.css">
+<link rel="stylesheet" href="../css/manager-integral.css">
 
 
 <!--[if lt IE 9]>
@@ -168,36 +168,21 @@
     </ul>
     
 </div>
-        <div class="content-right">
+        <div class="content-right integral-cont">
         	<div class="links">
         		<a href="index.html">首页</a> / <a href="###">系统管理</a> / <a href="###" class="at">积分管理</a>
         	</div>
-        	
-        	<div class="console-box whitebox">
-	<div class="tab-box">
-		
-		<a href="普通求助-我发出的预约.html" class="active">
-			我发出的预约
-			<span class="num hide">1</span>
-		</a>
-		
-		<a href="普通求助-我收到的预约.html" class="">
-			我收到的预约
-			<span class="num hide">1</span>
-		</a>
-		
-	</div>
-	<div class="console-right pull-right">
-		
-			
-				<button class="btns" onclick="window.location.href ='普通协助-按日期预约.html'">
-				<span class="tips-num hide">12</span>
-				积分规则设置
-				
-		</button>
-		
-	</div>
-</div>
+			<div class="console-box whitebox">
+				<div class="title-box">
+					积分管理
+				</div>
+				<div class="console-right pull-right">
+					<button class="btns" onclick="window.location.href ='系统管理-积分管理-积分规则设置.html'">
+						<span class="tips-num hide">12</span>
+						积分规则设置
+					</button>
+				</div>
+			</div>
         	<div class="right-content-box whitebox">
         		<div class="table-box">
         			<div class="console-box-list">
@@ -205,24 +190,17 @@
 	        			<ul class="table-console">
 	
 	<li class="console-list-lis inblock ib-mid">
-		<label class="lbs ">专家姓名：</label>
-		
-			<input type="text" class="inps" placeholder="请输入" style="width:undefinedpx"/>
-		
-	</li>
-	
-	<li class="console-list-lis inblock ib-mid">
-		<label class="lbs ">状态：</label>
+		<label class="lbs ">单位名称：</label>
 		
 			<div class="dropdown">
 				<button class="inps dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
 	            <ul class="dropdown-menu">
 	            	
-	                <li><a href="javascript:;">全部</a></li>
+	                <li><a href="javascript:;">北京市公安局</a></li>
 	                
-	                <li><a href="javascript:;">已预约</a></li>
+	                <li><a href="javascript:;">广州公安局</a></li>
 	                
-	                <li><a href="javascript:;">已取消</a></li>
+	                <li><a href="javascript:;">上海公安局</a></li>
 	                
 	            </ul>
             </div>
@@ -230,34 +208,9 @@
 	</li>
 	
 	<li class="console-list-lis inblock ib-mid">
-		<label class="lbs ">发布时间：</label>
+		<label class="lbs ">人员姓名：</label>
 		
-			<div class="data-times">
-	<div class="timebox">
-		<input type="text" class="allData inps">
-		<i class="iconfont icon-line-insert time"></i>
-	</div>
-  	<div class="dataList">
-      	<ul>
-          	
-          	<li><a href="javascript:void(0)">最近一天</a></li>
-          	
-          	<li><a href="javascript:void(0)">最近三天</a></li>
-          	
-          	<li><a href="javascript:void(0)">最近七天</a></li>
-          	
-      	</ul>
-      	<div class="timeCustom">
-          	<p class="custom-title">自定义</p>
-          	<div class="custom-data">从<input type="text" class="ts-range"></div>
-          	<div class="custom-data">至<input type="text" class="ts-range2"></div>
-          	<div class="custom-btn">
-              	<a href="javascript:void(0)">重置</a>
-              	<a href="javascript:void(0)" class="sure">确认</a>
-          	</div>
-          </div>
-      </div>
-</div>
+			<input type="text" class="inps" placeholder="请输入" style="width:undefinedpx"/>
 		
 	</li>
 	
@@ -271,153 +224,146 @@
 </ul>
         			</div>
         			
-        			<table class="tables">
+        			<table class="tables int-table">
         				<thead>
         					<tr>
-        						
-        						<th>专家姓名</th>
-        						
-        						<th>值班时间</th>
-        						
-        						<th>状态</th>
-        						
-        						<th>预约人</th>
-        						
-        						<th>预约时间</th>
-        						
-        						<th>操作</th>
-        						
+								
+								<th width="100">排行</th>
+								
+								
+								<th class="text-left">单位名称</th>
+								
+								
+								<th>人员姓名</th>
+								
+								
+								<th>总积分</th>
+								
+								
+								<th>操作</th>
+								
+								
         					</tr>
         				</thead>
         				<tbody>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle first">1</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle second">2</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle third">3</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">4</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">5</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">6</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">7</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">8</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">9</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
         					<tr>
-        						<td class="title">陈易信</td>
-        						<td>2018-11-13 12:00</td>
-        						<td>已预约</td>
-        						<td>方语嫣</td>
-        						<td>2018-11-13 12:00</td>
+								
+								<td><i class="grayCircle">10</i></td>
+								
+        						<td class="title text-left">上海公安局</td>
+        						<td>陈易信</td>
+        						<td>655</td>
         						<td class="operation">
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#cancel">取消预约</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtdis" data-toggle="modal" data-target="#launch_video">发起视频</a>
-        							<a href="javascript:void(0);" class="inblock ib-mid txtcol" data-toggle="modal" data-target="#look">查看</a>
+        							<a href="系统管理-积分管理-查看明细.html" class="inblock ib-mid txtcol">查看明细</a>
         						</td>
         					</tr>
         					
@@ -430,139 +376,6 @@
         	</div>
         </div>
     </div>
-    
-    <!-- 查看  -->
-	<div class="modal in" id="look">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	            <div class="modal-header clearfix">
-	                <span>查看</span>
-	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
-	            </div>
-	            <div class="modal-body">
-					<div class="modal-body-content">
-						<div class="lis-box">
-							<div class="small-tit bor-blue">基本信息</div>
-							<ul class="info-list">
-								
-								<li class="info-lis">
-									<label class="lbs">求助标题：</label>
-									<span>xxxx案件证物检验需要求助</span>
-								</li>
-								
-								<li class="info-lis">
-									<label class="lbs">在值时间：</label>
-									<span>2018-12-26 15:00—16:00</span>
-								</li>
-								
-								<li class="info-lis">
-									<label class="lbs">预约事由：</label>
-									<span>有相关问题需要询问专家</span>
-								</li>
-								
-								<li class="info-lis">
-									<label class="lbs">附件：</label>
-									<span>无</span>
-								</li>
-								
-							</ul>
-						</div>
-						<div class="lis-box details">
-							<div class="small-tit bor-blue">详情</div>
-							<ul class="details-list">
-								
-								<li class="details-lis before-green">
-									<div class="details">
-										<span class="name">方语嫣  进行了预约</span>
-										<span class="time pull-right">2018-02-09 12:30:00</span>
-									</div>
-									
-								</li>
-								
-								<li class="details-lis before-blue">
-									<div class="details">
-										<span class="name">黄玉玉 发起了视频</span>
-										<span class="time pull-right">2018-02-09 12:30:00</span>
-									</div>
-									
-										<div class="details-content">
-											<p class="details-content-txt">接通状态：已接通</p>
-											<p class="details-content-txt">视频时长：05:25</p>
-										</div>
-									
-								</li>
-								
-							</ul>
-						</div>
-					</div>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-	<!-- 发起视频  -->
-	<div class="modal in small" id="launch_video">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	            <div class="modal-header clearfix">
-	                <span>发起视频</span>
-	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
-	            </div>
-	            <div class="modal-body">
-					<div class="modal-body-content">
-						确定向专家【陈易新】发起视频？
-					</div>
-	            </div>
-	            <div class="modal-footer">
-	                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
-	                <button type="button" class="btns yes">确定</button>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-	
-	<!-- 取消预约  -->
-	<div class="modal in small" id="cancel">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	            <div class="modal-header clearfix">
-	                <span>取消预约</span>
-	                <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
-	            </div>
-	            <div class="modal-body">
-					<div class="modal-body-content">
-						<ul>
-							
-							<li>
-								<label class="lbs">专家姓名：</label>
-								
-									<span>陈易新</span>
-								
-							</li>
-							
-							<li>
-								<label class="lbs">值班时间：</label>
-								
-									<span>2018-12-16 15:00—16:00</span>
-								
-							</li>
-							
-							<li>
-								<label class="lbs">取消原因：</label>
-								
-									<input type="text" class="uninps" placeholder="请输入原因"/>
-								
-							</li>
-							
-						</ul>
-					</div>
-	            </div>
-	            <div class="modal-footer">
-	                <button type="button" class="btns cancel" data-dismiss="modal" aria-label="Close">取消</button>
-	                <button type="button" class="btns yes">确定</button>
-	            </div>
-	        </div>
-	    </div>
-	</div>
     
 <script src="../libs/jquery/jquery.min.js"></script>
 <script src="../libs/ztree/jquery.ztree.all.js"></script>

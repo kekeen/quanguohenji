@@ -309,6 +309,15 @@ button.inps.actve {
   height: 22px;
   width: 100%;
 }
+.search-box input::-webkit-input-placeholder {
+  color: white;
+}
+.search-box input:-ms-input-placeholder {
+  color: white;
+}
+.search-box input::placeholder {
+  color: white;
+}
 .search-box .search-btn {
   position: absolute;
   top: 0;
@@ -483,6 +492,11 @@ button.inps.actve {
   border-radius: 4px;
   text-align: center;
   color: white;
+}
+.redStar {
+  display: inline-block;
+  vertical-align: middle;
+  color: #f54545;
 }
 .modal.modal-delete .modal-content {
   width: 448px;

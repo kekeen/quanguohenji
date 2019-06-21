@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>系统管理-用户管理 - 全国痕迹检验网络实验室项目</title>
+<meta name="renderer" content="webkit">
+
+<link rel="stylesheet" href="../libs/ztree/css/zTreeStyle.css">
+<link rel="stylesheet" href="../css/custom-bootstrap.css">
+<link rel="stylesheet" href="../libs/icheck/skins/flat/_all.css">
+<link rel="stylesheet" href="../libs/fonts/iconfont.css">
+<link rel="stylesheet" href="../libs/datetimepicker-master/jquery.datetimepicker.css">
+<link rel="stylesheet" href="../css/jquery.paging.css">
+<link rel="stylesheet" href="../css/comment.css">
+<link rel="stylesheet" href="../css/time_data.css">
+<link rel="stylesheet" href="../css/upload_page.css">
+
+<link rel="stylesheet" href="../css/manager-addUser.css">
+
+
+<!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+
+<body>
+	<div class="header">
+    <div class="logo">
+        <a href="index.html"><img src="../images/logo.png"></a>
+    </div>
+    <div class="nav-list">
+        <ul class="clearfix">
+            <li class=""><a href="index.html">首页</a></li>
+            <li class=""><a href="紧急求助-我发出的求助.html">实战协同</a></li>
+            <li class=""><a href="javascript:void(0)">实验室建设</a></li>
+            <li class=""><a href="javascript:void(0)">标准规范</a></li>
+            <li class=""><a href="在线学习-课程录像.html">在线学习</a></li>
+            <li class=""><a href="javascript:void(0)">科技创新</a></li>
+            <li class="active"><a href="系统管理-积分管理.html">系统管理</a></li>
+        </ul>
+    </div>
+    <div class="set">
+        <a href="javascript:void(0)" class="set-search"><i></i></a>
+        <a href="login.html" class="set-login">登录</a>
+        <a href="register.html" class="set-register">注册</a>
+    </div>
+ </div>
+	<div class="content">
+		<div class="left-sidebar">
+    
+    
+    <ul>
+        
+        <li class="">
+            
+                <a href="系统管理-专家管理.html" >
+                    
+                    <i class="iconfont iconsystem-zhuanjia"></i>
+                    专家管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-栏目管理.html" >
+                    
+                    <i class="iconfont iconsystem-lanmu"></i>
+                    栏目管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="active">
+            
+                <a href="系统管理-用户管理.html" >
+                    
+                    <i class="iconfont iconsystem-yonghu"></i>
+                    用户管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-角色管理.html" >
+                    
+                    <i class="iconfont iconsystem-juese"></i>
+                    角色管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-字典管理.html" >
+                    
+                    <i class="iconfont iconsystem-zidian"></i>
+                    字典管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+            <a href="系统管理-通知中心-消息通知.html" >
+                
+                    <i class="iconfont iconsystem-tongzhi"></i>
+                    通知中心
+                    
+                    <em><i class="iconfont icon-outline-chevron_right-px"></i></em>
+                    
+                </a>
+                
+                <div class="left-side-kid">
+                    
+                    <a href="系统管理-通知中心-消息通知.html" class="">
+                        消息通知
+                    </a>
+                    
+                    <a href="系统管理-通知中心-通知管理.html" class="">
+                        通知管理
+                    </a>
+                    
+                </div>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-积分管理.html" >
+                    
+                    <i class="iconfont iconsystem-jifen"></i>
+                    积分管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-排班管理.html" >
+                    
+                    <i class="iconfont iconsystem-paiban"></i>
+                    排班管理
+                    
+                </a>
+                
+        </li>
+        
+        <li class="">
+            
+                <a href="系统管理-日志管理.html" >
+                    
+                    <i class="iconfont iconsystem-rizhi"></i>
+                    日志管理
+                    
+                </a>
+                
+        </li>
+        
+    </ul>
+    
+</div>
+		<div class="content-right">
+			<div class="links">
+				<a href="index.html">首页</a> /
+				<a href="###">系统管理</a> /
+				<a href="###" class="at">用户管理</a>
+			</div>
+			<div class="right-content-box whitebox">
+				<div class="table-box">
+					<div class="upload-wrapper addUser-upload">
+                        <div class="line-hr">
+                            <h3>新增用户</h3>
+                        </div>
+                        <div class="upload-cont">
+                            <div class="contWrap clearfix">
+                                <div class="au-left">
+                                    <div class="label-input">
+                                        <label for="">
+                                            头像：
+                                        </label>
+                                        <div class="file-content">
+                                            <!--上传图片开始-->
+                                            <dl>
+                                                <dt>
+                                                    <div class="upload-img">
+                                                        <input class="file" type="file"/>
+                                                        <a class="icon-uploadImg" href="#"></a>
+                                                    </div>
+                                                </dt>
+                                                <dd>上传头像</dd>
+                                            </dl>
+                                            <!--上传图片结束-->
+                                            <!--已经上传有图片开始-->
+                                            <div class="hadUpload" style="display: none">
+                                                <img src="../images/bg-pic.png">
+                                                <a class="uploadImg-del" href="#"><i class="iconfont icon-line-del"></i>删除</a>
+                                            </div>
+                                            <!--已经上传有图片结束-->
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>警官证号：
+                                        </label>
+                                        <input type="text" class="uninps" placeholder="请输入警官证号">
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>姓名：
+                                        </label>
+                                        <input type="text" class="uninps" placeholder="请输入姓名">
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>密码：
+                                        </label>
+                                        <input type="password" class="uninps" placeholder="请输入密码">
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            性别：
+                                        </label>
+                                        <div class="dropdown border-dropdown">
+                                            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">男</a></li>
+                                                <li><a href="javascript:;">女</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            联系方式：
+                                        </label>
+                                        <input type="password" class="uninps" placeholder="请输入联系方式">
+                                    </div>
+                                </div>
+                                <div class="au-right">
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>专业：
+                                        </label>
+                                        <div class="dropdown border-dropdown">
+                                            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">计算机</a></li>
+                                                <li><a href="javascript:;">鉴定专家</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>角色：
+                                        </label>
+                                        <div class="dropdown border-dropdown">
+                                            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">管理员</a></li>
+                                                <li><a href="javascript:;">用户中心</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>状态：
+                                        </label>
+                                        <div class="dropdown border-dropdown">
+                                            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">启用 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">启用</a></li>
+                                                <li><a href="javascript:;">禁止</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            <span class="necessarily">*</span>单位：
+                                        </label>
+                                        <div class="dropdown border-dropdown">
+                                            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">单位名称A</a></li>
+                                                <li><a href="javascript:;">单位名称B</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            职务：
+                                        </label>
+                                        <input type="password" class="uninps" placeholder="请输入职务">
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            职称：
+                                        </label>
+                                        <div class="dropdown border-dropdown">
+                                            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">请选择 <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">单位名称A</a></li>
+                                                <li><a href="javascript:;">单位名称B</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="label-input">
+                                        <label for="">
+                                            邮箱：
+                                        </label>
+                                        <input type="password" class="uninps" placeholder="请输入邮箱">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns-group">
+                                <a href="###" class="f-btn f-btn-a">发布</a>
+                                <a href="###" class="f-btn">取消</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+  <!-- Modal 预览-->
+
+<div class="modal fade modal-delete" id="remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header clearfix">
+        <span>删除提示</span>
+        <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+      </div>
+      <div class="modal-body">
+          确定删除该书籍？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="f-btn" data-dismiss="modal">取消</button>
+        <button type="button" class="f-btn f-btn-a">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-delete" id="pl-remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header clearfix">
+        <span>删除提示</span>
+        <a href="javascript:void(0);" data-dismiss="modal" aria-hidden="true" class="closer"><img src="../images/close.png"></a>
+      </div>
+      <div class="modal-body">
+          确定删除选中的书籍？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="f-btn" data-dismiss="modal">取消</button>
+        <button type="button" class="f-btn f-btn-a">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade yulan" id="yulan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">预览</h4>
+        </div>
+        <div class="modal-body">
+            <img src="../images/hj.png" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="f-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="f-btn f-btn-a">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/ztree/jquery.ztree.all.js"></script>
+<script src="../libs/bootstrap/dist/bootstrap.min.js"></script>
+<script src="../libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+<script src="../libs/icheck/icheck.min.js"></script>
+<script src="../js/jquery.paging.js"></script>
+<script src="../js/global.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.l_flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.grayColor {
+  color: #6c849c;
+}
+/*系统管理-积分管理开始*/
+.grayCircle {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 22px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 1px;
+  border-radius: 50%;
+  background: #d4e1e9;
+  color: white;
+}
+.grayCircle.first {
+  background: #ff4081;
+}
+.grayCircle.second {
+  background: #f4c700;
+}
+.grayCircle.third {
+  background: #03acef;
+}
+.title-box {
+  display: inline-block;
+  padding-left: 20px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #283e53;
+}
+.int-table th {
+  text-align: center;
+}
+.int-table th.text-left {
+  text-align: left;
+}
+.int-table td {
+  text-align: center;
+}
+.int-table td.text-left {
+  text-align: left;
+}
+.integral-cont .links {
+  position: relative;
+}
+.integral-cont .links .inps {
+  position: absolute;
+  right: 0;
+  top: -6px;
+}
+.modal#addRule .modal-dialog {
+  width: 480px;
+}
+.modal#addRule .modal-body {
+  min-height: auto;
+  padding: 50px 0;
+  font-size: 12px;
+}
+.modal#addRule .modal-body .modal-body-content {
+  width: 350px;
+}
+.modal#addRule .modal-body .modal-body-content li {
+  margin-bottom: 20px;
+}
+.modal#addRule .modal-body .modal-body-content li:last-child {
+  margin-bottom: 0;
+}
+.modal#addRule .modal-body .lbs {
+  color: #6c849c;
+}
+.modal#addRule .modal-body span {
+  color: #283e53;
+}
+.modal#addRule .modal-body .uninps {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+}
+.modal#addRule .modal-footer {
+  font-size: 14px;
+}
+/*系统管理-积分管理结束*/
+/*系统管理-用户管理开始*/
+.user-right-cont .unit-box {
+  float: left;
+  width: 260px;
+  height: 100%;
+  background: white;
+  padding: 10px;
+}
+.user-right-cont .unit-box .search-box {
+  margin-bottom: 14px;
+}
+.user-right-cont .unit-box .tree-box .allChoose {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #798ea4;
+}
+.user-right-cont .unit-box .tree-box .allChoose label {
+  cursor: pointer;
+}
+.user-right-cont .unit-box .tree-box .allChoose .icheckbox_flat-blue {
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.user-right-cont .unit-box .tree-box .ztree {
+  padding: 0;
+}
+.user-right-cont .user-tableWrap {
+  float: right;
+  width: calc(100% - 270px);
+}
+.user-right-cont .pag-box {
+  /*padding: 15px 10px;*/
+  padding: 15px 20px 15px 30px;
+}
+.user-right-cont .pag-box .blueBtn {
+  margin-left: 15px;
+}
+.user-right-cont .ztree li span.button.add {
+  margin-left: 2px;
+  margin-right: -1px;
+  background-position: -144px 0;
+  vertical-align: top;
+}
+.user-right-cont .ztree li {
+  margin: 5px 0;
+}
+.user-right-cont .ztree li span.button {
+  background-image: url('../libs/ztree/css/img/icon.png');
+}
+.user-right-cont .ztree li span.button.center_open,
+.user-right-cont .ztree li span.button.roots_open,
+.user-right-cont .ztree li span.button.bottom_open {
+  background-position: -40px -3px;
+}
+.user-right-cont .ztree li span.button.center_close,
+.user-right-cont .ztree li span.button.roots_close,
+.user-right-cont .ztree li span.button.bottom_close {
+  background-position: -5px -3px;
+}
+.user-right-cont .ztree li span.button.center_docu,
+.user-right-cont .ztree li span.button.bottom_docu,
+.user-right-cont .ztree li span.button.roots_docu {
+  background-image: url(../libs/ztree/css/img/zTreeStandard.png);
+}
+.user-right-cont .ztree li span.button.chk {
+  width: 15px;
+  height: 15px;
+}
+.user-right-cont .ztree li span.button.chk.checkbox_false_full,
+.user-right-cont .ztree li span.button.chk.checkbox_false_full_focus,
+.user-right-cont .ztree li span.button.chk.checkbox_false_part,
+.user-right-cont .ztree li span.button.chk.checkbox_false_part_focus {
+  background-position: -166px -7px;
+  margin-top: 4px;
+}
+.user-right-cont .ztree li span.button.chk.checkbox_true_part,
+.user-right-cont .ztree li span.button.chk.checkbox_true_part_focus {
+  background-position: -199px -7px;
+  margin-top: 4px;
+}
+.user-right-cont .ztree li span.button.chk.checkbox_true_full,
+.user-right-cont .ztree li span.button.chk.checkbox_true_full_focus {
+  background-position: -231px -7px;
+  margin-top: 4px;
+}
+.user-right-cont .ztree li span.button.pIcon01_ico_open,
+.user-right-cont .ztree li span.button.icon01_ico_open,
+.user-right-cont .ztree li span.button.ico_open {
+  background-position: -266px -26px;
+  margin-right: 8px;
+}
+.user-right-cont .ztree li span.button.pIcon01_ico_close,
+.user-right-cont .ztree li span.button.icon01_ico_close,
+.user-right-cont .ztree li span.button.ico_close {
+  background-position: -266px -9px;
+  margin-right: 8px;
+}
+.user-right-cont .ztree li span.button.icon01_ico_docu,
+.user-right-cont .ztree li span.button.ico_docu {
+  background-position: -266px -47px;
+  margin-right: 6px;
+}
+.user-right-cont .ztree li span.button.add {
+  background-position: -5px -32px;
+}
+.user-right-cont .ztree li span.button.edit {
+  background-position: -23px -32px;
+}
+.user-right-cont .ztree li span.button.remove {
+  background-position: -43px -32px;
+}
+.user-right-cont .ztree li a {
+  display: inline-block;
+  width: 84%;
+  color: #6c849c;
+  padding: 2px 4px;
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px solid #fff;
+}
+.user-right-cont .ztree li a .iconbox {
+  display: none;
+}
+.user-right-cont .ztree li a .iconbox button {
+  background: none;
+  box-shadow: none;
+  border: none;
+  margin: 0 2px;
+  color: #fff;
+}
+.user-right-cont .ztree li a:hover {
+  background: #fdd837;
+  border: 1px dashed #f4c700;
+  text-decoration: none;
+}
+.user-right-cont .ztree li a:hover .node_name {
+  color: #3598db;
+}
+.user-right-cont .ztree li a:hover .iconbox {
+  display: block;
+}
+.user-right-cont .ztree li a.curSelectedNode {
+  height: 100%;
+  background: #fdd837;
+  border: 1px dashed #f4c700;
+  opacity: 1;
+}
+.user-right-cont .ztree li .node_name input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #3598db;
+}
+.user-right-cont .ztree li .node_name input:focus {
+  outline: none;
+}
+.user-right-cont .ztree li .curSelectedNode .node_name {
+  color: #3598db;
+}
+.user-right-cont .ztree * {
+  font-size: inherit;
+}
+/*开关按钮开始*/
+.f-derail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: left;
+}
+.f-derail span {
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  background-color: #8fa1b5;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  -moz-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  -o-kit-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  -ms-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+}
+.f-derail i {
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  -moz-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  -o-kit-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  -ms-box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+  box-shadow: 0 1px 4px 0 rgba(148, 171, 182, 0.46);
+}
+.f-derail.on span {
+  background-color: rgba(53, 152, 219, 0.6);
+}
+.f-derail.on i {
+  background-color: #3598db;
+  right: 0;
+}
+.f-derail-s {
+  height: 18px;
+  width: 34px;
+}
+.f-derail-s span {
+  height: 12px;
+  border-radius: 6px;
+}
+.f-derail-s i {
+  width: 18px;
+}
+/*开关按钮结束*/
+#seeDetail .modal-dialog {
+  width: 535px;
+}
+#seeDetail .modal-body {
+  padding: 0 10px;
+}
+#seeDetail .modal-body-cont {
+  width: 100%;
+  padding: 15px 0 40px;
+}
+#seeDetail .contLeft {
+  float: left;
+  width: 45%;
+  padding-top: 30px;
+}
+#seeDetail .contLeft .img {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#seeDetail .contLeft .img img {
+  width: 100%;
+}
+#seeDetail .contLeft > p {
+  margin-top: 12px;
+}
+#seeDetail .contLeft .iconfont {
+  margin-left: 6px;
+}
+#seeDetail .contLeft .iconcom-woman {
+  color: #ff74a5;
+}
+#seeDetail .contLeft .iconcom-man {
+  color: #03acef;
+}
+#seeDetail .contLeft .iconcom-wu {
+  color: #9dabbb;
+}
+#seeDetail .contRight {
+  float: left;
+  width: 55%;
+  padding-left: 20px;
+  text-align: left;
+}
+#seeDetail .contRight > ul > li {
+  margin-top: 12px;
+}
+/*系统管理-用户管理结束*/
+
+/*# sourceMappingURL=manager-integral.css.map */

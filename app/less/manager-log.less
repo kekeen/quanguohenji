@@ -2,12 +2,39 @@
 .whitebox{
   background: transparent;
 }
+.diary-cont{
+  .right-content-box{
+    .table-box{
+      height: 100%;
+      .log{
+        height: 100%;
+        overflow: auto;
+        background: white;
+        .left{
+          height: 100%;
+          width: calc(~'50% - 10px');
+          float: left;
+        }
+        .right{
+          float: right;
+          height: 100%;
+          width: 50%;
+          background: pink;
 
-.log{
-  .left,.right{
-    display: inline-block;
-    width: calc(~'50% - 7px');
+          .case{
+            height: 100%;
+            overflow: auto;
+            .body{
+              height: calc(~'100% - 61px');
+              overflow: auto;
+            }
+          }
+        }
+      }
+    }
   }
+}
+.log{
   .left{
     margin-right: 10px;
   }
@@ -20,8 +47,8 @@
     border-radius: 2px;
     box-shadow: @shadow-color;
     .head{
-      height: 44px;
-      padding:0 15px;
+      /*height: 44px;*/
+      padding:8px 15px;
       border-bottom: 1px solid @border-color;
       color:@text-color;
       .title{
@@ -58,7 +85,7 @@
         }
         .timebox{
           .allData{
-            width: 115px;
+            width: 295px;
           }
           .time{
            top: 1px;
@@ -180,6 +207,20 @@
     }
     &:last-child{
       margin-bottom: 0;
+    }
+  }
+}
+@media screen and (max-width:1340px){
+  .log{
+    .case{
+      .head{
+        padding: 8px 5px 8px 10px;
+        .labels{
+          .labels-item{
+            margin-right: 0px;
+          }
+        }
+      }
     }
   }
 }
